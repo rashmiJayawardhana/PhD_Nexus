@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Filter, ArrowUpRight, Book, Briefcase, Award, Mail, Linkedin, Twitter, Menu, X, ChevronRight, Eye, Edit, Plus, Trash2, Save } from 'lucide-react';
+import { Search, ArrowUpRight, Book, Briefcase, Award, Mail, Linkedin, Twitter, Eye, Edit, Plus, Trash2, Save } from 'lucide-react';
 
 // Mock data structure (replace with API calls)
 const initialData = {
@@ -106,10 +106,10 @@ const initialData = {
 const PortfolioApp = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-  const [data, setData] = useState(initialData);
+  const [data] = useState(initialData);
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  //const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Filter projects
   const filteredProjects = data.projects.filter(project => {
