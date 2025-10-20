@@ -1,0 +1,1 @@
+// components/about/PhotoGrid.tsx
