@@ -234,7 +234,7 @@ const App = () => {
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center">
                 <span className="text-white text-sm font-semibold">SC</span>
               </div>
-              <button className="bg-amber-400 hover:bg-amber-500 text-slate-900 px-6 py-2 rounded-full font-semibold transition shadow-lg hover:shadow-xl">
+              <button className="bg-amber-400 hover:bg-amber-500 text-white-900 px-6 py-2 rounded-full font-semibold transition shadow-lg hover:shadow-xl">
                 Get Started
               </button>
             </div>
