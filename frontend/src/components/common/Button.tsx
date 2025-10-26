@@ -1,44 +1,41 @@
-// components/common/Button.tsx
-import { forwardRef } from 'react';
-import type { ButtonProps } from '../../types/common';
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ 
-  children, 
-  variant = 'primary', 
-  size = 'md',
+// src/components/common/Button.tsx
+import type { LucideIcon } from 'lucide-react';
+
+interface ButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+  variant?: 'primary' | 'secondary' | 'outline';
+  icon?: LucideIcon;
+  className?: string;
+  type?: 'button' | 'submit';
+  disabled?: boolean;
+}
+
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  onClick,
+  variant = 'primary',
   icon: Icon,
-  iconPosition = 'left',
   className = '',
-  ...props 
-}, ref) => {
-  const baseStyles = 'font-medium transition-all rounded-full flex items-center gap-2 justify-center';
-  
+  type = 'button',
+  disabled = false
+}) => {
   const variants = {
-    primary: 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg hover:shadow-xl',
-    secondary: 'bg-white text-slate-700 hover:bg-slate-100 shadow-lg',
-    ghost: 'bg-transparent text-indigo-600 hover:bg-indigo-50',
-    danger: 'bg-red-600 text-white hover:bg-red-700'
-  };
-  
-  const sizes = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3',
-    lg: 'px-8 py-4 text-lg'
+    primary: 'bg-slate-900 hover:bg-slate-800 text-white',
+    secondary: 'bg-amber-400 hover:bg-amber-500 text-slate-900',
+    outline: 'border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
   };
 
   return (
     <button
-      ref={ref}
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
-      {...props}
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={`px-8 py-4 rounded-lg font-semibold transition shadow-xl hover:shadow-2xl flex items-center gap-2 ${variants[variant]} ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}
     >
-      {Icon && iconPosition === 'left' && <Icon className="w-5 h-5" />}
       {children}
-      {Icon && iconPosition === 'right' && <Icon className="w-5 h-5" />}
+      {Icon && <Icon className="w-5 h-5" />}
     </button>
   );
-});
-
-Button.displayName = 'Button';
-
-export default Button;
+};

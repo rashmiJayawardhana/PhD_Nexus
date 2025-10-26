@@ -1,88 +1,85 @@
-// components/layout/Navigation.tsx
-import { type FC, useState } from 'react';
-import { Menu, X, Home, BookOpen, Users, Book, User } from 'lucide-react';
-import type { NavigationProps } from '@/types/layout';
+// src/components/layout/Navigation.tsx
+import { ChevronDown, Menu, X } from 'lucide-react';
 
-const Navigation: FC<NavigationProps> = ({ showAbout, onNavigate }) => {
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
+interface NavigationProps {
+  onAboutClick: () => void;
+  onContentClick: () => void;
+  onContactClick: () => void;
+  isMobileMenuOpen: boolean;
+  setIsMobileMenuOpen: (open: boolean) => void;
+}
 
-  const navLinks = [
-    { id: 'home', label: 'Home', icon: Home },
-    { id: 'projects', label: 'Projects', icon: BookOpen },
-    { id: 'testimonials', label: 'Testimonials', icon: Users },
-    { id: 'books', label: 'Books', icon: Book },
-    { id: 'about', label: 'About', icon: User },
-  ];
+export const Navigation: React.FC<NavigationProps> = ({
+  onAboutClick,
+  onContentClick,
+  onContactClick,
+  isMobileMenuOpen,
+  setIsMobileMenuOpen
+}) => (
+  <>
+    {/* Desktop Navigation */}
+    <nav className="hidden md:flex items-center gap-8">
+      <a href="#home" className="text-slate-700 hover:text-teal-600 font-medium transition">
+        Home
+      </a>
+      <button onClick={onAboutClick} className="text-slate-700 hover:text-teal-600 font-medium transition">
+        About
+      </button>
+      <button onClick={onContentClick} className="text-slate-700 hover:text-teal-600 font-medium transition">
+        Content
+      </button>
+      <button onClick={onContactClick} className="text-slate-700 hover:text-teal-600 font-medium transition">
+        Contact
+      </button>
+      <a href="#more" className="text-slate-700 hover:text-teal-600 font-medium transition flex items-center gap-1">
+        More <ChevronDown className="w-4 h-4" />
+      </a>
+    </nav>
 
-  const handleNavigate = (section: string) => {
-    setIsMobileOpen(false); // Close mobile menu
-    if (section === 'about') {
-      // Assuming onNavigate can handle 'about' for toggle; adjust in App.tsx if needed
-      onNavigate(section);
-      return;
-    }
-    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
-    onNavigate(section);
-  };
+    {/* User Actions */}
+    <div className="hidden md:flex items-center gap-4">
+      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center">
+        <span className="text-white text-sm font-semibold">SC</span>
+      </div>
+      <button className="bg-amber-400 hover:bg-amber-500 text-slate-900 px-6 py-2 rounded-full font-semibold transition shadow-lg hover:shadow-xl">
+        Get Started
+      </button>
+    </div>
 
-  const toggleMobileMenu = () => setIsMobileOpen(!isMobileOpen);
+    {/* Mobile Menu Button */}
+    <button
+      onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      className="md:hidden text-slate-700 p-2"
+    >
+      {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+    </button>
 
-  if (showAbout) {
-    // Minimal nav or hidden when in About page
-    return null;
-  }
-
-  return (
-    <>
-      {/* Desktop Nav */}
-      <nav className="hidden md:flex items-center gap-8">
-        {navLinks.slice(0, -1).map(({ id, label, icon: Icon }) => (
-          <button
-            key={id}
-            onClick={() => handleNavigate(id)}
-            className="flex items-center gap-2 text-slate-700 hover:text-indigo-600 font-medium transition-colors px-2 py-1 rounded-md hover:bg-indigo-50"
-            aria-label={`Navigate to ${label}`}
-          >
-            <Icon className="w-4 h-4" />
-            {label}
-          </button>
-        ))}
-        {/* About as special link */}
-        <button
-          onClick={() => handleNavigate('about')}
-          className="flex items-center gap-2 text-slate-700 hover:text-indigo-600 font-medium transition-colors px-2 py-1 rounded-md hover:bg-indigo-50"
+    {/* Mobile Menu */}
+    {isMobileMenuOpen && (
+      <div className="md:hidden mt-4 pb-4 space-y-3">
+        <a href="#home" className="block text-slate-700 hover:text-teal-600 py-2">Home</a>
+        <button 
+          onClick={() => { onAboutClick(); setIsMobileMenuOpen(false); }}
+          className="block w-full text-left text-slate-700 hover:text-teal-600 py-2"
         >
-          <User className="w-4 h-4" />
           About
         </button>
-      </nav>
-
-      {/* Mobile Menu Button */}
-      <button
-        onClick={toggleMobileMenu}
-        className="md:hidden text-slate-700 hover:text-indigo-600 transition-colors p-2"
-        aria-label="Toggle navigation menu"
-      >
-        {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
-
-      {/* Mobile Menu */}
-      {isMobileOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-xl mt-2 py-4 px-6 space-y-4 z-30">
-          {navLinks.map(({ id, label, icon: Icon }) => (
-            <button
-              key={id}
-              onClick={() => handleNavigate(id)}
-              className="w-full flex items-center gap-3 text-left text-slate-700 hover:text-indigo-600 font-medium transition-colors py-2 px-4 rounded-lg hover:bg-indigo-50"
-            >
-              <Icon className="w-5 h-5 flex-shrink-0" />
-              {label}
-            </button>
-          ))}
-        </div>
-      )}
-    </>
-  );
-};
-
-export default Navigation;
+        <button 
+          onClick={() => { onContentClick(); setIsMobileMenuOpen(false); }}
+          className="block w-full text-left text-slate-700 hover:text-teal-600 py-2"
+        >
+          Content
+        </button>
+        <button 
+          onClick={() => { onContactClick(); setIsMobileMenuOpen(false); }}
+          className="block w-full text-left text-slate-700 hover:text-teal-600 py-2"
+        >
+          Contact
+        </button>
+        <button className="w-full bg-amber-400 hover:bg-amber-500 text-slate-900 px-6 py-2 rounded-full font-semibold transition">
+          Get Started
+        </button>
+      </div>
+    )}
+  </>
+);
