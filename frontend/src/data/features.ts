@@ -1,5 +1,4 @@
 // src/data/features.ts
-
 import type { Feature } from "@/types";
 
 export const features: Feature[] = [

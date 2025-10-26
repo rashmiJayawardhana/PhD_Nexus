@@ -8,6 +8,7 @@ import { AboutPage } from './components/about/AboutPage';
 import { ContactPage } from './components/contact/ContactPage';
 import { features } from './data/features';
 import { ContentPage } from './components/content/ContentPage';
+import home from './assets/home.png';
 
 type Page = 'home' | 'about' | 'content' | 'contact';
 
@@ -66,12 +67,12 @@ const App = () => {
           </h2>
           <div className="flex justify-center mb-8">
             <img
-              src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=600&h=300&fit=crop"
+              src={home}
               alt="Healthcare professionals"
               className="rounded-2xl shadow-2xl max-w-md"
             />
           </div>
-          <button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-lg font-semibold transition shadow-xl hover:shadow-2xl">
+          <button className="bg-slate-900 hover:bg-slate-800 text-slate-900 px-8 py-4 rounded-lg font-semibold transition shadow-xl hover:shadow-2xl">
             Get Started
           </button>
         </div>

@@ -1,4 +1,3 @@
-
 // src/components/common/Button.tsx
 import type { LucideIcon } from 'lucide-react';
 
@@ -22,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false
 }) => {
   const variants = {
-    primary: 'bg-slate-900 hover:bg-slate-800 text-white',
+    primary: 'bg-slate-900 hover:bg-slate-800 text-slate-900',
     secondary: 'bg-amber-400 hover:bg-amber-500 text-slate-900',
     outline: 'border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
   };
