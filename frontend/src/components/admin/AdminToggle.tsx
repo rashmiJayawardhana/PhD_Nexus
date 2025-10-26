@@ -1,7 +1,7 @@
 // components/admin/AdminToggle.tsx
 import { Save, Edit } from 'lucide-react';
 import { useAdmin } from '../../context/AdminContext';
-import Button from '../common/Button';
+import { Button } from '../common/Button';
 
 const AdminToggle = () => {
   const { isAdmin, isEditing, toggleAdmin, toggleEditing } = useAdmin();
@@ -11,7 +11,7 @@ const AdminToggle = () => {
       <Button
         onClick={toggleAdmin}
         variant={isAdmin ? 'primary' : 'secondary'}
-        size="sm"
+        //size="sm"
       >
         {isAdmin ? 'Admin Mode' : 'View Mode'}
       </Button>
@@ -19,7 +19,7 @@ const AdminToggle = () => {
         <Button
                   onClick={toggleEditing}
                   variant="secondary"
-                  size="sm"
+                  //size="sm"
                   icon={isEditing ? Save : Edit} children={undefined}        />
       )}
     </div>

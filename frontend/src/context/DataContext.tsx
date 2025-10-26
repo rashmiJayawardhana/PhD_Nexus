@@ -12,7 +12,7 @@ const DataContext = createContext<DataContextType | undefined>(undefined);
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [data, setData] = useState<AppData>(initialData);
-  const [loading, setLoading] = useState(true); // New
+  const [, setLoading] = useState(true); // New
   useEffect(() => { setLoading(false); }, []);
 
   const updateProfile = (updates: Partial<Profile>) => {
