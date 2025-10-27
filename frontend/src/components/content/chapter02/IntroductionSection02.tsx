@@ -5,7 +5,6 @@ export const IntroductionSection02: React.FC = () => (
   <IntroductionSection
     chapterNumber="02"
     description="The second chapter of this module describes evidence of occupational exposure to chemotherapy, exposure routes, risk activities, and occupational exposure-related adverse effects present among HCWs. After studying the learning material listed in Table 6, oncology nurses should have achieved the learning objectives and practical competence."
-    nurseNote="are expected to reach learning outcomes and practical competencies at the end of the study of the learning content of Chapter 02."
     tableTitle="Learning Outcomes & Practice Competencies & Learning Content"
     rows={[
       [

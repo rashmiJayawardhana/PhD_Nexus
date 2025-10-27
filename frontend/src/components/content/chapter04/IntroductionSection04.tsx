@@ -5,7 +5,6 @@ export const IntroductionSection04: React.FC = () => (
   <IntroductionSection
     chapterNumber="04"
     description="Level 1 (elimination) and level 2 (substation), hierarchical controls are impossible in the health care settings, and level 3 protection (PEC) is not cost-effective. Therefore, level 4 (administration controls) and level 5 (PPE) protections are widely used, and appropriate use of those measures is important in risk reduction.\n\nHD handling guidelines describe recommendations and best practices for each step of handling them. This e-module describes recommendations and best practices related to nurses’ job roles in handling chemotherapy in the local setting since it is used as educational material for a tailored education intervention."
-    nurseNote="are expected to reach learning outcomes and practical competencies at the end of the study of the learning content of Chapter 04."
     tableTitle="Learning Outcomes & Practice Competencies & Learning Content"
     rows={[
       [

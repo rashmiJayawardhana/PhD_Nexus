@@ -5,7 +5,6 @@ export const IntroductionSection01: React.FC = () => (
   <IntroductionSection
     chapterNumber="01"
     description="The first chapter of this e-module provides an overview towards cancer by providing cancer definition, epidemiology, treatment methods, adverse drug effects, and related terminologies. It is useful in better understanding occupational exposure and best practices and recommendations for handling chemotherapy which are discussed in upcoming chapters of this e-module."
-    nurseNote="are expected to reach learning outcomes and practical competencies at the end of the study of the learning content of Chapter 01."
     tableTitle="Learning Outcomes & Practice Competencies & Learning Content"
     rows={[
       [

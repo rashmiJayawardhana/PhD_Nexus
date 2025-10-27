@@ -5,7 +5,6 @@ export const IntroductionSection03: React.FC = () => (
   <IntroductionSection
     chapterNumber="03"
     description="The third chapter describes hierarchical controls for handling chemotherapy/ HDs. Learning outcomes and practical competencies related to respective content are outlined in Table."
-    nurseNote="are expected to reach learning outcomes and practical competencies at the end of the study of the learning content of Chapter 03."
     tableTitle="Learning Outcomes & Practice Competencies & Learning Content"
     rows={[
       [

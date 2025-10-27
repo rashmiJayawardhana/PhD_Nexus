@@ -5,7 +5,6 @@ export const IntroductionSection05: React.FC = () => (
   <IntroductionSection
     chapterNumber="05"
     description="The fifth chapter of this e-module describes barriers that contribute to safety precautions and occupational exposure and the impact of education towards safe practices. Oncology nurses are expected to reach learning outcomes and practice competencies after following this chapter."
-    nurseNote="are expected to reach learning outcomes and practical competencies at the end of the study of the learning content of Chapter 05."
     tableTitle="Learning Outcomes & Practice Competencies & Learning Content"
     rows={[
       [

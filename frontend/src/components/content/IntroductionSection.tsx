@@ -9,7 +9,6 @@ import { DataTable } from "./DataTable";
 interface ChapterIntroductionProps {
   chapterNumber: string;
   description: string;
-  nurseNote: string;
   tableTitle: string;
   rows: string[][];
 }
