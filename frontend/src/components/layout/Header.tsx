@@ -6,6 +6,7 @@ interface HeaderProps {
   onAboutClick: () => void;
   onContentClick: () => void;
   onContactClick: () => void;
+  onMoreClick: () => void;
   isMobileMenuOpen: boolean;
   setIsMobileMenuOpen: (open: boolean) => void;
 }

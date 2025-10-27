@@ -1,10 +1,11 @@
 // src/components/layout/Navigation.tsx
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavigationProps {
   onAboutClick: () => void;
   onContentClick: () => void;
   onContactClick: () => void;
+  onMoreClick: () => void;
   isMobileMenuOpen: boolean;
   setIsMobileMenuOpen: (open: boolean) => void;
 }
@@ -13,6 +14,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   onAboutClick,
   onContentClick,
   onContactClick,
+  onMoreClick, 
   isMobileMenuOpen,
   setIsMobileMenuOpen
 }) => (
@@ -31,9 +33,9 @@ export const Navigation: React.FC<NavigationProps> = ({
       <button onClick={onContactClick} className="text-slate-700 hover:text-teal-600 font-medium transition">
         Contact
       </button>
-      <a href="#more" className="text-slate-700 hover:text-teal-600 font-medium transition flex items-center gap-1">
-        More <ChevronDown className="w-4 h-4" />
-      </a>
+      <button onClick={onMoreClick} className="text-slate-700 hover:text-teal-600 font-medium transition">
+        More
+      </button>
     </nav>
 
     {/* User Actions */}
@@ -41,7 +43,7 @@ export const Navigation: React.FC<NavigationProps> = ({
       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center">
         <span className="text-white text-sm font-semibold">SC</span>
       </div>
-      <button className="bg-amber-400 hover:bg-amber-500 text-slate-900 px-6 py-2 rounded-full font-semibold transition shadow-lg hover:shadow-xl">
+      <button onClick={onContentClick} className="bg-amber-400 hover:bg-amber-500 text-slate-900 px-6 py-2 rounded-full font-semibold transition shadow-lg hover:shadow-xl">
         Get Started
       </button>
     </div>
@@ -75,6 +77,12 @@ export const Navigation: React.FC<NavigationProps> = ({
           className="block w-full text-left text-slate-700 hover:text-teal-600 py-2"
         >
           Contact
+        </button>
+        <button 
+          onClick={() => { onMoreClick(); setIsMobileMenuOpen(false); }}
+          className="block w-full text-left text-slate-700 hover:text-teal-600 py-2"
+        >
+          More
         </button>
         <button className="w-full bg-amber-400 hover:bg-amber-500 text-slate-900 px-6 py-2 rounded-full font-semibold transition">
           Get Started

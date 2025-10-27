@@ -9,8 +9,9 @@ import { ContactPage } from './components/contact/ContactPage';
 import { features } from './data/features';
 import { ContentPage } from './components/content/ContentPage';
 import home from './assets/home.png';
+import MorePage from './components/more/MorePage';
 
-type Page = 'home' | 'about' | 'content' | 'contact';
+type Page = 'home' | 'about' | 'content' | 'contact' | 'more';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -31,6 +32,11 @@ const App = () => {
     return <ContentPage onBack={() => setCurrentPage('home')} />;
   }
 
+  // Render More Page
+  if (currentPage === 'more') {
+    return <MorePage onBack={() => setCurrentPage('home')} />;
+  }
+
   // Render Home Page
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-50 via-blue-50 to-purple-50">
@@ -38,6 +44,7 @@ const App = () => {
         onAboutClick={() => setCurrentPage('about')}
         onContentClick={() => setCurrentPage('content')}
         onContactClick={() => setCurrentPage('contact')}
+        onMoreClick={() => setCurrentPage('more')}
         isMobileMenuOpen={isMobileMenuOpen}
         setIsMobileMenuOpen={setIsMobileMenuOpen}
       />
@@ -72,7 +79,7 @@ const App = () => {
               className="rounded-2xl shadow-2xl max-w-md"
             />
           </div>
-          <button className="bg-slate-900 hover:bg-slate-800 text-slate-900 px-8 py-4 rounded-lg font-semibold transition shadow-xl hover:shadow-2xl">
+          <button onClick={() => setCurrentPage('content')} className="bg-slate-900 hover:bg-slate-800 text-slate-900 px-8 py-4 rounded-lg font-semibold transition shadow-xl hover:shadow-2xl">
             Get Started
           </button>
         </div>
