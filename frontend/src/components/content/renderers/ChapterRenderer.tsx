@@ -21,7 +21,7 @@ export const ChapterRenderer: React.FC<ChapterRendererProps> = ({
   chapters
 }) => {
   // List of chapters with enhanced rendering
-  const enhancedChapters = ['chapter-01'];
+  const enhancedChapters = ['chapter-01', 'chapter-02', 'chapter-03', 'chapter-04', 'chapter-05', 'resources'];
 
   if (enhancedChapters.includes(chapterId || '')) {
     return (

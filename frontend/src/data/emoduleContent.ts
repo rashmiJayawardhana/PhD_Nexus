@@ -1,440 +1,47 @@
 // src/data/emoduleContent.ts
-import cells from '../assets/cells.png';
-import cell from '../assets/cell.png';
-import twoincorrect from '../assets/two-incorrect.png';
-import oneincorrect from '../assets/one-incorrect.png'; 
-import AdverseEffects from '../assets/AdverseEffects.png';  
-import summary01 from '../assets/AdverseEffects.png';
 import type { Chapter } from '@/types/content';
+
 export const emoduleContent: Chapter[] = [
-    
   {
     id: 'chapter-01',
     title: 'Chapter 01: Introduction',
     icon: '📖',
     description: 'Overview of cancer, epidemiology, treatment methods, and adverse effects',
     subTopics: [
-        {
+      {
         id: 'introduction',
         title: 'Introduction',
-        content: `
-          <p>The first chapter of this e-module provides an overview towards cancer by providing cancer definition, epidemiology, treatment methods, adverse drug effects, and related terminologies. It is useful in better understanding occupational exposure and best practices and recommendations for handling chemotherapy which are discussed in upcoming chapters of this e-module. Oncology nurses are expected to reach learning outcomes and practical competencies at the end of the study of the learning content of Chapter 01.</p>
-          <h3>Learning outcomes, competencies and learning content: Chapter 01</h3>
-          <table>
-            <tr>
-              <th>Learning outcomes</th>
-              <th>Practice competencies</th>
-              <th>Learning content</th>
-            </tr>
-            <tr>
-              <td>Define the term cancer
-                  Describe cancer-related terminologies 
-              </td>
-              <td>Define the term cancer
-Explain cancer-related terminologies
-</td>
-              <td>Cancer definition and related terminologies 
-              </td>
-            </tr>
-
-            <tr>
-              <td>Describe the epidemiology of cancer</td>
-              <td>Explain cancer epidemiology</td>
-              <td>Prevalence of common cancers and death rates
-              </td>
-            </tr>
-
-            <tr>
-              <td>Define the terminologies related to cancer therapy
-
-Critically evaluate the current cancer treatment methods
-
-Describe how chemotherapy mainly acts in the human body
-</td>
-              <td>Explain different cancer therapies
-
-Explain cancer treatments 
-
-Explain the main mechanism of chemotherapy
-              </td>
-              <td>Cancer treatment methods: Surgery, Radiotherapy, Chemotherapy, other drugs and other treatment methods
-
-Cancer therapies: Adjuvant, neoadjuvant, palliative and systemic therapy
-
-Selective and non-selective mechanisms of drugs 
-              </td>
-            </tr>
-
-            <tr>
-              <td>Identify adverse effects of anti-cancer drugs 
-
-Identify common classifications of adverse effects 
-</td>
-              <td>Explain common anti-cancer drugs and their adverse effects 
-Apply adverse effects-related knowledge in oncology nursing care (assess, educate, and support to management of adverse effects)
-              </td>
-              <td>Common anti-cancer drugs and classification of adverse effects (based on mechanism of drugs/ drug groups/ presenting time)
-              </td>
-            </tr>
-          </table>
-        `
+        content: '' // Content handled by React component
       },
       {
         id: 'overview-cancer',
         title: 'Overview of Cancer',
-        content: `
-          <p>Cancer is the generic name for neoplasms/tumors. Tumors are of two types, benign and cancerous. Benign tumors grow slowly and usually do not invade other tissues or convert to cancer. Cancerous tumors are referred to as malignant tumors and demonstrate uncontrolled cell division and the potential to invade surrounding tissues by destroying normal cells12. Cancers may be developed in solid or liquid tissues. In solid cancers, abnormal cells create a mass or lump (Eg, breast and prostate cancers). Many types of cancers belong to solid cancers. The abnormal cell buildup in the blood, bone marrow, and lymphatic system is considered liquid cancer (Eg: leukemia, myeloma). The first-developed cancer is known as primary cancer, and it is localized, not tend to spread to other organs1. Secondary cancer or metastasis refers to the growth of primary cancer at a new site with the distribution of cancer cells through blood and lymph.</p>
-          <h3>Development of cancer</h3>
-          <div className="flex justify-center mb-8">
-            <img
-              src={cells}
-              alt="Healthcare professionals"
-              className="rounded-2xl shadow-2xl max-w-md"
-            />
-            <img
-              src={cell}
-              alt="Healthcare professionals"
-              className="rounded-2xl shadow-2xl max-w-md"
-            />
-          </div>
-          `
+        content: '' // Content handled by React component
       },
       {
         id: 'cancer-epidemiology',
         title: 'Cancer Epidemiology',
-        content: `
-          <h2>Cancer Epidemiology</h2>
-          <p>Cancer is a global health concern. It causes one in six deaths (16.8%) globally. GLOBACAN cancer statistics reported 20 million new cases and 9.7 million deaths in 2022. Over 35 million new cancer cases and a 77% increment in incidence is predicted by 2050 compared to the year 2022. Lung cancer is the most widely prevalent cancer globally (2.5 million; 12.4% new cases) and female breast cancer ranked second (2.3 million cases, 11.6%), followed by colorectal cancer (1.9 million cases, 9.6%), prostate cancer (1.5 million cases, 7.3%), and stomach cancer (970 000 cases, 4.9%). The incidence and deaths are increasing in Asia. According to the latest Sri Lankan statistics, oral (lip, tongue and mouth), trachea, bronchus and lung, colorectal (colon and rectum), esophagus and prostate cancers were common among males. Out of all types of cancers among males in Sri Lanka, 15% represented lip, tongue, and mouth cancers5.  Breast, thyroid, colon, ovarian, and cervical cancers were commonly prevalent cancers among women in Sri Lanka. Out of all types of cancers among women in Sri Lanka, breast cancers were prominent (27%).  </p>
-        `
+        content: '' // Content handled by React component
       },
       {
         id: 'cancer-management',
         title: 'Cancer Management',
-        content: `
-          <p>The well-known treatment modalities of cancer include surgery, radiotherapy, and drug therapies (chemotherapy, hormone therapy, targeted therapy, immunotherapy) (Table 2). The type of treatment depends on the cancer diagnosis (type and stage of cancer, organ type, condition of the cells). The principal goal of the treatment is improving the quality of life and /or overall survival.</p> 
-          <h3>Cancer treatment types</h3>
-          <table>
-            <tr>
-              <th>Treatment Type</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td>Surgery</td>
-              <td>A surgical operation to remove cancer/ body parts affected by cancer</td>
-            </tr>
-            <tr>
-              <td>Radiotherapy</td>
-              <td>The use of controlled doses of radiation to destroy or damage cancer cells does not allow them to grow, multiply, or spread.</td>
-            </tr>
-            <tr>
-              <td>Drug therapies</td>
-              <td>Chemotherapy - Kill cancer cells or slow their growth
-Hormone therapy - Replace natural hormones in some types of cancer
-Immunotherapy - Affects the immune system. (Harness power of the immune system to act against cancer). 
-Targeted therapy - Target specific features of cancer cells to stop the growth or spread of cancer cells
-</td>
-            </tr>
-            <tr>
-              <td>Other</td>
-              <td>Chemoradiation - Combined treatment of chemotherapy and radiotherapy 
-Stem cell transplant - Destroy blood cells by high-dose chemotherapy and replace healthy stem cells with blood cancers such as leukemia, lymphoma and myeloma
-</td>
-            </tr>
-          </table>
-
-          <p>In addition to the cancer treatment classification mentioned above, purpose-based cancer therapies are established.</p>
-
-          <h3>Purpose-based cancer therapies</h3>
-          <table>
-            <tr>
-              <th>Cancer therapy</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td>Adjuvant therapy</td>
-              <td>Use of drugs after their primary surgery. Useful to eradicate microscopic cancer cells</td>
-            </tr>
-            <tr>
-              <td>Neoadjuvant therapy </td>
-              <td>Primarily used to shrink locally advanced and large cancers before surgery to facilitate the surgical resection</td>
-            </tr>
-            <tr>
-              <td>Palliative therapy</td>
-              <td>Control of symptoms in advanced and incurable to improve quality of life and survival</td>
-            </tr>
-            <tr>
-              <td>Systemic therapy</td>
-              <td>Kill and modify malignant cells, leaving the unharmed normal cells</td>
-            </tr>
-          </table>
-        `
+        content: '' // Content handled by React component
       },
       {
         id: 'properties-hazardous-drugs',
         title: 'Properties of Hazardous Drugs',
-        content: `
-          <h2>Properties of Hazardous Drugs</h2>
-          <p>Anti-cancer chemotherapy and a few other drug groups (antiviral drugs, hormones, some bioengineered drugs, and other miscellaneous drugs) are considered hazardous drugs (HDs) due to the below-mentioned characteristics.</p>
-          <ul>
-            <li>Carcinogenicity</li>
-            <li>Teratogenicity or developmental toxicity</li>
-            <li>Reproductive toxicity</li>
-            <li>Organ toxicity at low doses</li>
-            <li>Genotoxicity</li>
-            <li>Structure and toxicity profiles of new drugs that mimic existing drugs determined hazardous by the above criteria</li>
-          </ul>
-        `
+        content: '' // Content handled by React component
       },
       {
         id: 'chemotherapy-adverse-effects',
         title: 'Chemotherapy and Adverse Effects',
-        content: `
-          <h2>Chemotherapy and Adverse Effects</h2>
-          <p>Chemotherapy is a general term to indicate the use of chemicals as a therapy. However, the term is commonly used for cytotoxic chemotherapy in cancer management and is considered as hazardous drugs. Systemic Anti-Cancer Therapy (SACT) refers to drug-based cancer treatments introduced as systemic therapy and it includes chemotherapy, hormone drugs, immunotherapy, targeted therapy, and antibody-drug conjugates. SACT can be used either alone or in combination with other types of treatments such as surgery or radiation therapy and combination treatments are effective and common in the eradication or mitigation of cancer. Chemotherapy is administered through oral, intravenous (IV), subcutaneous (SC), intramuscular (IM), or intrathecal routes (IT). IV route administration is common due to increased bioavailability, versatility, and flexibility in treatment dosages when compared to other routes of administration.
-Chemotherapeutic agents were developed in the 1940s and were primarily used to treat cancer and a few other non-oncology indications such as arthritis, and lupus. Chemotherapy shows cytotoxic properties (kills cancer cells) in providing therapeutic efficacy. Non-selective mechanisms and narrow therapeutic properties of many agents cause numerous adverse effects. Therefore, target-specific drugs which mainly target cancer cells or specific proteins on cancer cells are introduced. However, those agents are not cost-effective with advanced processing mechanisms. 
-Adverse effects of chemotherapy are mainly classified according to the general mechanisms of drugs (non-selective vs target-specific mechanisms; Table 4), drug groups (Table 5), body systems or organs (cardiac, hepatic, renal, hematopoietic, pulmonary, reproductive, dermal etc.), adverse effects presenting time (acute vs chronic; Figure 2). </p>
-         <h3>Table 4: Classification of chemotherapy and adverse effects (non-selective vs target-specific drugs) </h3>
-          <table>
-            <tr>
-              <th></th>
-              <th>Non-specific anticancer drugs
-                </th>
-              <th>Target specific anti-cancer drugs </th>
-            </tr>
-
-            <tr>
-              <td>Mechanism
-              </td>
-              <td>Act on both malignant and normal cells
-              <div className="flex justify-center mb-8">
-            <img
-              src={twoincorrect}
-              alt="Healthcare professionals"
-              className="rounded-2xl shadow-2xl max-w-md"
-            />
-          </div>
-</td>
-              <td>Act selectively only on malignant cell
-              <div className="flex justify-center mb-8">
-            <img
-              src={oneincorrect}
-              alt="Healthcare professionals"
-              className="rounded-2xl shadow-2xl max-w-md"
-            />
-          </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Example drugs</td>
-              <td>Methotrexate
-5-Fluroacil 
-Cychphophamids
-Cisplatin
-Doxorubicin
-Irinotecan
-Mitoxantrone
-Vinblastine
-Paclitaxel
-Tamoxifen
-</td>
-              <td>Imatinib
-Sorofenib
-Palbociclib
-Bevacizumub
-Bortezomib
-Mitoxantrone
-Trastzumab
-Cetuximab
-Brentuximab
-Elotuzumub
-
-              </td>
-            </tr>
-
-            <tr>
-              <td>Adverse effects </td>
-              <td>Thrombocytopenia
-Neutropenia
-GI issues
-Neurotoxicity
-Myelosuppression
-Secondary leukaemia
-Peripheral neuropathy
-
-              </td>
-              <td>Nausea
-Vomiting
-Skin toxicities
-Dry skin
-Congestive heart failure
-Hypertension
-Proteinuria
-
-              </td>
-            </tr>
-          </table> 
-
-          <p>Adverse effects are frequently categorized according to drug groups since those correspond with the particular mechanism of action (Table 5).</p>
-
-          <h3>Table 5: Classification of chemotherapy (drug-group wise) and adverse effects</h3>
-          <table>
-            <tr>
-              <th>Main drug group</th>
-              <th>Sub-classes</th>
-              <th>Example drugs</th>
-              <th>Common toxicities</th>
-            </tr>
-
-            <tr>
-              <td>Alkylating agents</td>
-              <tr>
-                <td>Nitrogen mustards</td>
-                <td>Cyclophosphamide
-    Ifosfamide</td>
-                <td>Nausea, vomiting, bone marrow depression, cystitis, pulmonary fibrosis, infertility, premature menopause, myelodysplasia, secondary neoplasia</td>
-              </tr>
-              <tr>
-                <td>Platinum agents</td>
-                <td>Cisplatin
-    Carboplatin
-    Oxaliplatin
-    </td>
-                <td>Bone marrow depression, nausea, vomiting, allergy, nephrotoxicity, hypomagnesaemia, hypocalcemia, hypokalemia, hypophosphatemia, hyperuricemia, Raynaud’s diseases, sterility, teratogenicity, ototoxicity, peripheral neuropathy, cold dysesthesia, laryngopharyngeal dysaesthesia</td>
-              </tr>
-            </tr>
-
-            <tr>
-              <td>Anti-metabolites</td>
-              <tr>
-                <td>Folic acid analogues</td>
-                <td>Methotrexate
-Pemetrexed
-Pralatrexate 
-</td>
-                <td>Acute renal failure, neurotoxicity, hepatotoxicity</td>
-              </tr>
-              <tr>
-                <td>Pyrimidine analogues</td>
-                <td>5-fluorouracil
-Capecitabine
-Floxuridine
-Gemcitabine</td>
-                <td>GI issues, leukopenia, thrombocytopenia, hemorrhage</td>
-              </tr>
-            </tr>
-
-            <tr>
-              <td>Anti-mitotic agents</td>
-              <tr>
-                <td>Vinca alkaloids</td>
-                <td>Vincristine
-Vinblastine
-Vinorelbine
-</td>
-                <td>Leukopenia, thrombocytopenia, anaemia, 
-peripheral neuropathy, neuronal death</td>
-              </tr>
-              <tr>
-                <td>Taxanes</td>
-                <td>Docetaxcel
-Carbazitaxel
-Paclitaxcel
-    </td>
-                <td>Nausea, vomiting, hypersensitivity, bone marrow depression, fluid retention, peripheral neuropathy, alopecia, arthralgia, myalgias, cardiac toxicity, mild GI disturbances, mucositis</td>
-              </tr>
-            </tr>
-
-            <tr>
-              <td>Topoisomerase inhibitors</td>
-              <tr>
-                <td>Topoisomerase 1 inhibitors</td>
-                <td>Irinotecan
-Topotecan</td>
-                <td>Diarrhoea, abdominal cramps, hair loss or thinning, increased sweating and saliva, nausea, vomiting, loss of appetite, tiredness, watery eyes, occasionally cause mouth sores and ulcers, muscle cramps, rashes, myelosuppression</td>
-              </tr>
-              <tr>
-                <td>Topoisomerase 2 inhibitors</td>
-                <td>Etoposide
-Teniposide
-    </td>
-                <td>Hair loss, nausea and vomiting, anorexia, stomatitis, bone marrow suppression, leukopenia</td>
-              </tr>
-            </tr>
-
-            <tr>
-              <td>Anti-tumor antibiotics</td>
-              <tr>
-                <td>Anthracycline</td>
-                <td>Doxorubicin
-Daunorubicin
-Epirubicin
-Idarubicin
-Valrubicin
-</td>
-                <td>Nausea, vomiting, bone marrow depression, cardiotoxicity, red-colour urine, severe local tissue damage with extravasation, alopecia, stomatitis, anorexia, conductivities, acral pigmentation, dermatitis, hyperuricemia</td>
-              </tr>
-              <tr>
-                <td>Other</td>
-                <td>Mitoxantrone
-Bleomycin
-    </td>
-                <td>Bone marrow suppression, Irreversible cardiomyopathy, anaphylactic reactions</td>
-              </tr>
-            </tr>
-
-            <tr>
-              <td>Immunotherapy</td>
-              <tr>
-                <td>Monoclonal antibodies</td>
-                <td>Rituximab
-Ofatumumab
-Obinutuzumab
-Alemtuzumab
-Daratumumab
-</td>
-                <td>Infusion-related reactions (including fever,
-chills, shortness of breath, low blood pressure, and anaphylaxis) myelosuppression, increased risk of opportunistic infections, liver toxicity
-</td>
-              </tr>
-              <tr>
-                <td>Small molecules</td>
-                <td>Thalidomide
-Lenalidomide
-Pomalidomide
-    </td>
-                <td></td>
-              </tr>
-            </tr>
-          </table> 
-
-          <p>Adverse effects of chemotherapy can be outlined according to the presenting time. Generally, reversible adverse effects are present after administration of chemotherapy and are considered as acute adverse effects. Late effects are regarded as long-term and non-reversible.</p>
-
-          <h3>Adverse effects of chemotherapy (Acute vs chronic)</h3>
-          <div className="flex justify-center mb-8">
-            <img
-              src={AdverseEffects}
-              alt="Healthcare professionals"
-              className="rounded-2xl shadow-2xl max-w-md"
-            />
-          </div>
-        `
+        content: '' // Content handled by React component
       },
       {
         id: 'summary',
         title: 'Summary',
-        content: `
-          <p>Cancer refers to abnormal cell growth, categorized as benign (non-cancerous) or malignant (cancerous). Malignant tumors invade surrounding tissues and show metastasis properties by spreading to new sites through blood or lymph. Cancer is a leading cause of global deaths, and it is expected to rise by 77% by 2050. Lung, breast, colorectal, prostate, and stomach cancers are globally common. Anti-cancer treatment modalities include surgery, radiotherapy, and SACT (chemotherapy, hormone therapy, targeted therapy, and immunotherapy). 
-The non-selective mechanism and narrow therapeutic index of anti-cancer chemotherapy cause a wide variety of adverse effects. Due to the inherent toxic properties of chemotherapy, it is categorized as a hazardous drug. Adverse effects are mainly classified according to the drug groups and their presenting time. The common adverse effects include nausea, vomiting, headache, hypersensitivity reactions, alopecia, GI disturbance, tumor lysis syndrome, bone marrow suppression, secondary malignancies, and reproductive adverse effects. 
-</p>
-       <div className="flex justify-center mb-8">
-            <img
-              src={summary01}
-              alt="Healthcare professionals"
-              className="rounded-2xl shadow-2xl max-w-md"
-            />
-          </div>
-        `
+        content: '' // Content handled by React component
       }
     ]
   },
@@ -444,6 +51,11 @@ The non-selective mechanism and narrow therapeutic index of anti-cancer chemothe
     icon: '⚠️',
     description: 'Evidence of exposure, routes, and risk activities among healthcare workers',
     subTopics: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content: '' // Content handled by React component
+      }, 
       {
         id: 'evidence-exposure',
         title: 'Evidence of Occupational Exposure',
@@ -526,18 +138,7 @@ The non-selective mechanism and narrow therapeutic index of anti-cancer chemothe
       {
         id: 'summary',
         title: 'Summary',
-        content: `
-          <p>Cancer refers to abnormal cell growth, categorized as benign (non-cancerous) or malignant (cancerous). Malignant tumors invade surrounding tissues and show metastasis properties by spreading to new sites through blood or lymph. Cancer is a leading cause of global deaths, and it is expected to rise by 77% by 2050. Lung, breast, colorectal, prostate, and stomach cancers are globally common. Anti-cancer treatment modalities include surgery, radiotherapy, and SACT (chemotherapy, hormone therapy, targeted therapy, and immunotherapy). 
-The non-selective mechanism and narrow therapeutic index of anti-cancer chemotherapy cause a wide variety of adverse effects. Due to the inherent toxic properties of chemotherapy, it is categorized as a hazardous drug. Adverse effects are mainly classified according to the drug groups and their presenting time. The common adverse effects include nausea, vomiting, headache, hypersensitivity reactions, alopecia, GI disturbance, tumor lysis syndrome, bone marrow suppression, secondary malignancies, and reproductive adverse effects. 
-</p>
-       <div className="flex justify-center mb-8">
-            <img
-              src={summary01}
-              alt="Healthcare professionals"
-              className="rounded-2xl shadow-2xl max-w-md"
-            />
-          </div>
-        `
+        content: '' // Content handled by React component
       }
     ]
   },
@@ -547,6 +148,11 @@ The non-selective mechanism and narrow therapeutic index of anti-cancer chemothe
     icon: '🛡️',
     description: 'Engineering controls, administrative measures, and PPE for safe handling',
     subTopics: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content: '' // Content handled by React component
+      },
       {
         id: 'standard-guidelines',
         title: 'Standard Guidelines',
@@ -684,6 +290,11 @@ The non-selective mechanism and narrow therapeutic index of anti-cancer chemothe
             <li>Sleeve covers when needed</li>
           </ul>
         `
+      },
+      {
+        id: 'summary',
+        title: 'Summary',
+        content: '' // Content handled by React component
       }
     ]
   },
@@ -693,6 +304,11 @@ The non-selective mechanism and narrow therapeutic index of anti-cancer chemothe
     icon: '📋',
     description: 'Best practices for receiving, preparing, administering, and disposing',
     subTopics: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content: '' // Content handled by React component
+      },
       {
         id: 'receiving-storage',
         title: 'Receiving, Distribution, and Storage',
@@ -1083,6 +699,11 @@ The non-selective mechanism and narrow therapeutic index of anti-cancer chemothe
             <li>Medical surveillance results</li>
           </ul>
         `
+      },
+      {
+        id: 'summary',
+        title: 'Summary',
+        content: '' // Content handled by React component
       }
     ]
   },
@@ -1092,6 +713,11 @@ The non-selective mechanism and narrow therapeutic index of anti-cancer chemothe
     icon: '🎓',
     description: 'Factors affecting compliance and effectiveness of education programs',
     subTopics: [
+      {
+        id: 'introduction',
+        title: 'Introduction',
+        content: '' // Content handled by React component
+      },
       {
         id: 'barriers-safety',
         title: 'Barriers to Following Safety Precautions',
@@ -1214,6 +840,11 @@ The non-selective mechanism and narrow therapeutic index of anti-cancer chemothe
             <li>Organizational support for implementing learning</li>
           </ul>
         `
+      },
+      {
+        id: 'summary',
+        title: 'Summary',
+        content: '' // Content handled by React component
       }
     ]
   },

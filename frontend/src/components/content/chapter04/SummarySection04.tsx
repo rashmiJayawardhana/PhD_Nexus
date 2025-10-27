@@ -13,18 +13,11 @@ export const SummarySection04: React.FC = () => {
       'Recommendations for handling chemotherapy are established in the guidelines considering the role or activity of handling. Education, training, appropriate facilities and PPE and skills are vital to perform activities related to handling chemotherapy. Chapter 04 discusses the recommendations that are most important to local setting nurses since the present e-module is used as educational material.  Therefore, chapter 04 included the work practices related to receiving, distribution, and storage of HDs, compounding HDs, transport of compounded HDs, administration of chemotherapy, disposal of waste, cleaning and decontamination of HD equipment and work surfaces, deactivation, decontamination, handling spills, contaminated bed linen, recommendations are made to avoid exposure, emergency procedures for personnel contamination with HDs,  training personnel in handling HDs and Medical Surveillance.'
     ],
     keyPoints: [
-      'Adverse effects vary by drug group and timing of presentation'
+      ''
     ],
     images: [
       {
         src: summaryImage,
-        alt: '',
-        caption: '',
-        size: 'full', // Use preset: small, medium, large, full, auto
-        objectFit: 'contain' // How image should fit: contain, cover, fill, none, scale-down
-      },
-      {
-        src: summaryImage2,
         alt: '',
         caption: '',
         size: 'full', // Use preset: small, medium, large, full, auto

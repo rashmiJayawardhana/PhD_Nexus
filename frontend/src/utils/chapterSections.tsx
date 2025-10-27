@@ -2,7 +2,7 @@
 // Utility to get sections for each chapter
 // ============================================
 import type { ContentSection } from '@/types/content';
-import { IntroductionSection } from '@/components/content/chapter01/IntroductionSection';
+import { IntroductionSection01 } from '@/components/content/chapter01/IntroductionSection01';
 import { CancerOverviewSection } from '@/components/content/chapter01/CancerOverviewSection';
 import { EpidemiologySection } from '@/components/content/chapter01/EpidemiologySection';
 import { TreatmentSection } from '@/components/content/chapter01/TreatmentSection';
@@ -15,6 +15,10 @@ import { SummarySection03 } from '@/components/content/chapter03/SummarySection0
 import { SummarySection04 } from '@/components/content/chapter04/SummarySection04';
 import { SummarySection05 } from '@/components/content/chapter05/SummarySection05';
 import ChemotherapySection from '@/components/content/chapter01/ChemotherapySection';
+import { IntroductionSection02 } from '@/components/content/chapter02/IntroductionSection02';
+import { IntroductionSection03 } from '@/components/content/chapter03/IntroductionSection03';
+import { IntroductionSection04 } from '@/components/content/chapter04/IntroductionSection04';
+import { IntroductionSection05 } from '@/components/content/chapter05/IntroductionSection05';
 // TODO: Add imports for other chapter components when implemented
 // e.g., import { EvidenceExposureSection } from '@/components/content/chapter02/EvidenceExposureSection';
 
@@ -24,8 +28,8 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
       { 
         id: 'intro', 
         title: 'Introduction', 
-        content: <IntroductionSection />,
-        chapterTitle: 'Chapter 01: Introduction',
+        content: <IntroductionSection01 />,
+        chapterTitle: 'Introduction',
         chapterDescription: 'Overview of cancer, epidemiology, treatment methods, and adverse effects'
       },
       { id: 'overview', title: 'Overview of Cancer', content: <CancerOverviewSection /> },
@@ -37,17 +41,29 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
     ],
     'chapter-02': [
       { 
+        id: 'intro', 
+        title: 'Introduction', 
+        content: <IntroductionSection02 />,
+        chapterTitle: 'Occupational Exposure to Chemotherapy',
+        chapterDescription: 'Overview of cancer definition, epidemiology, treatment methods, adverse drug effects'
+      },
+      { 
         id: 'evidence', 
         title: 'Evidence of Occupational Exposure', 
-        content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Evidence of Occupational Exposure (implement EvidenceExposureSection)</div>,
-        chapterTitle: 'Chapter 02: Occupational Exposure',
-        chapterDescription: 'Evidence of exposure, routes, and risk activities among healthcare workers'
+        content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Chemotherapy Exposure Routes (implement ExposureRoutesSection)</div> 
       },
       { id: 'routes', title: 'Chemotherapy Exposure Routes', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Chemotherapy Exposure Routes (implement ExposureRoutesSection)</div> },
       { id: 'adverse', title: 'Adverse Effects Among Healthcare Workers', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Adverse Effects Among Healthcare Workers (implement AdverseEffectsHcwsSection)</div> },
       { id: 'summary', title: 'Summary', content: <SummarySection02 /> }
     ],
     'chapter-03': [
+      { 
+        id: 'intro', 
+        title: 'Introduction', 
+        content: <IntroductionSection03 />,
+        chapterTitle: 'Hierarchical Controls in Handling Chemotherapy',
+        chapterDescription: 'Overview of hierarchical controls for handling chemotherapy/ HDs'
+      },
       { 
         id: 'standard', 
         title: 'Standard Guidelines', 
@@ -61,6 +77,13 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
       { id: 'summary', title: 'Summary', content: <SummarySection03 /> }
     ],
     'chapter-04': [
+      { 
+        id: 'intro', 
+        title: 'Introduction', 
+        content: <IntroductionSection04 />,
+        chapterTitle: 'Recommendations for Handling Chemotherapy',
+        chapterDescription: 'Overview of recommendations and best practices in handling chemotherapy'
+      },
       { 
         id: 'receiving', 
         title: 'Receiving, Distribution, and Storage', 
@@ -79,6 +102,13 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
       { id: 'summary', title: 'Summary', content: <SummarySection04 /> }
     ],
     'chapter-05': [
+      { 
+        id: 'intro', 
+        title: 'Introduction', 
+        content: <IntroductionSection05 />,
+        chapterTitle: 'Barriers to Following Safety Precautions & The Impact of Education Programs Towards Safe Practices',
+        chapterDescription: 'Overview of barriers that contribute to safety precautions and occupational exposure and the impact of education towards safe practices'
+      },
       { 
         id: 'barriers', 
         title: 'Barriers to Following Safety Precautions', 

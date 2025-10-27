@@ -34,7 +34,7 @@ export const useContentNavigation = (
         'cancer-epidemiology': 'epidemiology',
         'cancer-management': 'treatment',
         'properties-hazardous-drugs': 'hazardous',
-        'chemotherapy-adverse-effects': 'adverse',
+        'chemotherapy-adverse-effects': 'chemotherapy',
         'summary': 'summary' 
       };
       setActiveSection(sectionMap[subTopicId] || 'intro');
@@ -43,6 +43,7 @@ export const useContentNavigation = (
     // Map subtopic IDs to section IDs for Chapter 02
     if (chapterId === 'chapter-02') {
       const sectionMap: Record<string, string> = {
+        'introduction': 'intro',
         'evidence-exposure': 'evidence',
         'exposure-routes': 'routes',
         'adverse-effects-hcws': 'adverse',
@@ -54,6 +55,7 @@ export const useContentNavigation = (
     // Map subtopic IDs to section IDs for Chapter 03
     if (chapterId === 'chapter-03') {
       const sectionMap: Record<string, string> = {
+        'introduction': 'intro',
         'standard-guidelines': 'standard',
         'hierarchical-controls-overview': 'hierarchical',
         'engineering-controls': 'engineering',
@@ -66,6 +68,7 @@ export const useContentNavigation = (
     // Map subtopic IDs to section IDs for Chapter 04
     if (chapterId === 'chapter-04') {
       const sectionMap: Record<string, string> = {
+        'introduction': 'intro',
         'receiving-storage': 'receiving',
         'compounding-hds': 'compounding',
         'administration': 'administration',
@@ -83,6 +86,7 @@ export const useContentNavigation = (
     // Map subtopic IDs to section IDs for Chapter 05
     if (chapterId === 'chapter-05') {
       const sectionMap: Record<string, string> = {
+        'introduction': 'intro',
         'barriers-safety': 'barriers',
         'education-impact': 'education',
         'summary': 'summary' 
