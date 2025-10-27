@@ -17,7 +17,6 @@ interface ChapterIntroductionProps {
 export const IntroductionSection: React.FC<ChapterIntroductionProps> = ({
   chapterNumber,
   description,
-  nurseNote,
   tableTitle,
   rows
 }) => (

@@ -4,7 +4,6 @@
 import { SummarySection } from '../SummarySection';
 import type { SummaryData } from '@/types/content';
 import summaryImage from '../../../assets/summary04.webp';
-import summaryImage2 from '../../../assets/summary04-2.png';
 
 export const SummarySection04: React.FC = () => {
   const summaryData: SummaryData = {
