@@ -22,6 +22,9 @@ export const EpidemiologySection: React.FC = () => (
         <StatCard number="2.3M" label="Breast Cancer Cases (11.6%)" color="bg-pink-100" />
         <StatCard number="1.9M" label="Colorectal Cancer (9.6%)" color="bg-blue-100" />
       </div>
+      <p className="text-slate-700 leading-relaxed mb-6 mt-2">
+        Lung cancer is the most widely prevalent cancer globally (2.5 million cases; 12.4% new cases) and female breast cancer ranked second (2.3 million cases, 11.6%), followed by colorectal cancer (1.9 million cases, 9.6%), prostate cancer (1.5 million cases, 7.3%), and stomach cancer (970 000 cases, 4.9%). The incidence and deaths are increasing in Asia. 
+      </p>
 
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-blue-50 rounded-lg p-5 border-2 border-blue-200">

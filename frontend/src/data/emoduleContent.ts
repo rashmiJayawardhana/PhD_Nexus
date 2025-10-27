@@ -522,6 +522,22 @@ The non-selective mechanism and narrow therapeutic index of anti-cancer chemothe
             <li>Blood count abnormalities</li>
           </ul>
         `
+      },
+      {
+        id: 'summary',
+        title: 'Summary',
+        content: `
+          <p>Cancer refers to abnormal cell growth, categorized as benign (non-cancerous) or malignant (cancerous). Malignant tumors invade surrounding tissues and show metastasis properties by spreading to new sites through blood or lymph. Cancer is a leading cause of global deaths, and it is expected to rise by 77% by 2050. Lung, breast, colorectal, prostate, and stomach cancers are globally common. Anti-cancer treatment modalities include surgery, radiotherapy, and SACT (chemotherapy, hormone therapy, targeted therapy, and immunotherapy). 
+The non-selective mechanism and narrow therapeutic index of anti-cancer chemotherapy cause a wide variety of adverse effects. Due to the inherent toxic properties of chemotherapy, it is categorized as a hazardous drug. Adverse effects are mainly classified according to the drug groups and their presenting time. The common adverse effects include nausea, vomiting, headache, hypersensitivity reactions, alopecia, GI disturbance, tumor lysis syndrome, bone marrow suppression, secondary malignancies, and reproductive adverse effects. 
+</p>
+       <div className="flex justify-center mb-8">
+            <img
+              src={summary01}
+              alt="Healthcare professionals"
+              className="rounded-2xl shadow-2xl max-w-md"
+            />
+          </div>
+        `
       }
     ]
   },

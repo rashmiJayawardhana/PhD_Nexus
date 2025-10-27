@@ -2,6 +2,8 @@
 import { chapter1Data } from "@/data/emoduleContent/chapter1Data";
 import { ContentCard } from "../ContentCard";
 import { InfoBox } from "../InfoBox";
+import cells from '../../../assets/cells.png';
+import cell from '../../../assets/cell.png';
 
 export const CancerOverviewSection: React.FC = () => (
   <>
@@ -22,6 +24,18 @@ export const CancerOverviewSection: React.FC = () => (
           </div>
         ))}
       </div>
+      <div className="flex justify-center m-8 gap-5">
+            <img
+              src={cells}
+              alt="Healthcare professionals"
+              className="rounded-xl shadow-xl max-w-md w-auto border-2 border-slate-200"
+            />
+            <img
+              src={cell}
+              alt="Healthcare professionals"
+              className="rounded-xl shadow-xl max-w-md w-auto border-2 border-slate-200"
+            />
+          </div>
     </ContentCard>
 
     <InfoBox type="tip">

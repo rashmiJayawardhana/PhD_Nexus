@@ -24,10 +24,10 @@ export const chapter1Data = {
   cancerOverview: {
     definition: "Cancer is the generic name for neoplasms/tumors. Tumors are of two types, benign and cancerous. Benign tumors grow slowly and usually do not invade other tissues or convert to cancer. Cancerous tumors are referred to as malignant tumors and demonstrate uncontrolled cell division and the potential to invade surrounding tissues by destroying normal cells. Cancers may be developed in solid or liquid tissues.",
     types: [
-      { name: "Solid Cancers", description: "Abnormal cells create a mass or lump (e.g., breast and prostate cancers)" },
+      { name: "Solid Cancers", description: "Abnormal cells create a mass or lump (e.g., breast and prostate cancers). Many types of cancers belong to solid cancers." },
       { name: "Liquid Cancers", description: "Abnormal cell buildup in blood, bone marrow, and lymphatic system (e.g., leukemia, myeloma)" },
-      { name: "Primary Cancer", description: "First-developed cancer, localized, not tending to spread" },
-      { name: "Secondary Cancer/Metastasis", description: "Growth of primary cancer at new site through blood and lymph distribution" }
+      { name: "Primary Cancer", description: "First-developed cancer, localized, not tend to spread to other organs" },
+      { name: "Secondary Cancer/Metastasis", description: "Growth of primary cancer at a new site with the distribution of cancer cells through blood and lymph" }
     ]
   },
 
@@ -40,7 +40,7 @@ export const chapter1Data = {
       "Female breast cancer second (2.3M cases, 11.6%)"
     ],
     sriLanka: {
-      males: "Oral (lip, tongue, mouth), trachea, bronchus and lung, colorectal, esophagus, and prostate cancers were common. Lip, tongue, and mouth cancers represented 15% of all male cancers.",
+      males: "Oral (lip, tongue, mouth), trachea, bronchus and lung, colorectal (colon and rectum), esophagus, and prostate cancers were common. Lip, tongue, and mouth cancers represented 15% of all male cancers.",
       females: "Breast, thyroid, colon, ovarian, and cervical cancers were commonly prevalent. Breast cancers were prominent at 27% of all female cancers."
     }
   }

@@ -23,7 +23,7 @@ export const IntroductionSection: React.FC = () => (
       </InfoBox>
     </ContentCard>
 
-    <ContentCard title="Learning Outcomes & Competencies" icon={<CheckCircle className="w-6 h-6 text-green-600" />}>
+    <ContentCard title="Learning Outcomes & Competencies & Content" icon={<CheckCircle className="w-6 h-6 text-green-600" />}>
       <DataTable 
         headers={["Learning Outcomes", "Practice Competencies", "Learning Content"]}
         rows={[
