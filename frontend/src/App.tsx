@@ -49,12 +49,12 @@ const App = () => {
         setIsMobileMenuOpen={setIsMobileMenuOpen}
       />
 
-      <HeroSection />
+      <HeroSection onGetStarted={() => setCurrentPage('content')} />
       
       <FeaturesSection features={features} />
       
       {/* Supporting Healthcare Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-pink-50 to-purple-50">
+      <section className="py-10 px-6 bg-gradient-to-br from-pink-50 to-purple-50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-slate-900 mb-6">
             Supporting Healthcare Professionals
@@ -66,7 +66,7 @@ const App = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-amber-100 via-purple-100 to-blue-100">
+      <section className="py-10 px-6 bg-gradient-to-br from-amber-100 via-purple-100 to-blue-100">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
             Enhance your knowledge and practice of safe chemotherapy handling<br />

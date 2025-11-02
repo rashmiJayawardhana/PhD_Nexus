@@ -26,7 +26,7 @@ export const ContentHeader: React.FC<ContentHeaderProps> = ({
       
       <div className="flex items-center gap-3">
         <BookOpen className="w-10 h-14 text-teal-600" />
-        <h1 className="text-xl font-bold text-slate-900">E-Module Content</h1>
+        <h1 className="text-xl font-bold text-slate-900">Content</h1>
       </div>
 
       <button

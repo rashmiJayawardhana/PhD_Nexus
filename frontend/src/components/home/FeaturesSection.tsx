@@ -1,4 +1,6 @@
+// src/components/home/FeaturesSection.tsx
 import type { Feature } from '../../types';
+// src/data/features.ts - This section's Data file
 
 interface FeaturesSectionProps {
   features: Feature[];

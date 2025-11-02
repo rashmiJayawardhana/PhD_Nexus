@@ -15,8 +15,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack }) => (
       Back to Home
     </button>
 
-    <section className="min-h-screen flex items-center justify-center px-6 py-20">
-      <div className="max-w-5xl mx-auto text-center space-y-8">
+    <section className="min-h-screen flex items-center justify-center px-6 py-5">
+      <div className="max-w-5xl mx-auto text-center space-y-4">
         <div className="space-y-4">
           <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-blue-400 to-purple-400">
             Chemosafe
@@ -44,7 +44,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack }) => (
             <h2 className="text-3xl font-bold text-white">Our Mission</h2>
           </div>
           <p className="text-lg text-slate-200 leading-relaxed">
-            Chemosafe is a website developed as part of a tailored educational program designed for oncology nurses in Sri Lanka. This program uses a <span className="text-teal-400 font-semibold">blended learning approach</span>, combining in-person teaching with online learning opportunities. The website hosts interactive e-modules and resources that share best practices for safely handling chemotherapy and other hazardous drugs.
+            Chemosafe is a website developed as part of a tailored educational program for oncology nurses in Sri Lanka. The program follows a <span className="text-teal-400 font-semibold">blended learning approach</span>, combining face-to-face teaching with online learning opportunities. Through this website, nurses can access interactive e-modules and resources that share best practices for the safe handling of chemotherapy and other hazardous drugs.
           </p>
         </div>
 

@@ -18,8 +18,8 @@ export const Footer: React.FC<FooterProps> = ({ onAboutClick }) => (
         </div>
         <div className="space-y-2 text-sm text-slate-700">
           <p><strong>Contact</strong></p>
-          <p>General Inquiries: info@chemosafe.com</p>
-          <p>Support: support@chemosafe.com</p>
+          <p>General Inquiries: samanthisenarath38@gmail.com</p>
+          <p>Support: samanthisenarath38@gmail.com</p>
         </div>
       </div>
 

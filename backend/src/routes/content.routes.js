@@ -1,0 +1,1 @@
+// src/routes/content.routes.js
