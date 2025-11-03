@@ -12,7 +12,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onBack }) => (
     {/* Back Button */}
     <button
       onClick={onBack}
-      className="fixed top-6 left-6 z-50 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition flex items-center gap-2"
+      className="fixed top-6 left-6 z-50 px-6 py-3 bg-white/95 backdrop-blur-md rounded-full text-gray-900 hover:bg-white/20 transition flex items-center gap-2"
     >
       <ArrowLeft className="w-5 h-5" />
       Back to Home
@@ -51,17 +51,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onBack }) => (
         {/* Contact Info - Takes 1 column */}
         <div className="md:col-span-1">
           <ContactInfo />
-        </div>
-      </div>
-    </section>
-
-    {/* Map Section (Optional) */}
-    <section className="py-12 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="bg-white rounded-2xl p-4 shadow-xl overflow-hidden">
-          <div className="aspect-video bg-slate-200 rounded-lg flex items-center justify-center">
-            <p className="text-slate-500">Map Location (Integrate Google Maps API)</p>
-          </div>
         </div>
       </div>
     </section>

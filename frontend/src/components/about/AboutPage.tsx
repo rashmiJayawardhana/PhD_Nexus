@@ -10,7 +10,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack, onContentClick }) 
   <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-900 to-purple-900">
     <button
       onClick={onBack}
-      className="fixed top-6 left-6 z-50 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition flex items-center gap-2"
+      className="fixed top-6 left-6 z-50 px-6 py-3 bg-white/95 backdrop-blur-md rounded-full text-gray-900 hover:bg-white/20 transition flex items-center gap-2"
     >
       <ArrowLeft className="w-5 h-5" />
       Back to Home

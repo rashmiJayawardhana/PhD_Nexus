@@ -709,7 +709,7 @@ export const emoduleContent: Chapter[] = [
   },
   {
     id: 'chapter-05',
-    title: 'Chapter 05: Barriers and Education Impact',
+    title: 'Chapter 05: Safety Precautions',
     icon: '🎓',
     description: 'Factors affecting compliance and effectiveness of education programs',
     subTopics: [

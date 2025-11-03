@@ -19,7 +19,12 @@ const App = () => {
 
   // Render About Page
   if (currentPage === 'about') {
-    return <AboutPage onBack={() => setCurrentPage('home')} />;
+    return (
+      <AboutPage
+        onBack={() => setCurrentPage('home')}
+        onContentClick={() => setCurrentPage('content')} 
+      />
+    );
   }
 
   // Render Contact Page

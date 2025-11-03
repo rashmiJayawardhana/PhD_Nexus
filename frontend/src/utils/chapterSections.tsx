@@ -106,7 +106,7 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
         id: 'intro', 
         title: 'Introduction', 
         content: <IntroductionSection05 />,
-        chapterTitle: 'Barriers to Following Safety Precautions & The Impact of Education Programs Towards Safe Practices',
+        chapterTitle: 'Safety Precautions',
         chapterDescription: 'Overview of barriers that contribute to safety precautions and occupational exposure and the impact of education towards safe practices'
       },
       { 

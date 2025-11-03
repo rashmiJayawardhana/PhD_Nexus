@@ -12,7 +12,7 @@ export const ContactForm = () => {
     subject: '',
     message: ''
   });
-  const [isSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -41,7 +41,7 @@ export const ContactForm = () => {
     } catch (error) {
         setSubmitStatus('error');
     }
-    };
+  };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
