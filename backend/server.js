@@ -11,8 +11,8 @@ import rateLimit from 'express-rate-limit';
 // Import routes
 import authRoutes from './src/routes/auth.routes.js';
 import chapterRoutes from './src/routes/chapter.routes.js';
-import contentRoutes from './src/routes/content.routes.js';
-import uploadRoutes from './src/routes/upload.routes.js';
+//import contentRoutes from './src/routes/content.routes.js';
+//import uploadRoutes from './src/routes/upload.routes.js';
 
 // Load environment variables
 dotenv.config();

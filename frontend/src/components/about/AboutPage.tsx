@@ -3,9 +3,10 @@ import { ArrowLeft, Target, Users, BookOpen, Shield, Lightbulb, ChevronDown, Arr
 
 interface AboutPageProps {
   onBack: () => void;
+  onContentClick: () => void;
 }
 
-export const AboutPage: React.FC<AboutPageProps> = ({ onBack }) => (
+export const AboutPage: React.FC<AboutPageProps> = ({ onBack, onContentClick }) => (
   <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-900 to-purple-900">
     <button
       onClick={onBack}
@@ -149,7 +150,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack }) => (
           {/* Call to Action */}
           <div className="text-center py-12">
             <button 
-              //onClick={() =>()}
+              onClick={onContentClick}
               className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-10 py-4 rounded-full font-semibold transition shadow-2xl hover:shadow-teal-500/50 text-lg flex items-center gap-3 mx-auto"
             >
               Explore Learning Materials
