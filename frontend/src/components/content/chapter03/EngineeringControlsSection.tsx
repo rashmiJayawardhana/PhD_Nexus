@@ -2,14 +2,14 @@
 import { Boxes, Wind, Lock } from 'lucide-react';
 import { ContentCard } from "../ContentCard";
 import { InfoBox } from "../InfoBox";
-import bscImage from '../../../assets/evidence.png';
-import caciImage from '../../../assets/evidence.png';
-import cstdImage from '../../../assets/evidence.png';
+import bscImage from '../../../assets/bsc.png';
+import caciImage from '../../../assets/caci.png';
+import cstdImage from '../../../assets/cstd.png';
 
 export const EngineeringControlsSection: React.FC = () => (
   <>
     <ContentCard 
-      title="Engineering Controls: Overview" 
+      title="Level 3 : Engineering Controls" 
       icon={<Boxes className="w-6 h-6 text-indigo-600" />}
       variant="info"
     >
@@ -46,7 +46,10 @@ export const EngineeringControlsSection: React.FC = () => (
           A ventilated device designed and operated to prepare HDs. It provides a containment ventilated 
           enclosure (CVE) to reduce workers' and environmental exposures to HDs. Examples include Biological 
           Safety Cabinets (BSC), also known as Cytotoxic Drug Safety Cabinets (CDSC), and Compounding 
-          Aseptic Containment Isolators (CACI).
+          Aseptic Containment Isolator (CACI).
+        </p>
+        <p className="text-slate-700 leading-relaxed">
+          Use of C-PEC is recommended when handling antineoplastic drugs categorized as group 1 or 2A carcinogens (according to IARC classification), and recommended to use ventilated engineering controls (according to manufacturer’s instructions). All processes related to drug preparation, mixing, manipulation, counting, crushing, compounding powders, or pouring liquid HDs need to be conducted inside a BSC or isolator to prevent exposure to HDs.
         </p>
 
         {/* BSC Section */}
@@ -54,6 +57,8 @@ export const EngineeringControlsSection: React.FC = () => (
           <h5 className="font-bold text-cyan-900 mb-4">
             Biological Safety Cabinets (BSC) / Cytotoxic Drug Safety Cabinets (CDSC)
           </h5>
+
+          <p>BSC/ CDSCs provide controlled airflow, protection shields, and HEPA filters. Regular monitoring of device readings, maintenance according to the manufacturer’s recommendations and following appropriate techniques are vital for achieving better user outcomes.</p>
           
           <div className="grid md:grid-cols-2 gap-6 mb-4">
             <div>
@@ -93,12 +98,13 @@ export const EngineeringControlsSection: React.FC = () => (
           <div className="bg-white rounded-lg p-4 mt-4">
             <h6 className="font-semibold text-cyan-900 mb-2">BSC Classification:</h6>
             <p className="text-sm text-slate-700 mb-2">
+                BSCs are designed to meet various needs and intended uses.
               BSCs are classified into three classes (I to III). <strong>Class II Type B2 BSCs are 
               recommended</strong> for handling HDs as they provide 100% discharge of contaminated air 
-              to the outdoors and meet regular requirements for handling HDs.
+              to the outdoors and meet the regular requirements for handling HDs.
             </p>
             <p className="text-sm text-slate-700">
-              Some literature also recommends using Class III BSC or isolators if the drug is stable 
+              Some literature also recommends using the Class III BSC or isolators, if the drug is stable 
               enough to prepare.
             </p>
           </div>
@@ -147,7 +153,7 @@ export const EngineeringControlsSection: React.FC = () => (
 
           <div className="bg-white rounded-lg p-4 mt-4">
             <p className="text-sm text-slate-700">
-              <strong>Definition:</strong> CACI is a specific type of compounding aseptic isolator designed 
+              <strong>Definition:</strong> CACI is a specific type of compounding aseptic isolator that is designed 
               for the compounding of sterile HDs. It provides hatches, glove ports, HEPA filters, and a 
               physical barrier between the product and the operator.
             </p>
@@ -227,6 +233,8 @@ export const EngineeringControlsSection: React.FC = () => (
           <h5 className="font-bold text-green-900 mb-4">
             Closed-System Drug-Transfer Devices (CSTDs)
           </h5>
+
+          <p>These are included in CSTDs, Lure lock fittings (fittings that prevent accidental disconnection), needleless systems or safety-engineered needles (which lower the risk of workers receiving percutaneous exposure), and filtered venting devices (such as chemotherapy-dispensing pins and chemotherapy vents).</p>
           
           <div className="grid md:grid-cols-2 gap-6 mb-4">
             <div>
@@ -285,7 +293,7 @@ export const EngineeringControlsSection: React.FC = () => (
               <h6 className="font-bold text-amber-900 mb-1">Critical Warning</h6>
               <p className="text-sm text-slate-700">
                 Although supplemental engineering controls are protective, they should <strong>never 
-                substitute for C-PEC</strong> (BSCs or isolators). Drug preparation must always be 
+                substitute for C-PEC</strong> (for BSCs or isolators). Drug preparation must always be 
                 conducted under C-PEC.
               </p>
             </div>

@@ -13,10 +13,12 @@ export const InfoBox: React.FC<{ type: 'tip' | 'note' | 'critical' | 'success' |
     critical: { bg: 'bg-red-50', border: 'border-red-500', icon: '🚨' }
   };
 
+  const style = styles[type];
+
   return (
-    <div className={`${styles[type].bg} border-l-4 ${styles[type].border} p-4 rounded-r-lg mb-4`}>
+    <div className={`${style.bg} border-l-4 ${style.border} p-4 rounded-r-lg mb-4`}>
       <div className="flex items-start gap-3">
-        {styles[type].icon}
+        <span className="text-xl">{style.icon}</span>
         <div className="text-sm text-slate-700">{children}</div>
       </div>
     </div>

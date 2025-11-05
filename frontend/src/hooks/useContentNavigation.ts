@@ -46,7 +46,6 @@ export const useContentNavigation = (
         'introduction': 'intro',
         'evidence-exposure': 'evidence',
         'exposure-routes': 'routes',
-        'adverse-effects-hcws': 'adverse',
         'summary': 'summary' 
       };
       setActiveSection(sectionMap[subTopicId] || subTopicId);

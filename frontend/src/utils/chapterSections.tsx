@@ -28,6 +28,11 @@ import { ReferencesSection } from '@/components/content/resources/ReferencesSect
 import { GlossarySection } from '@/components/content/resources/GlossarySection';
 import { AcknowledgementsSection } from '@/components/content/resources/AcknowledgementsSection';
 import { AbbreviationsSection } from '@/components/content/resources/AbbreviationsSection';
+import ReceivingStorageSection from '@/components/content/chapter04/ReceivingStorageSection';
+import CompoundingHdsSection from '@/components/content/chapter04/CompoundingHdsSection';
+import AdministrationSection from '@/components/content/chapter04/AdministrationSection';
+import WasteDisposalSection from '@/components/content/chapter04/WasteDisposalSection';
+import CleaningDecontaminationSection from '@/components/content/chapter04/CleaningDecontaminationSection';
 
 export const getChapterSections = (chapterId: string): ContentSection[] => {
   const sectionMap: Record<string, ContentSection[]> = {
@@ -77,7 +82,7 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
       },
       { 
         id: 'hierarchical', 
-        title: 'Hierarchical Controls Overview', 
+        title: 'Hierarchical Controls', 
         content: <HierarchicalControlsOverviewSection /> 
       },
       { 
@@ -107,14 +112,12 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
       { 
         id: 'receiving', 
         title: 'Receiving, Distribution, and Storage', 
-        content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Receiving, Distribution, and Storage (implement ReceivingStorageSection)</div>,
-        chapterTitle: 'Chapter 04: Handling Recommendations',
-        chapterDescription: 'Best practices for receiving, preparing, administering, and disposing'
+        content: <ReceivingStorageSection/>
       },
-      { id: 'compounding', title: 'Compounding Hazardous Drugs', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Compounding Hazardous Drugs (implement CompoundingHdsSection)</div> },
-      { id: 'administration', title: 'Administration of Chemotherapy', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Administration of Chemotherapy (implement AdministrationSection)</div> },
-      { id: 'waste', title: 'Disposal of Waste', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Disposal of Waste (implement WasteDisposalSection)</div> },
-      { id: 'cleaning', title: 'Cleaning and Decontamination', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Cleaning and Decontamination (implement CleaningDecontaminationSection)</div> },
+      { id: 'compounding', title: 'Compounding Hazardous Drugs', content: <CompoundingHdsSection/> },
+      { id: 'administration', title: 'Administration of Chemotherapy', content: <AdministrationSection/> },
+      { id: 'waste', title: 'Disposal of Waste', content: <WasteDisposalSection/> },
+      { id: 'cleaning', title: 'Cleaning and Decontamination', content: <CleaningDecontaminationSection/> },
       { id: 'spill', title: 'Cleaning HD Spills', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Cleaning HD Spills (implement SpillManagementSection)</div> },
       { id: 'reassignment', title: 'Protective Reassignment', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Protective Reassignment (implement ProtectiveReassignmentSection)</div> },
       { id: 'emergency', title: 'Emergency Procedures', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Emergency Procedures (implement EmergencyProceduresSection)</div> },
@@ -129,8 +132,8 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
         chapterTitle: 'Safety Precautions',
         chapterDescription: 'Overview of barriers that contribute to safety precautions and occupational exposure and the impact of education towards safe practices'
       },
-      { id: 'barriers', title: 'Barriers to Safety', content: <BarriersToSafetySection /> },
-      { id: 'education', title: 'Education Impact', content: <EducationImpactSection /> },
+      { id: 'barriers', title: 'Barriers to following safety precautions', content: <BarriersToSafetySection /> },
+      { id: 'education', title: 'Impact of education programs', content: <EducationImpactSection /> },
       { id: 'summary', title: 'Summary', content: <SummarySection05 /> }
     ],
     'resources': [

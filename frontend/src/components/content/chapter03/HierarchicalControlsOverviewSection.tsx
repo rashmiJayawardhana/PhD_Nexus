@@ -14,7 +14,7 @@ export const HierarchicalControlsOverviewSection: React.FC = () => (
     >
       <div className="space-y-4">
         <p className="text-slate-700 leading-relaxed">
-          Hierarchical controls include five levels of precautions in handling chemotherapy and other 
+          Hierarchical controls included five levels of precautions in handling chemotherapy and other 
           hazardous drugs, including (1) elimination, (2) substitution, (3) engineering controls, 
           (4) administrative controls, and (5) PPE.
         </p>
@@ -37,7 +37,7 @@ export const HierarchicalControlsOverviewSection: React.FC = () => (
         </div>
 
         <InfoBox type="note">
-          <strong>Critical Principle:</strong> Applying all levels of precautions, from the most effective to the least adequate, in hierarchical control is vital. However, when it is not possible to apply an upper level of protection, the immediate next level of precautions should be used to ensure occupational and environmental health safety.
+          <strong>Critical Principle:</strong> Applying all levels of precautions, from the most effective to the least adequate, in hierarchical control is vital. However, when it is not possible to apply an upper level of protection, the immediate next level of precautions should be used to ensure occupational and environmental health safety (Table 12).
         </InfoBox>
       </div>
     </ContentCard>
@@ -99,6 +99,10 @@ export const HierarchicalControlsOverviewSection: React.FC = () => (
           </div>
         </div>
       </div>
+      <h5 className="font-bold text-red-900 mb-3">Levels 1 and 2: Elimination and substitution</h5>
+      <p className="text-slate-700 leading-relaxed">
+        Levels 1 and 2 precautions included elimination (removing HDs) and substitution (considering a less toxic drug). Both levels of measures are rarely possible in the clinical setting since the treatment / anti-cancer drug depends on the cancer diagnosis. Therefore, next-level measures (engineering controls, administrative controls, and PPE) need to be appropriately applied in the healthcare settings. 
+        </p>
     </ContentCard>
   </>
 );

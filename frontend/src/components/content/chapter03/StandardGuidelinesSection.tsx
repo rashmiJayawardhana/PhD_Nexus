@@ -51,7 +51,7 @@ export const StandardGuidelinesSection: React.FC = () => (
           ],
           [
             "United States Pharmacopeia (USP)",
-            "Hazardous Drugs--Handling in Healthcare Settings (2016)\n\nUSP chapter 800 (2019)"
+            "Hazardous Drugs-Handling in Healthcare Settings (2016)\n\nUSP chapter 800 (2019)"
           ],
           [
             "Oncology Nurses Society (ONS)",
@@ -98,7 +98,7 @@ export const StandardGuidelinesSection: React.FC = () => (
         rows={[
           [
             "8 - Hazard Communication",
-            "<ul><li>Written plan:\n</li><li>Labeling of HD containers</li><li>Safety Data Sheets (SDS) for all HDs</li><li>Information before initial handling</li><li>Personnel of reproductive capability acknowledge the risks of HDs</li></ul>"
+            "Written plan:\n<ul><li>Labeling of HD containers</li><li>Safety Data Sheets (SDS) for all HDs</li><li>Information before initial handling</li><li>Personnel of reproductive capability acknowledge the risks of HDs</li></ul>"
           ],
           [
             "9 - Personal Training",

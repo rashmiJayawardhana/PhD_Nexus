@@ -58,62 +58,13 @@ export const emoduleContent: Chapter[] = [
       }, 
       {
         id: 'evidence',
-        title: 'Evidence of Occupational Exposure',
+        title: 'Evidence of Occupational Exposure and AEs among HCWs',
         content: '' // Content handled by React component
       },
       {
         id: 'exposure-routes',
-        title: 'Chemotherapy Exposure Routes',
-        content: `
-          <h2>Chemotherapy Exposure Routes and Risk Activities</h2>
-          <h3>Main Exposure Routes</h3>
-          <ol>
-            <li><strong>Inhalation:</strong> Via droplets, particulates, and vapors</li>
-            <li><strong>Dermal Contact:</strong> Direct skin contact with contaminated surfaces</li>
-            <li><strong>Ingestion:</strong> Inadvertent consumption through contaminated food/beverages</li>
-            <li><strong>Needle Stick Injuries:</strong> Accidental injection during handling</li>
-          </ol>
-          <h3>High-Risk Activities</h3>
-          <ul>
-            <li>Drug preparation and compounding</li>
-            <li>Administration to patients</li>
-            <li>Spill management</li>
-            <li>Waste disposal</li>
-            <li>Cleaning contaminated surfaces</li>
-            <li>Handling patient excreta</li>
-          </ul>
-        `
-      },
-      {
-        id: 'adverse-effects-hcws',
-        title: 'Adverse Effects Among Healthcare Workers',
-        content: `
-          <h2>Adverse Effects Among Healthcare Workers</h2>
-          <h3>Acute Effects</h3>
-          <ul>
-            <li>Headaches</li>
-            <li>Nausea and vomiting</li>
-            <li>Hair loss</li>
-            <li>Skin irritation</li>
-            <li>Eye irritation</li>
-            <li>Dizziness</li>
-          </ul>
-          <h3>Reproductive Effects</h3>
-          <ul>
-            <li>Fetal loss and miscarriage (especially first trimester exposure)</li>
-            <li>Infertility</li>
-            <li>Preterm births</li>
-            <li>Learning disabilities in offspring</li>
-            <li>Spontaneous abortions</li>
-          </ul>
-          <h3>Long-term Effects</h3>
-          <ul>
-            <li>Organ toxicity (liver, kidney)</li>
-            <li>DNA damage</li>
-            <li>Increased infection risk</li>
-            <li>Blood count abnormalities</li>
-          </ul>
-        `
+        title: 'Chemotherapy Exposure Routes and Risk Activities',
+        content: ``
       },
       {
         id: 'summary',
@@ -136,63 +87,12 @@ export const emoduleContent: Chapter[] = [
       {
         id: 'standard-guidelines',
         title: 'Standard Guidelines',
-        content: `
-          <h2>Standard Guidelines for Handling Chemotherapy</h2>
-          <h3>Key Organizations and Guidelines</h3>
-          <table>
-            <tr>
-              <th>Organization</th>
-              <th>Guidelines</th>
-            </tr>
-            <tr>
-              <td>NIOSH</td>
-              <td>Alert Preventing Occupational Exposures to Antineoplastic and Other Hazardous Drugs (2004)</td>
-            </tr>
-            <tr>
-              <td>OSHA</td>
-              <td>Controlling Occupational Exposure to Hazardous Drugs (2016)</td>
-            </tr>
-            <tr>
-              <td>USP</td>
-              <td>Chapter 800 - Hazardous Drugs Handling in Healthcare Settings (2019)</td>
-            </tr>
-            <tr>
-              <td>ONS</td>
-              <td>Safe Handling of Hazardous Drugs, 3rd Edition (2017)</td>
-            </tr>
-            <tr>
-              <td>ISOPP</td>
-              <td>Standards for Safe Handling of Cytotoxic Drugs (2007)</td>
-            </tr>
-          </table>
-        `
+        content: ''
       },
       {
         id: 'hierarchical-controls-overview',
-        title: 'Hierarchical Controls Overview',
-        content: `
-          <h2>Hierarchical Controls for Handling Chemotherapy</h2>
-          <p>Five levels of precautionary measures (from most to least effective):</p>
-          <h3>Level 1: Elimination</h3>
-          <p>Remove hazardous drugs from the workplace (rarely possible in clinical settings)</p>
-          
-          <h3>Level 2: Substitution</h3>
-          <p>Use less hazardous alternatives (e.g., tablets instead of IV when clinically appropriate)</p>
-          
-          <h3>Level 3: Engineering Controls</h3>
-          <p>Physical barriers to separate workers from hazards:</p>
-          <ul>
-            <li>Biological Safety Cabinets (BSC)</li>
-            <li>Compounding Aseptic Containment Isolators (CACI)</li>
-            <li>Closed System Drug-Transfer Devices (CSTD)</li>
-          </ul>
-          
-          <h3>Level 4: Administrative Controls</h3>
-          <p>Work practices and procedures to reduce exposure</p>
-          
-          <h3>Level 5: Personal Protective Equipment (PPE)</h3>
-          <p>Last line of defense when other controls cannot eliminate risk</p>
-        `
+        title: 'Hierarchical Controls',
+        content: ''
       },
       {
         id: 'engineering-controls',
@@ -701,125 +601,12 @@ export const emoduleContent: Chapter[] = [
       {
         id: 'barriers-safety',
         title: 'Barriers to Following Safety Precautions',
-        content: `
-          <h2>Barriers to Following Safety Precautions</h2>
-          
-          <h3>Organizational Factors</h3>
-          <ul>
-            <li>Increased workload and patient count</li>
-            <li>Staff shortage</li>
-            <li>Insufficient supervision</li>
-            <li>Limited PPE availability</li>
-            <li>Lack of engineering controls (BSC, CSTD)</li>
-            <li>Budget constraints</li>
-            <li>Poor workplace safety climate</li>
-          </ul>
-          
-          <h3>Knowledge and Training Factors</h3>
-          <ul>
-            <li>Inadequate knowledge of safe handling</li>
-            <li>Insufficient training opportunities</li>
-            <li>Lack of ongoing education</li>
-            <li>Unavailability of routine training programs</li>
-            <li>Poor understanding of exposure risks</li>
-          </ul>
-          
-          <h3>Practice and Behavioral Factors</h3>
-          <ul>
-            <li>Poor attitudes toward safety measures</li>
-            <li>Low self-efficacy in handling HDs</li>
-            <li>Conflict between professional image and safety</li>
-            <li>Prioritizing social roles over professional safety</li>
-            <li>Reliance on clinical wisdom instead of guidelines</li>
-            <li>Non-compliance with PPE use</li>
-            <li>Unsafe practices (e.g., priming with chemotherapy)</li>
-          </ul>
-          
-          <h3>Environmental Factors</h3>
-          <ul>
-            <li>Technical issues with devices</li>
-            <li>Drug spills during handling</li>
-            <li>Complex drug regimens</li>
-            <li>High-dose drug handling</li>
-            <li>Interpersonal influences</li>
-          </ul>
-          
-          <h3>Most Significant Barriers</h3>
-          <p>Research shows <strong>insufficient knowledge and training</strong> are the most frequently associated factors with occupational exposure and related adverse effects.</p>
-        `
+        content: ''
       },
       {
         id: 'education-impact',
         title: 'Impact of Education Programs',
-        content: `
-          <h2>Impact of Education Programs on Safe Handling</h2>
-          
-          <h3>Evidence of Effectiveness</h3>
-          <p>Multiple studies demonstrate that education interventions significantly improve:</p>
-          <ul>
-            <li>Knowledge of safe handling practices</li>
-            <li>Compliance with safety guidelines</li>
-            <li>Proper use of PPE</li>
-            <li>Self-efficacy in HD handling</li>
-            <li>Nursing performance</li>
-            <li>Attitudes toward safety</li>
-            <li>Confidence levels</li>
-            <li>Reduction in drug spills</li>
-          </ul>
-          
-          <h3>Effective Educational Methods</h3>
-          <ul>
-            <li><strong>Web-based online courses</strong> - Flexible, accessible</li>
-            <li><strong>E-learning modules</strong> - Cost-effective for LMIC</li>
-            <li><strong>Blended learning</strong> - Combines face-to-face and online</li>
-            <li><strong>Educational modules</strong> - Self-paced learning</li>
-            <li><strong>Safety protocols</strong> - Clear guidelines and procedures</li>
-            <li><strong>Demonstrations</strong> - Hands-on practice</li>
-            <li><strong>Videos and presentations</strong> - Visual learning</li>
-            <li><strong>Workshops and seminars</strong> - Interactive sessions</li>
-            <li><strong>Mobile applications</strong> - On-demand access</li>
-          </ul>
-          
-          <h3>Recommendations for LMICs</h3>
-          <p>For Lower and Middle-Income Countries:</p>
-          <ul>
-            <li>E-learning modules are highly recommended</li>
-            <li>Cost-effective alternative to traditional training</li>
-            <li>Addresses lack of educational opportunities</li>
-            <li>Blended learning approach most suitable</li>
-            <li>Refreshes knowledge and preserves time</li>
-            <li>Supports lifelong learning and CPD</li>
-          </ul>
-          
-          <h3>Key Success Factors</h3>
-          <ul>
-            <li>High participant satisfaction</li>
-            <li>Significant improvement in theoretical knowledge</li>
-            <li>Enhanced practical skills</li>
-            <li>Better attitude toward safety</li>
-            <li>Increased confidence in handling HDs</li>
-            <li>Sustained behavior change</li>
-          </ul>
-          
-          <h3>Challenges</h3>
-          <ul>
-            <li>Technology access and connectivity issues</li>
-            <li>Limited interaction in some online formats</li>
-            <li>Structural barriers to implementing learned behaviors</li>
-            <li>Need for motivation and engagement</li>
-            <li>Preference for traditional methods by some learners</li>
-          </ul>
-          
-          <h3>Best Practices</h3>
-          <ul>
-            <li>Combine e-learning with face-to-face training</li>
-            <li>Include interactive elements</li>
-            <li>Provide ongoing support and resources</li>
-            <li>Regular competency assessments</li>
-            <li>Continuous professional development</li>
-            <li>Organizational support for implementing learning</li>
-          </ul>
-        `
+        content: ''
       },
       {
         id: 'summary',

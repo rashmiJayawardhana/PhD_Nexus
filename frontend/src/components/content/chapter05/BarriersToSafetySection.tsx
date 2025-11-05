@@ -4,7 +4,6 @@ import { ContentCard } from "../ContentCard";
 import { EmpiricalStudyCard } from "../EmpiricalStudyCard";
 import { InfoBox } from "../InfoBox";
 
-// Main Barriers Section Component
 export const BarriersToSafetySection = () => (
   <>
     {/* Introduction */}
