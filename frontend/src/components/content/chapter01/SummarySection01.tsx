@@ -15,11 +15,14 @@ export const SummarySection01: React.FC = () => {
       'Adverse effects are mainly classified according to the drug groups and their presenting time. The common adverse effects include nausea, vomiting, headache, hypersensitivity reactions, alopecia, GI disturbance, tumor lysis syndrome, bone marrow suppression, secondary malignancies, and reproductive adverse effects.'
     ],
     keyPoints: [
-      'Cancer incidence projected to increase by 77% by 2050',
-      'Malignant tumors demonstrate uncontrolled division and metastasis',
-      'SACT includes multiple treatment modalities beyond chemotherapy',
-      'Chemotherapy classified as hazardous drug due to toxic properties',
-      'Adverse effects vary by drug group and timing of presentation'
+      '🌍 Global Impact: Cancer causes 1 in 6 deaths worldwide (16.8%), with 77% increase expected by 2050',
+      '🔬 Cancer Types: Malignant tumors show uncontrolled division, tissue invasion, and metastasis via blood/lymph',
+      '💊 Treatment Options: SACT encompasses chemotherapy, hormone therapy, targeted therapy, and immunotherapy',
+      '⚠️ Hazardous Classification: 6 criteria define hazardous drugs - carcinogenicity, teratogenicity, reproductive toxicity, organ toxicity, genotoxicity, and structural similarity',
+      '🎯 Drug Mechanisms: Non-selective drugs affect both normal and cancer cells; target-specific drugs act only on malignant cells',
+      '📋 Adverse Effect Classification: Organized by drug mechanism, drug groups, affected body systems, and timing (acute vs chronic)',
+      '⏱️ Temporal Effects: Acute effects are reversible and occur shortly after treatment; chronic effects are long-term and often irreversible',
+      '🌐 Top 5 Cancers: Lung (12.4%), breast (11.6%), colorectal (9.6%), prostate (7.3%), and stomach (4.9%)'
     ],
     images: [
       {

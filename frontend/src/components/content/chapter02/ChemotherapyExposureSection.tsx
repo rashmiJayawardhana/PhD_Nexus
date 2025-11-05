@@ -18,7 +18,7 @@ export const ChemotherapyExposureSection: React.FC = () => (
           <h5 className="font-bold text-red-900 mb-3">🎯 Main Exposure Routes</h5>
           <p className="text-slate-700 leading-relaxed">
             Chemotherapy exposure routes typically include <strong>inhalation, dermal, ingestion, and needle 
-            prick injuries.</strong> Inhalation via droplets, particulates, vapors, and dermal contamination 
+            prick injuries</strong>  (Figure 03). Inhalation via droplets, particulates, vapors, and dermal contamination 
             are more common.
           </p>
         </div>
@@ -208,7 +208,7 @@ export const ChemotherapyExposureSection: React.FC = () => (
       icon={<AlertCircle className="w-6 h-6 text-red-600" />}
     >
       <p className="text-slate-700 mb-4">
-        Possible opportunities for exposure based on activity are outlined below:
+        Possible opportunities for exposure based on activity are outlined below (Table 8):
       </p>
       
       <p className="text-slate-700 mb-4 text-sm italic">

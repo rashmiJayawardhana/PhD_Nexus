@@ -360,7 +360,7 @@ export const EvidenceExposureSection: React.FC = () => (
       </p>
 
       <DataTable 
-        headers={["Research Method", "Main Findings on Occupational Exposure and Adverse Effects"]}
+        headers={["Research Methods", "Main Findings on Occupational Exposure and Adverse Effects"]}
         rows={[
           [
             "Meta-analysis",
@@ -376,7 +376,7 @@ export const EvidenceExposureSection: React.FC = () => (
           ],
           [
             "Case-Control Study among nurses in Cairo University, Egypt",
-            "<ul><li>Prevalence of menstrual disorders and abortions among exposed HCWs was significantly associated with drug handling (compared to controls)</li><li>Adverse effects: Frequent infections (37.5%), hair loss (68.8%) (only among exposure groups)</li><li>Other adverse effects: Allergic symptoms (59.4%)</li><li>Exposure to Cisplatin was statistically significant with kidney and liver function tests and DNA damage</li></ul>"
+            "<ul><li>Prevalence of menstrual disorders and abortions among exposed HCWs was significantly associated with drug handling (compared to controls).</li><li>Adverse effects: Frequent infections (37.5%), hair loss (68.8%) (only among exposure groups).</li><li>Other adverse effects: Allergic symptoms (59.4%)</li><li>Exposure to Cisplatin was statistically significant with kidney and liver function tests and DNA damage.</li></ul>"
           ],
           [
             "Cross-sectional, comparative study among nurses, Turkey",
