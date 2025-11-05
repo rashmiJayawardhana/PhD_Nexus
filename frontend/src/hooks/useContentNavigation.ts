@@ -93,6 +93,18 @@ export const useContentNavigation = (
       };
       setActiveSection(sectionMap[subTopicId] || subTopicId);
     }
+
+    // Map subtopic IDs to section IDs for Resources
+    if (chapterId === 'resources') {
+      const sectionMap: Record<string, string> = {
+        'overview': 'intro',
+        'references': 'references',
+        'glossary': 'glossary',
+        'acknowledgements': 'acknowledgements',
+        'abbreviations': 'abbreviations'
+      };
+      setActiveSection(sectionMap[subTopicId] || subTopicId);
+    }
   };
 
   return {

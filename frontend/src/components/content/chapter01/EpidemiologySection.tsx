@@ -1,5 +1,5 @@
 // src/components/content/chapter01/EpidemiologySection.tsx
-import { chapter1Data } from "@/data/emoduleContent/chapter1Data";
+import { chapter1Data } from "@/data/content/chapter1Data";
 import { ContentCard } from "../ContentCard";
 import { StatCard } from "../StatCard";
 

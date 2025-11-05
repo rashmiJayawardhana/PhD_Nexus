@@ -57,29 +57,9 @@ export const emoduleContent: Chapter[] = [
         content: '' // Content handled by React component
       }, 
       {
-        id: 'evidence-exposure',
+        id: 'evidence',
         title: 'Evidence of Occupational Exposure',
-        content: `
-          <h2>Evidence of Occupational Exposure and Adverse Effects</h2>
-          <p>First concerns about occupational exposure to anti-cancer agents were raised in the 1970s.</p>
-          <h3>Detection Methods</h3>
-          <ul>
-            <li>Workplace contamination on surfaces</li>
-            <li>Drug metabolites in biological samples (urine, blood)</li>
-            <li>Chromosomal aberrations (CAs)</li>
-            <li>Sister chromatid exchanges (SCEs)</li>
-          </ul>
-          <h3>Common Drugs Detected</h3>
-          <ul>
-            <li>Cyclophosphamide</li>
-            <li>Ifosfamide</li>
-            <li>Fluorouracil</li>
-            <li>Methotrexate</li>
-            <li>Paclitaxel</li>
-            <li>Doxorubicin</li>
-            <li>Platinum-containing drugs (Cisplatin, Carboplatin)</li>
-          </ul>
-        `
+        content: '' // Content handled by React component
       },
       {
         id: 'exposure-routes',
@@ -849,219 +829,35 @@ export const emoduleContent: Chapter[] = [
     ]
   },
   {
-    id: 'resources',
-    title: 'Additional Resources',
-    icon: '📚',
-    description: 'References, glossary, and supplementary materials',
-    subTopics: [
-      {
-        id: 'key-terms',
-        title: 'Glossary of Key Terms',
-        content: `
-          <h2>Glossary of Key Terms</h2>
-          
-          <h3>A-C</h3>
-          <dl>
-            <dt><strong>Adverse Drug Reaction (ADR)</strong></dt>
-            <dd>An unwanted, undesired effect of a medicine</dd>
-            
-            <dt><strong>Antineoplastic</strong></dt>
-            <dd>A drug used to prevent, inhibit, or prevent development of neoplasms (tumors)</dd>
-            
-            <dt><strong>ASTM Standards</strong></dt>
-            <dd>American Society for Testing and Materials standards for delivery, testing, specifications</dd>
-            
-            <dt><strong>Bioavailability</strong></dt>
-            <dd>Fraction/amount/rate of drug entry to system circulation from administration site</dd>
-            
-            <dt><strong>Biological Safety Cabinet (BSC)</strong></dt>
-            <dd>Enclosed, ventilated containment device protecting workers, environment, and product</dd>
-            
-            <dt><strong>Blended Learning</strong></dt>
-            <dd>Combines teacher-centered and student-centered learning methods</dd>
-            
-            <dt><strong>Carcinogen</strong></dt>
-            <dd>Chemical or physical agent with potential to develop cancer</dd>
-            
-            <dt><strong>Chemotherapy</strong></dt>
-            <dd>Cytotoxic drugs that kill cancer cells by stopping growth or division</dd>
-            
-            <dt><strong>Closed System Drug-Transfer Devices (CSTDs)</strong></dt>
-            <dd>Device preventing leaks, airborne particulates, and vapor escape</dd>
-            
-            <dt><strong>Containment Primary Engineering Control (C-PEC)</strong></dt>
-            <dd>Ventilated device minimizing exposure when directly handling HDs</dd>
-            
-            <dt><strong>Containment Secondary Engineering Control (C-SEC)</strong></dt>
-            <dd>Designated room where C-PEC is placed for controlled compounding</dd>
-            
-            <dt><strong>Cytotoxic Drug</strong></dt>
-            <dd>Drug affecting cell growth and proliferation, not distinguishing cancer from normal cells</dd>
-          </dl>
-          
-          <h3>D-H</h3>
-          <dl>
-            <dt><strong>DNA</strong></dt>
-            <dd>Deoxyribonucleic acid - molecule carrying genetic information</dd>
-            
-            <dt><strong>Epidemiology</strong></dt>
-            <dd>Study of disease occurrence frequency in populations</dd>
-            
-            <dt><strong>Eyewash Fountain</strong></dt>
-            <dd>Station for washing hazardous chemicals from eyes (minimum 15 minutes)</dd>
-            
-            <dt><strong>Hazardous Drugs (HDs)</strong></dt>
-            <dd>Drugs with carcinogenic, teratogenic, reproductive, or organ toxic properties</dd>
-            
-            <dt><strong>HEPA Filters</strong></dt>
-            <dd>High-Efficiency Particulate Air filters capturing 99.97% of 0.3-micron particles</dd>
-            
-            <dt><strong>Hypersensitivity</strong></dt>
-            <dd>Immune system overreaction causing inflammation and tissue damage</dd>
-          </dl>
-          
-          <h3>L-P</h3>
-          <dl>
-            <dt><strong>Luer-Lock</strong></dt>
-            <dd>Medical instrument fitting designed to prevent leaking</dd>
-            
-            <dt><strong>Narrow Therapeutic Index</strong></dt>
-            <dd>Small difference between minimum effective and maximum safe doses</dd>
-            
-            <dt><strong>Neoplasms</strong></dt>
-            <dd>Abnormal tissue mass from excessive cell growth (benign or malignant tumors)</dd>
-            
-            <dt><strong>Occupational Exposure Limits (OELs)</strong></dt>
-            <dd>Maximum allowable concentrations of hazardous substances in workplace air</dd>
-            
-            <dt><strong>Oncology</strong></dt>
-            <dd>Study of cancer</dd>
-            
-            <dt><strong>Personal Protective Equipment (PPE)</strong></dt>
-            <dd>Clothing/equipment minimizing exposure to hazards (gloves, gowns, masks, etc.)</dd>
-            
-            <dt><strong>Powered Air-Purifying Respirator (PAPR)</strong></dt>
-            <dd>Tight-fitting goggles and N-95 respirator for high-risk aerosol procedures</dd>
-          </dl>
-          
-          <h3>S-Z</h3>
-          <dl>
-            <dt><strong>Safety Data Sheets (SDS)</strong></dt>
-            <dd>Document providing information about hazardous chemical properties and safety precautions</dd>
-            
-            <dt><strong>Sister Chromatid Exchanges (SCEs)</strong></dt>
-            <dd>Indicator of DNA damage or genotoxic effects</dd>
-            
-            <dt><strong>Standard Operating Procedures (SOPs)</strong></dt>
-            <dd>Step-by-step instructions for carrying out specific procedures</dd>
-            
-            <dt><strong>Stem Cell Transplant</strong></dt>
-            <dd>Replacement of damaged blood-forming cells with healthy stem cells</dd>
-            
-            <dt><strong>Systemic Anti-Cancer Therapy (SACT)</strong></dt>
-            <dd>Drug-based cancer treatments including chemotherapy, hormones, immunotherapy, targeted therapy</dd>
-            
-            <dt><strong>Teratogenicity</strong></dt>
-            <dd>Ability to cause birth defects or developmental abnormalities</dd>
-            
-            <dt><strong>USP Chapter 800</strong></dt>
-            <dd>Standards for safe handling of hazardous drugs in healthcare settings</dd>
-          </dl>
-        `
-      },
-      {
-        id: 'quick-reference',
-        title: 'Quick Reference Guide',
-        content: `
-          <h2>Quick Reference Guide</h2>
-          
-          <h3>PPE Requirements Quick Check</h3>
-          <table>
-            <tr>
-              <th>Activity</th>
-              <th>Required PPE</th>
-            </tr>
-            <tr>
-              <td>Receiving/Unpacking</td>
-              <td>Gloves (if damaged containers suspected)</td>
-            </tr>
-            <tr>
-              <td>Compounding</td>
-              <td>Double gloves, gown, eye protection, respirator</td>
-            </tr>
-            <tr>
-              <td>Administration</td>
-              <td>Double gloves, gown, face shield (if splash risk)</td>
-            </tr>
-            <tr>
-              <td>Spill Cleanup</td>
-              <td>Double gloves, gown, respirator, face shield, shoe covers, head cover</td>
-            </tr>
-            <tr>
-              <td>Waste Handling</td>
-              <td>Double gloves, gown</td>
-            </tr>
-          </table>
-          
-          <h3>When to Change Gloves</h3>
-          <ul>
-            <li>Every 30 minutes during continuous use</li>
-            <li>Immediately if torn, punctured, or contaminated</li>
-            <li>Between different tasks</li>
-            <li>Before leaving compounding area</li>
-          </ul>
-          
-          <h3>When to Change Gown</h3>
-          <ul>
-            <li>Every 2-3 hours (if no permeation data)</li>
-            <li>Immediately after spill or splash</li>
-            <li>Never reuse disposable gowns</li>
-            <li>Follow manufacturer guidance if available</li>
-          </ul>
-          
-          <h3>Emergency Contact Numbers</h3>
-          <ul>
-            <li>Hospital Safety Officer: [INSERT NUMBER]</li>
-            <li>Pharmacy Department: [INSERT NUMBER]</li>
-            <li>Emergency Services: [INSERT NUMBER]</li>
-            <li>Poison Control: [INSERT NUMBER]</li>
-          </ul>
-          
-          <h3>Spill Size Classification</h3>
-          <ul>
-            <li><strong>Small:</strong> Less than 5ml or 5g - Use spill kit</li>
-            <li><strong>Large:</strong> More than 5ml or 5g - Notify supervisor, use full PPE</li>
-            <li><strong>Major:</strong> Requires evacuation - Call emergency response team</li>
-          </ul>
-        `
-      },
-      {
-        id: 'acknowledgments',
-        title: 'Acknowledgments',
-        content: `
-          <h2>Acknowledgments</h2>
-          
-          <h3>Supporting Institutions</h3>
-          <ul>
-            <li>Medical Research Institute (MRI), Sri Lanka</li>
-            <li>University of Sri Jayewardenepura, Sri Lanka</li>
-            <li>National Cancer Institute (NCI); Apeksha Hospital, Maharagama, Sri Lanka</li>
-          </ul>
-          
-          <h3>Expert Panel</h3>
-          <ul>
-            <li><strong>Prof. M.K.D.L. Meegoda</strong> - Senior Lecturer, Department of Nursing and Midwifery, Faculty of Allied Health Science, University of Sri Jayewardenepura</li>
-            
-            <li><strong>Prof. S.S. Jayasinghe</strong> - Professor in Pharmacology, Faculty of Medicine, University of Ruhuna, Post-doctoral researcher in South Asian Clinical Toxicology Research Collaboration, University of Peradeniya</li>
-            
-            <li><strong>Prof. S.S.P. Warnakulasuriya</strong> - Professor in Nursing, Dean, Faculty of Nursing, University of Colombo</li>
-            
-            <li><strong>Dr. Darshana De Silva</strong> - Consultant Clinical Pharmacologist, Department of Pharmacology, Medical Research Institute, Sri Lanka</li>
-            
-            <li><strong>Dr. Wasantha Rathna</strong> - Consultant Clinical Pharmacologist, Department of Pharmacology, Medical Research Institute, Sri Lanka</li>
-          </ul>
-        `
-      }
-    ]
-  }
-]
+  id: 'resources',
+  title: 'Additional Resources',
+  icon: '📚',
+  description: 'References, glossary, acknowledgements, and supplementary materials',
+  subTopics: [
+    {
+      id: 'overview',
+      title: 'Overview',
+      content: ''
+    },
+    {
+      id: 'references',
+      title: 'References',
+      content: ''
+    },
+    {
+      id: 'glossary',
+      title: 'Glossary',
+      content: ''
+    },
+    {
+      id: 'acknowledgements',
+      title: 'Acknowledgements',
+      content: ''
+    },
+    {
+      id: 'abbreviations',
+      title: 'List of Abbreviations',
+      content: ''
+    }
+  ]
+}]

@@ -1,4 +1,4 @@
-// src/data/emoduleContent/chapter1Data.ts
+// src/data/content/chapter1Data.ts
 export const chapter1Data = {
   learningOutcomes: {
     outcomes: [

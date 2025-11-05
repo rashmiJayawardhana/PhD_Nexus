@@ -37,8 +37,9 @@ export interface ContentCardProps {
   title: string;
   icon?: React.ReactNode;
   children: React.ReactNode;
-  variant?: 'default' | 'highlight' | 'info' | 'warning';
+  variant?: "default" | "highlight" | "info" | "warning" | "success"; 
 }
+
 
 export interface NavigationProps {
   sections: ContentSection[];

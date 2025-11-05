@@ -9,7 +9,7 @@ export const SummarySection02: React.FC = () => {
   const summaryData: SummaryData = {
     title: 'Chapter 02 Summary',
     description: [
-      'Occupational exposure to anti-cancer agents is a health concern. Anti-cancer drugs and their metabolites are detected on drug-handling surfaces and biological samples. However, OELs are not established for chemotherapy due to their toxic properties and zero contamination is accepted. Inhalation, dermal contact, ingestion, and needle stick injuries are found as exposure routes. Inhalation and dermal contamination are common, and a range of risk activities are found. Occupational exposure related to adverse health effects is widely reported among HCWs. Headache, dizziness, nausea, vomiting, hypersensitivity reactions, reproductive issues such as miscarriages, fetal death, and fertility-related issues are widely reported.'
+      'Occupational exposure to anti-cancer agents is a health concern. Anti-cancer drugs and their metabolites are detected on drug-handling surfaces and biological samples. However, OELs are not established for chemotherapy due to their toxic properties, and zero contamination is accepted. Inhalation, dermal contact, ingestion, and needle stick injuries are found as exposure routes. Inhalation and dermal contamination are common, and a range of risk activities are found. Occupational exposure and related AEs are widely reported among HCWs. Headache, dizziness, nausea, vomiting, hypersensitivity reactions, and reproductive AEs (miscarriages, fetal death, and fertility-related issues) are associated with exposure to anti-cancer chemotherapy.'
     ],
     keyPoints: [
       ''

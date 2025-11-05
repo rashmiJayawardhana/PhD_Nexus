@@ -1,6 +1,5 @@
 // FILE: src/components/content/layout/MobileSidebarOverlay.tsx
 // Mobile overlay component
-// ============================================
 interface MobileSidebarOverlayProps {
   isOpen: boolean;
   onClose: () => void;

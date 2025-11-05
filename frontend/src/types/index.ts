@@ -1,5 +1,4 @@
 // src/types/index.ts
-
 export interface Feature {
   image: string;
   title: string;
