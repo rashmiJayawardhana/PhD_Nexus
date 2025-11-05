@@ -109,7 +109,7 @@ export const AcknowledgementsSection: React.FC = () => {
               Purpose & Development
             </h4>
             <p className="text-slate-700 text-sm leading-relaxed mb-3">
-              This content was developed as an e-module to use as supportive education material for a tailored 
+              This website was developed as an content to use as supportive education material for a tailored 
               educational intervention designed for oncology nurses in Sri Lanka. The educational intervention 
               adopted a blended learning method and consisted of physical place-based teaching methods and online 
               educational opportunities (e-module, website).
