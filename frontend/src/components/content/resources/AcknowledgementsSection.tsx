@@ -57,7 +57,7 @@ export const AcknowledgementsSection: React.FC = () => {
         <div className="flex items-center gap-2 mb-6 p-4 bg-pink-50 rounded-lg border-2 border-pink-200">
           <Heart className="w-5 h-5 text-pink-600 flex-shrink-0" />
           <p className="text-slate-700 text-sm leading-relaxed">
-            This e-module was made possible through the valuable contributions and support of the following 
+            This content was made possible through the valuable contributions and support of the following 
             institutions and experts. We extend our sincere gratitude to all who contributed to the development 
             of this educational resource.
           </p>
@@ -98,7 +98,7 @@ export const AcknowledgementsSection: React.FC = () => {
 
       {/* About This E-Module */}
       <ContentCard 
-        title="About This E-Module" 
+        title="About This Content" 
         icon={<span className="text-2xl">📖</span>}
         variant="highlight"
       >
@@ -109,7 +109,7 @@ export const AcknowledgementsSection: React.FC = () => {
               Purpose & Development
             </h4>
             <p className="text-slate-700 text-sm leading-relaxed mb-3">
-              This booklet was developed as an e-module to use as supportive education material for a tailored 
+              This content was developed as an e-module to use as supportive education material for a tailored 
               educational intervention designed for oncology nurses in Sri Lanka. The educational intervention 
               adopted a blended learning method and consisted of physical place-based teaching methods and online 
               educational opportunities (e-module, website).
