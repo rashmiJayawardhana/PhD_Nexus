@@ -2,37 +2,44 @@
 // Utility to get sections for each chapter 
 // ============================================
 import type { ContentSection } from '@/types/content';
-import { IntroductionSection01 } from '@/components/content/chapter01/IntroductionSection01';
-import { CancerOverviewSection } from '@/components/content/chapter01/CancerOverviewSection';
-import { EpidemiologySection } from '@/components/content/chapter01/EpidemiologySection';
-import { TreatmentSection } from '@/components/content/chapter01/TreatmentSection';
-import { HazardousSection } from '@/components/content/chapter01/HazardousSection';
-import { SummarySection01 } from '@/components/content/chapter01/SummarySection01';
-import { SummarySection02 } from '@/components/content/chapter02/SummarySection02';
-import ChemotherapyExposureSection from '@/components/content/chapter02/ChemotherapyExposureSection';
-import { SummarySection03 } from '@/components/content/chapter03/SummarySection03';
-import { SummarySection04 } from '@/components/content/chapter04/SummarySection04';
-import { SummarySection05 } from '@/components/content/chapter05/SummarySection05';
-import ChemotherapySection from '@/components/content/chapter01/ChemotherapySection';
-import { IntroductionSection02 } from '@/components/content/chapter02/IntroductionSection02';
-import { IntroductionSection03 } from '@/components/content/chapter03/IntroductionSection03';
-import { IntroductionSection04 } from '@/components/content/chapter04/IntroductionSection04';
-import { IntroductionSection05 } from '@/components/content/chapter05/IntroductionSection05';
-import EvidenceExposureSection from '@/components/content/chapter02/EvidenceExposureSection';
-import StandardGuidelinesSection from '@/components/content/chapter03/StandardGuidelinesSection';
-import HierarchicalControlsOverviewSection from '@/components/content/chapter03/HierarchicalControlsOverviewSection';
-import EngineeringControlsSection from '@/components/content/chapter03/EngineeringControlsSection';
-import BarriersToSafetySection from '@/components/content/chapter05/BarriersToSafetySection';
-import EducationImpactSection from '@/components/content/chapter05/EducationImpactSection';
+import { IntroductionSection01 } from '@/components/content/chapter01/01IntroductionSection01';
+import { CancerOverviewSection } from '@/components/content/chapter01/02CancerOverviewSection';
+import { EpidemiologySection } from '@/components/content/chapter01/03EpidemiologySection';
+import { TreatmentSection } from '@/components/content/chapter01/04TreatmentSection';
+import { HazardousSection } from '@/components/content/chapter01/05HazardousSection';
+import { SummarySection01 } from '@/components/content/chapter01/07SummarySection01';
+import { SummarySection02 } from '@/components/content/chapter02/04SummarySection02';
+import ChemotherapyExposureSection from '@/components/content/chapter02/03ChemotherapyExposureSection';
+import { SummarySection03 } from '@/components/content/chapter03/07SummarySection03';
+import { SummarySection04 } from '@/components/content/chapter04/12SummarySection04';
+import { SummarySection05 } from '@/components/content/chapter05/04SummarySection05';
+import ChemotherapySection from '@/components/content/chapter01/06ChemotherapySection';
+import { IntroductionSection02 } from '@/components/content/chapter02/01IntroductionSection02';
+import { IntroductionSection03 } from '@/components/content/chapter03/01IntroductionSection03';
+import { IntroductionSection04 } from '@/components/content/chapter04/01IntroductionSection04';
+import { IntroductionSection05 } from '@/components/content/chapter05/01IntroductionSection05';
+import EvidenceExposureSection from '@/components/content/chapter02/02EvidenceExposureSection';
+import StandardGuidelinesSection from '@/components/content/chapter03/02StandardGuidelinesSection';
+import HierarchicalControlsOverviewSection from '@/components/content/chapter03/03HierarchicalControlsOverviewSection';
+import EngineeringControlsSection from '@/components/content/chapter03/04EngineeringControlsSection';
+import BarriersToSafetySection from '@/components/content/chapter05/02BarriersToSafetySection';
+import EducationImpactSection from '@/components/content/chapter05/03EducationImpactSection';
 import { ReferencesSection } from '@/components/content/resources/ReferencesSection';
 import { GlossarySection } from '@/components/content/resources/GlossarySection';
 import { AcknowledgementsSection } from '@/components/content/resources/AcknowledgementsSection';
 import { AbbreviationsSection } from '@/components/content/resources/AbbreviationsSection';
-import ReceivingStorageSection from '@/components/content/chapter04/ReceivingStorageSection';
-import CompoundingHdsSection from '@/components/content/chapter04/CompoundingHdsSection';
-import AdministrationSection from '@/components/content/chapter04/AdministrationSection';
-import WasteDisposalSection from '@/components/content/chapter04/WasteDisposalSection';
-import CleaningDecontaminationSection from '@/components/content/chapter04/CleaningDecontaminationSection';
+import ReceivingStorageSection from '@/components/content/chapter04/02ReceivingStorageSection';
+import CompoundingHdsSection from '@/components/content/chapter04/03CompoundingHdsSection';
+import AdministrationSection from '@/components/content/chapter04/04AdministrationSection';
+import WasteDisposalSection from '@/components/content/chapter04/05WasteDisposalSection';
+import CleaningDecontaminationSection from '@/components/content/chapter04/06CleaningDecontaminationSection';
+import AdministrativeControlsSection from '@/components/content/chapter03/05AdministrativeControlsSection';
+import PersonalProtectiveEquipmentSection from '@/components/content/chapter03/06PersonalProtectiveEquipmentSection';
+import SpillManagementSection from '@/components/content/chapter04/07SpillManagementSection';
+import TrainingPersonnelSection from '@/components/content/chapter04/10TrainingPersonnelSection';
+import MedicalSurveillanceSection from '@/components/content/chapter04/11MedicalSurveillanceSection';
+import ProtectiveReassignmentSection from '@/components/content/chapter04/08ProtectiveReassignment';
+import EmergencyProceduresSection from '@/components/content/chapter04/09EmergencyProceduresSection';
 
 export const getChapterSections = (chapterId: string): ContentSection[] => {
   const sectionMap: Record<string, ContentSection[]> = {
@@ -91,9 +98,14 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
         content: <EngineeringControlsSection /> 
       },
       { 
+        id: 'administrative', 
+        title: 'Administrative Controls', 
+        content: <AdministrativeControlsSection /> 
+      },
+      { 
         id: 'ppe', 
         title: 'Personal Protective Equipment', 
-        content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for PPE (implement PreRequirementsSection)</div>
+        content: <PersonalProtectiveEquipmentSection/>
       },
       { 
         id: 'summary', 
@@ -118,10 +130,11 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
       { id: 'administration', title: 'Administration of Chemotherapy', content: <AdministrationSection/> },
       { id: 'waste', title: 'Disposal of Waste', content: <WasteDisposalSection/> },
       { id: 'cleaning', title: 'Cleaning and Decontamination', content: <CleaningDecontaminationSection/> },
-      { id: 'spill', title: 'Cleaning HD Spills', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Cleaning HD Spills (implement SpillManagementSection)</div> },
-      { id: 'reassignment', title: 'Protective Reassignment', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Protective Reassignment (implement ProtectiveReassignmentSection)</div> },
-      { id: 'emergency', title: 'Emergency Procedures', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Emergency Procedures (implement EmergencyProceduresSection)</div> },
-      { id: 'training', title: 'Training and Medical Surveillance', content: <div className="p-8 bg-gray-100 rounded-lg">Placeholder content for Training and Medical Surveillance (implement TrainingSurveillanceSection)</div> },
+      { id: 'spill', title: 'Cleaning HD Spills', content: <SpillManagementSection/> },
+      { id: 'reassignment', title: 'Protective Reassignment', content: <ProtectiveReassignmentSection/> },
+      { id: 'emergency', title: 'Emergency Procedures', content: <EmergencyProceduresSection/> },
+      { id: 'training', title: 'Training Personnel', content: <TrainingPersonnelSection/> },
+      { id: 'medical', title: 'Medical Surveillance', content: <MedicalSurveillanceSection/> },
       { id: 'summary', title: 'Summary', content: <SummarySection04 /> }
     ],
     'chapter-05': [

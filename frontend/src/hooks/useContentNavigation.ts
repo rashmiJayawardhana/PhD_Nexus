@@ -58,7 +58,8 @@ export const useContentNavigation = (
         'standard-guidelines': 'standard',
         'hierarchical-controls-overview': 'hierarchical',
         'engineering-controls': 'engineering',
-        'pre-requirements': 'ppe',
+        'administrative-controls': 'administrative',
+        'equipment': 'ppe',
         'summary': 'summary' 
       };
       setActiveSection(sectionMap[subTopicId] || subTopicId);
@@ -76,7 +77,8 @@ export const useContentNavigation = (
         'spill-management': 'spill',
         'protective-reassignment': 'reassignment',
         'emergency-procedures': 'emergency',
-        'training-surveillance': 'training',
+        'training-personnel': 'training',
+        'medical-surveillance': 'medical',
         'summary': 'summary' 
       };
       setActiveSection(sectionMap[subTopicId] || subTopicId);

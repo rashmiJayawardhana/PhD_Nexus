@@ -4,18 +4,19 @@ import React from "react";
 
 interface ProcedureListProps {
   items: string[];
-  variant?: "default" | "teal" | "blue" | "purple";
+  variant?: "default" | "teal" | "blue" | "purple" | "red";
 }
 
 export const ProcedureList: React.FC<ProcedureListProps> = ({
   items,
   variant = "default",
 }) => {
-  const variants: Record<"default" | "teal" | "blue" | "purple", string> = {
+  const variants: Record<"default" | "teal" | "blue" | "purple" | "red" , string> = {
     default: "bg-white",
     teal: "bg-teal-50 border-teal-200",
     blue: "bg-blue-50 border-blue-200",
     purple: "bg-purple-50 border-purple-200",
+    red: "bg-red-50 border-red-200",
   };
 
   return (

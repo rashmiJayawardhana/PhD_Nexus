@@ -1,38 +1,59 @@
 // FILE: src/components/content/chapter03/StandardGuidelinesSection.tsx
-import { FileText, Building2 } from 'lucide-react';
+import { FileText, Building2, BookOpen } from 'lucide-react';
 import { ContentCard } from "../ContentCard";
 import { DataTable } from "../DataTable";
 import { InfoBox } from "../InfoBox";
 
 export const StandardGuidelinesSection: React.FC = () => (
   <>
+    {/* Main Introduction Card */}
     <ContentCard 
       title="Standard Guidelines for Handling Chemotherapy" 
       icon={<FileText className="w-6 h-6 text-blue-600" />}
       variant="info"
     >
       <div className="space-y-4">
-        <p className="text-slate-700 leading-relaxed">
-          Although the anti-cancer agents/chemotherapy-related risk is balanced for patients, occupational 
-          exposure harms healthcare workers. Therefore, government and regulatory agencies issue safety 
-          precautions to protect healthcare workers from unnecessary exposure.
-        </p>
+        <div className="bg-white rounded-lg p-5 shadow-inner">
+          <p className="text-slate-700 leading-relaxed text-base">
+            Although the anti-cancer agents/chemotherapy-related risk is balanced for patients, occupational 
+            exposure harms healthcare workers. Therefore, government and regulatory agencies issue safety 
+            precautions to protect healthcare workers from unnecessary exposure.
+          </p>
+        </div>
 
         <InfoBox type="note">
           <strong>Important:</strong> Multiple international organizations have developed comprehensive 
           guidelines for safe handling of hazardous drugs. Healthcare facilities should adopt and implement 
           these evidence-based recommendations.
         </InfoBox>
+
+        <div className="bg-gradient-to-r from-blue-100 to-cyan-100 rounded-xl p-6 border-2 border-blue-300 mt-4">
+          <div className="flex items-start gap-4">
+            <div className="bg-white rounded-full p-3 shadow-md">
+              <BookOpen className="w-8 h-8 text-blue-600" />
+            </div>
+            <div>
+              <h4 className="font-bold text-blue-900 text-lg mb-2">Why Guidelines Matter</h4>
+              <p className="text-slate-700 text-sm leading-relaxed">
+                These standardized guidelines ensure consistent, evidence-based practices across healthcare 
+                settings, protecting workers from hazardous drug exposure while maintaining patient care quality.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </ContentCard>
 
+    {/* Organizations Table Card */}
     <ContentCard 
       title="Key Organizations and Guidelines" 
       icon={<Building2 className="w-6 h-6 text-teal-600" />}
     >
-      <p className="text-slate-700 mb-4 text-sm italic">
-        Table 10: Standard guidelines in handling chemotherapy
-      </p>
+      <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-4 mb-4 border-l-4 border-teal-500">
+        <p className="text-slate-700 text-sm italic font-medium">
+          📋 Table 10: Standard guidelines in handling chemotherapy
+        </p>
+      </div>
 
       <DataTable 
         headers={["Organization/Regulatory Agency", "Safe Handling Guidelines"]}
@@ -68,30 +89,40 @@ export const StandardGuidelinesSection: React.FC = () => (
         ]}
       />
 
-      <div className="mt-6 bg-blue-50 rounded-lg p-5 border-2 border-blue-200">
-        <h5 className="font-bold text-blue-900 mb-2">📋 Guideline Application</h5>
-        <p className="text-sm text-slate-700">
-          Each guideline describes recommendations and mandates of handling chemotherapy and other 
-          hazardous drugs at each step of handling. Practices related to oncology nursing can be 
-          adopted from those guidelines. As an example, standards related to oncology nursing practice, which are derived from the USP general chapter 800, are outlined in table.
-        </p>
+      <div className="mt-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-300 shadow-md">
+        <div className="flex items-start gap-3">
+          <span className="text-3xl">📋</span>
+          <div>
+            <h5 className="font-bold text-blue-900 mb-3 text-lg">Guideline Application</h5>
+            <p className="text-sm text-slate-700 leading-relaxed">
+              Each guideline describes recommendations and mandates of handling chemotherapy and other 
+              hazardous drugs at each step of handling. Practices related to oncology nursing can be 
+              adopted from those guidelines. As an example, standards related to oncology nursing practice, 
+              which are derived from the USP general chapter 800, are outlined in table.
+            </p>
+          </div>
+        </div>
       </div>
     </ContentCard>
 
-    {/* USP 800 Standards */}
+    {/* USP 800 Standards Card */}
     <ContentCard 
       title="USP Chapter 800: Standards for Oncology Nursing Practice" 
       icon={<span className="text-2xl">📖</span>}
       variant="highlight"
     >
-      <p className="text-slate-700 leading-relaxed mb-4">
-        USP General Chapter 800 provides specific standards that directly impact oncology nursing practice. 
-        The following sections outline key requirements nurses must follow:
-      </p>
+      <div className="bg-white rounded-lg p-5 shadow-inner mb-5">
+        <p className="text-slate-700 leading-relaxed text-base">
+          USP General Chapter 800 provides specific standards that directly impact oncology nursing practice. 
+          The following sections outline key requirements nurses must follow:
+        </p>
+      </div>
 
-      <p className="text-slate-700 mb-4 text-sm italic">
-        Table 11: USP &lt;800&gt; standards in oncology nursing practice
-      </p>
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-4 mb-4 border-l-4 border-purple-500">
+        <p className="text-slate-700 text-sm italic font-medium">
+          📊 Table 11: USP &lt;800&gt; standards in oncology nursing practice
+        </p>
+      </div>
 
       <DataTable 
         headers={["Section/Standard", "Overview of Requirements"]}
@@ -118,6 +149,24 @@ export const StandardGuidelinesSection: React.FC = () => (
           ]
         ]}
       />
+
+      <div className="mt-6 grid md:grid-cols-3 gap-4">
+        <div className="bg-gradient-to-br from-teal-100 to-teal-50 rounded-lg p-4 border-2 border-teal-300 text-center">
+          <div className="text-3xl mb-2">🎓</div>
+          <h6 className="font-bold text-teal-900 text-sm mb-1">Training</h6>
+          <p className="text-xs text-slate-600">Annual competency assessments</p>
+        </div>
+        <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg p-4 border-2 border-blue-300 text-center">
+          <div className="text-3xl mb-2">🛡️</div>
+          <h6 className="font-bold text-blue-900 text-sm mb-1">Protection</h6>
+          <p className="text-xs text-slate-600">Proper PPE & equipment use</p>
+        </div>
+        <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg p-4 border-2 border-purple-300 text-center">
+          <div className="text-3xl mb-2">📝</div>
+          <h6 className="font-bold text-purple-900 text-sm mb-1">Documentation</h6>
+          <p className="text-xs text-slate-600">Written procedures & records</p>
+        </div>
+      </div>
 
       <InfoBox type="tip">
         <strong>Compliance Note:</strong> All oncology nurses handling hazardous drugs must be familiar 

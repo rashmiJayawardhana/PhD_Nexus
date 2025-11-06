@@ -1,4 +1,4 @@
-// FILE: src/components/content/chapter01/IntroductionSection03.tsx
+// FILE: src/components/content/chapter03/IntroductionSection03.tsx
 import { IntroductionSection } from "../IntroductionSection";
 
 export const IntroductionSection03: React.FC = () => (
