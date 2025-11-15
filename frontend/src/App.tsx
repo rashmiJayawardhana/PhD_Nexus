@@ -1,5 +1,6 @@
-// src/App.tsx - MAIN APPLICATION FILE
-import { useState } from 'react';
+// src/App.tsx - // Main application file with admin integration
+import { useState, useEffect } from 'react';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { HeroSection } from './components/home/HeroSection';
@@ -8,14 +9,47 @@ import { AboutPage } from './components/about/AboutPage';
 import { ContactPage } from './components/contact/ContactPage';
 import { features } from './data/features';
 import { ContentPage } from './components/content/ContentPage';
+import { AdminLogin } from './admin/AdminLogin';
+import { AdminDashboard } from './admin/AdminDashboard';
 import home from './assets/home.png';
 import MorePage from './components/more/MorePage';
+import { Shield } from 'lucide-react';
 
-type Page = 'home' | 'about' | 'content' | 'contact' | 'more';
+type Page = 'home' | 'about' | 'content' | 'contact' | 'more' | 'admin' | 'admin-dashboard';
 
-const App = () => {
+const AppContent = () => {
   const [currentPage, setCurrentPage] = useState<Page>('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isAdmin } = useAuth();
+
+  // Secret admin access: Press Ctrl+Shift+A to open admin login
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      // Ctrl+Shift+A opens admin login (secret shortcut)
+      if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+        e.preventDefault();
+        setCurrentPage('admin');
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
+
+  // Render Admin Dashboard
+  if (currentPage === 'admin-dashboard' && isAdmin) {
+    return <AdminDashboard />;
+  }
+
+  // Render Admin Login
+  if (currentPage === 'admin') {
+    if (isAdmin) {
+      // Already logged in, go to dashboard
+      setCurrentPage('admin-dashboard');
+      return null;
+    }
+    return <AdminLogin onLoginSuccess={() => setCurrentPage('admin-dashboard')} />;
+  }
 
   // Render About Page
   if (currentPage === 'about') {
@@ -32,7 +66,7 @@ const App = () => {
     return <ContactPage onBack={() => setCurrentPage('home')} />;
   }
 
-  // Render Contact Page
+  // Render Content Page
   if (currentPage === 'content') {
     return <ContentPage onBack={() => setCurrentPage('home')} />;
   }
@@ -84,7 +118,10 @@ const App = () => {
               className="rounded-2xl shadow-2xl max-w-md"
             />
           </div>
-          <button onClick={() => setCurrentPage('content')} className="bg-slate-900 hover:bg-slate-800 text-slate-900 px-8 py-4 rounded-lg font-semibold transition shadow-xl hover:shadow-2xl">
+          <button 
+            onClick={() => setCurrentPage('content')} 
+            className="bg-slate-900 hover:bg-slate-800 text-slate-900 px-8 py-4 rounded-lg font-semibold transition shadow-xl hover:shadow-2xl"
+          >
             Get Started
           </button>
         </div>
@@ -99,7 +136,26 @@ const App = () => {
       >
         💬
       </button>
+
+      {/* Admin Button - ONLY VISIBLE WHEN LOGGED IN */}
+      {isAdmin && (
+        <button 
+          onClick={() => setCurrentPage('admin-dashboard')}
+          className="fixed bottom-24 right-6 bg-purple-600 hover:bg-purple-700 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition z-50"
+          title="Admin Dashboard"
+        >
+          <Shield className="w-6 h-6" />
+        </button>
+      )}
     </div>
+  );
+};
+
+const App = () => {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 };
 
