@@ -1,4 +1,4 @@
-// FILE: src/hooks/useHybridContent.ts
+// FILE: src/hooks/useHybridContent.tsx
 // Reusable hook for Firebase-first, hardcoded-fallback pattern
 // ==============================================================
 

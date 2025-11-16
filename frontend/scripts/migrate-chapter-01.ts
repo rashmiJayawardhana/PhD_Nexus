@@ -20,7 +20,7 @@ const db = getFirestore(app);
 const ADMIN_UID = 'Oy4i5QwrT0RiJmt0Utae2MNXzCF2';
 const ADMIN_EMAIL = 'samanthisenarath38@gmail.com';
 
-// COMPLETE CHAPTER 01 DATA - Fixed for Firestore (no nested arrays)
+// COMPLETE CHAPTER 01 DATA
 const chapter01Data = {
   id: 'chapter-01',
   title: 'Chapter 01: Introduction',
@@ -36,32 +36,38 @@ const chapter01Data = {
         description: 'The first chapter of this e-module provides an overview towards cancer by providing cancer definition, epidemiology, treatment methods, adverse drug effects, and related terminologies. It is useful in better understanding occupational exposure and best practices and recommendations for handling chemotherapy which are discussed in upcoming chapters of this e-module.',
         note: 'Oncology nurses are expected to reach learning outcomes and practical competencies at the end of the study of the learning content of Chapter 01.',
         tableTitle: 'Learning Outcomes & Practice Competencies & Learning Content',
-        // FIXED: Store as object with indices instead of nested array
         tableRows: {
-          row0: {
-            col0: "Define the term cancer\nDescribe cancer-related terminologies",
-            col1: "Define the term cancer\nExplain cancer-related terminologies",
-            col2: "Cancer definition and related terminologies"
+          headers: {
+            col0: "Learning Outcomes",
+            col1: "Practice Competencies",
+            col2: "Learning Content"
           },
-          row1: {
-            col0: "Describe the epidemiology of cancer",
-            col1: "Explain cancer epidemiology",
-            col2: "Prevalence of common cancers and death rates"
-          },
-          row2: {
-            col0: "Define the terminologies related to cancer therapy\n\nCritically evaluate the current cancer treatment methods\n\nDescribe how chemotherapy mainly acts in the human body",
-            col1: "Explain different cancer therapies\n\nExplain cancer treatments\n\nExplain the main mechanism of chemotherapy",
-            col2: "Cancer treatment methods: Surgery, Radiotherapy, Chemotherapy, other drugs and other treatment methods\n\nCancer therapies: Adjuvant, neoadjuvant, palliative and systemic therapy\n\nSelective and non-selective mechanisms of drugs"
-          },
-          row3: {
-            col0: "Identify adverse effects of anti-cancer drugs\n\nIdentify common classifications of adverse effects",
-            col1: "Explain common anti-cancer drugs and their adverse effects\n\nApply adverse effects-related knowledge in oncology nursing care (assess, educate, and support to management of adverse effects)",
-            col2: "Common anti-cancer drugs and classification of adverse effects (based on mechanism of drugs/ drug groups/ presenting time)"
+          rows: {
+            row0: {
+              col0: "Define the term cancer\nDescribe cancer-related terminologies",
+              col1: "Define the term cancer\nExplain cancer-related terminologies",
+              col2: "Cancer definition and related terminologies"
+            },
+            row1: {
+              col0: "Describe the epidemiology of cancer",
+              col1: "Explain cancer epidemiology",
+              col2: "Prevalence of common cancers and death rates"
+            },
+            row2: {
+              col0: "Define the terminologies related to cancer therapy\n\nCritically evaluate the current cancer treatment methods\n\nDescribe how chemotherapy mainly acts in the human body",
+              col1: "Explain different cancer therapies\n\nExplain cancer treatments\n\nExplain the main mechanism of chemotherapy",
+              col2: "Cancer treatment methods: Surgery, Radiotherapy, Chemotherapy, other drugs and other treatment methods\n\nCancer therapies: Adjuvant, neoadjuvant, palliative and systemic therapy\n\nSelective and non-selective mechanisms of drugs"
+            },
+            row3: {
+              col0: "Identify adverse effects of anti-cancer drugs\n\nIdentify common classifications of adverse effects",
+              col1: "Explain common anti-cancer drugs and their adverse effects\n\nApply adverse effects-related knowledge in oncology nursing care (assess, educate, and support to management of adverse effects)",
+              col2: "Common anti-cancer drugs and classification of adverse effects (based on mechanism of drugs/ drug groups/ presenting time)"
+            }
           }
         }
       }
     },
-    
+        
     overview: {
       id: 'overview',
       title: 'Overview of Cancer',
@@ -104,7 +110,7 @@ const chapter01Data = {
       order: 3,
       data: {
         intro: 'The well-known treatment modalities of cancer include surgery, radiotherapy, and drug therapies (chemotherapy, hormone therapy, targeted therapy, immunotherapy). The type of treatment depends on the cancer diagnosis (type and stage of cancer, organ type, condition of the cells). The principal goal of the treatment is improving the quality of life and/or overall survival.',
-        // FIXED: Convert table rows to object format
+        // Convert table rows to object format
         treatmentTypesTable: {
           headers: { col0: "Treatment Type", col1: "Description" },
           rows: {
@@ -160,7 +166,126 @@ const chapter01Data = {
         temporalIntro: 'Adverse effects of chemotherapy can be outlined according to the presenting time. Generally, reversible adverse effects are present after administration of chemotherapy and are considered as acute adverse effects. Late effects are regarded as long-term and non-reversible.',
         acuteEffects: 'Occur shortly after treatment administration. Generally reversible with proper management and supportive care.',
         chronicEffects: 'Long-term or late-onset effects that may persist after treatment completion. Often non-reversible and require ongoing monitoring.',
-        clinicalNote: 'Understanding the temporal pattern of adverse effects is crucial for oncology nurses to provide appropriate patient education, implement timely interventions, and plan for long-term follow-up care.'
+        clinicalNote: 'Understanding the temporal pattern of adverse effects is crucial for oncology nurses to provide appropriate patient education, implement timely interventions, and plan for long-term follow-up care.',
+        
+        // Editable drug mechanism table
+        mechanismTable: {
+          headers: { col0: "Category", col1: "Non-specific Anticancer Drugs", col2: "Target Specific Anti-cancer Drugs" },
+          rows: {
+            row0: {
+              col0: "Mechanism",
+              col1: "Act on both malignant and normal cells",
+              col2: "Act selectively only on malignant cells"
+            },
+            row1: {
+              col0: "Example Drugs",
+              col1: "Methotrexate\n5-Fluorouracil\nCyclophosphamide\nCisplatin\nDoxorubicin\nIrinotecan\nMitoxantrone\nVinblastine\nPaclitaxel\nTamoxifen",
+              col2: "Imatinib\nSorafenib\nPalbociclib\nBevacizumab\nBortezomib\nMitoxantrone\nTrastuzumab\nCetuximab\nBrentuximab\nElotuzumab"
+            },
+            row2: {
+              col0: "Adverse Effects",
+              col1: "Thrombocytopenia\nNeutropenia\nGI issues\nNeurotoxicity\nMyelosuppression\nSecondary leukemia\nPeripheral neuropathy",
+              col2: "Nausea\nVomiting\nSkin toxicities\nDry skin\nCongestive heart failure\nHypertension\nProteinuria"
+            }
+          }
+        },
+        
+        // NEW: Editable drug classification tables
+        alkylatingAgentsTable: {
+          headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+          rows: {
+            row0: {
+              col0: "Nitrogen mustards",
+              col1: "Cyclophosphamide\nIfosfamide",
+              col2: "Nausea, vomiting, bone marrow depression, cystitis, pulmonary fibrosis, infertility, premature menopause, myelodysplasia, secondary neoplasia"
+            },
+            row1: {
+              col0: "Platinum agents",
+              col1: "Cisplatin\nCarboplatin\nOxaliplatin",
+              col2: "Bone marrow depression, nausea, vomiting, allergy, nephrotoxicity, hypomagnesemia, hypocalcemia, hypokalemia, hypophosphatemia, hyperuricemia, Raynaud's disease, sterility, teratogenicity, ototoxicity, peripheral neuropathy, cold dysesthesia, laryngopharyngeal dysesthesia"
+            }
+          }
+        },
+        
+        antimetabolitesTable: {
+          headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+          rows: {
+            row0: {
+              col0: "Folic acid analogues",
+              col1: "Methotrexate\nPemetrexed\nPralatrexate",
+              col2: "Acute renal failure, neurotoxicity, hepatotoxicity"
+            },
+            row1: {
+              col0: "Pyrimidine analogues",
+              col1: "5-fluorouracil\nCapecitabine\nFloxuridine\nGemcitabine",
+              col2: "GI issues, leukopenia, thrombocytopenia, hemorrhage"
+            }
+          }
+        },
+        
+        antimitoticAgentsTable: {
+          headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+          rows: {
+            row0: {
+              col0: "Vinca alkaloids",
+              col1: "Vincristine\nVinblastine\nVinorelbine",
+              col2: "Leukopenia, thrombocytopenia, anemia, peripheral neuropathy, neuronal death"
+            },
+            row1: {
+              col0: "Taxanes",
+              col1: "Docetaxel\nCabazitaxel\nPaclitaxel",
+              col2: "Nausea, vomiting, hypersensitivity, bone marrow depression, fluid retention, peripheral neuropathy, alopecia, arthralgia, myalgias, cardiac toxicity, mild GI disturbances, mucositis"
+            }
+          }
+        },
+        
+        topoisomeraseInhibitorsTable: {
+          headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+          rows: {
+            row0: {
+              col0: "Topoisomerase 1 inhibitors",
+              col1: "Irinotecan\nTopotecan",
+              col2: "Diarrhea, abdominal cramps, hair loss or thinning, increased sweating and saliva, nausea, vomiting, loss of appetite, tiredness, watery eyes, occasionally cause mouth sores and ulcers, muscle cramps, rashes, myelosuppression"
+            },
+            row1: {
+              col0: "Topoisomerase 2 inhibitors",
+              col1: "Etoposide\nTeniposide",
+              col2: "Hair loss, nausea and vomiting, anorexia, stomatitis, bone marrow suppression, leukopenia"
+            }
+          }
+        },
+        
+        antitumorAntibioticsTable: {
+          headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+          rows: {
+            row0: {
+              col0: "Anthracycline",
+              col1: "Doxorubicin\nDaunorubicin\nEpirubicin\nIdarubicin\nValrubicin",
+              col2: "Nausea, vomiting, bone marrow depression, cardiotoxicity, red-colored urine, severe local tissue damage with extravasation, alopecia, stomatitis, anorexia, conjunctivitis, acral pigmentation, dermatitis, hyperuricemia"
+            },
+            row1: {
+              col0: "Other",
+              col1: "Mitoxantrone\nBleomycin",
+              col2: "Bone marrow suppression, irreversible cardiomyopathy, anaphylactic reactions"
+            }
+          }
+        },
+        
+        immunotherapyTable: {
+          headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+          rows: {
+            row0: {
+              col0: "Monoclonal antibodies",
+              col1: "Rituximab\nOfatumumab\nObinutuzumab\nAlemtuzumab\nDaratumumab",
+              col2: "Infusion-related reactions (including fever, chills, shortness of breath, low blood pressure, and anaphylaxis), myelosuppression, increased risk of opportunistic infections, liver toxicity"
+            },
+            row1: {
+              col0: "Small molecules",
+              col1: "Thalidomide\nLenalidomide\nPomalidomide",
+              col2: "Various toxicities depending on specific agent"
+            }
+          }
+        }
       }
     },
     
@@ -195,7 +320,7 @@ const chapter01Data = {
 };
 
 async function migrateChapter01() {
-  console.log('🚀 Migrating Chapter 01...\n');
+  console.log('🚀 Migrating Chapter 01 (INCLUDING chemotherapy drug tables)...\n');
 
   const processedSections: Record<string, any> = {};
   
@@ -216,6 +341,7 @@ async function migrateChapter01() {
   });
   
   console.log('✅ Chapter 01 migrated successfully!\n');
+  console.log('📊 Chemotherapy section now includes 6 editable drug tables!\n');
 }
 
 async function createAdmin() {
@@ -232,17 +358,26 @@ async function createAdmin() {
 async function run() {
   try {
     console.log('========================================');
-    console.log('   CHAPTER 01 MIGRATION (FINAL)');
+    console.log('   CHAPTER 01 MIGRATION (COMPLETE)');
+    console.log('   With Chemotherapy Drug Tables');
     console.log('========================================\n');
     
     await createAdmin();
     await migrateChapter01();
     
     console.log('\n✅ Migration complete!');
-    console.log('\nNext steps:');
-    console.log('1. Verify data in Firebase Console');
-    console.log('2. Replace ChemotherapySection component');
-    console.log('3. Test editing in admin panel');
+    console.log('\nWhat was migrated:');
+    console.log('1. Introduction table (3x4 table)');
+    console.log('2. Treatment tables (2 tables)');
+    console.log('3. Chemotherapy drug mechanism table');
+    console.log('4. Chemotherapy drug classification (6 tables):');
+    console.log('   - Alkylating Agents');
+    console.log('   - Anti-metabolites');
+    console.log('   - Anti-mitotic Agents');
+    console.log('   - Topoisomerase Inhibitors');
+    console.log('   - Anti-tumor Antibiotics');
+    console.log('   - Immunotherapy');
+    console.log('\nNext: Update ChemotherapySection.tsx');
     process.exit(0);
   } catch (error) {
     console.error('\n❌ Migration failed:', error);

@@ -8,7 +8,7 @@ import twoincorrect from '../../../assets/two-incorrect.png';
 import oneincorrect from '../../../assets/one-incorrect.png';
 import adverseEffects from '../../../assets/AdverseEffects.png';
 
-// Fallback data structure
+// Fallback data structure - NOW INCLUDES ALL TABLES
 const CHEMOTHERAPY_FALLBACK = {
   intro: 'Chemotherapy is a general term to indicate the use of chemicals as a therapy. However, the term is commonly used for cytotoxic chemotherapy in cancer management and is considered as hazardous drugs. Systemic Anti-Cancer Therapy (SACT) refers to drug-based cancer treatments introduced as systemic therapy and it includes chemotherapy, hormone drugs, immunotherapy, targeted therapy, and antibody-drug conjugates.',
   sactNote: 'Can be used either alone or in combination with other types of treatments such as surgery or radiation therapy. Combination treatments are effective and common in the eradication or mitigation of cancer.',
@@ -19,8 +19,84 @@ const CHEMOTHERAPY_FALLBACK = {
   temporalIntro: 'Adverse effects of chemotherapy can be outlined according to the presenting time. Generally, reversible adverse effects are present after administration of chemotherapy and are considered as acute adverse effects. Late effects are regarded as long-term and non-reversible.',
   acuteEffects: 'Occur shortly after treatment administration. Generally reversible with proper management and supportive care.',
   chronicEffects: 'Long-term or late-onset effects that may persist after treatment completion. Often non-reversible and require ongoing monitoring.',
-  clinicalNote: 'Understanding the temporal pattern of adverse effects is crucial for oncology nurses to provide appropriate patient education, implement timely interventions, and plan for long-term follow-up care.'
+  clinicalNote: 'Understanding the temporal pattern of adverse effects is crucial for oncology nurses to provide appropriate patient education, implement timely interventions, and plan for long-term follow-up care.',
+  
+  // NEW: All table fallbacks
+  mechanismTable: {
+    headers: { col0: "Category", col1: "Non-specific Anticancer Drugs", col2: "Target Specific Anti-cancer Drugs" },
+    rows: {
+      row0: { col0: "Mechanism", col1: "Act on both malignant and normal cells", col2: "Act selectively only on malignant cells" },
+      row1: { col0: "Example Drugs", col1: "Methotrexate\n5-Fluorouracil\nCyclophosphamide\nCisplatin\nDoxorubicin\nIrinotecan\nMitoxantrone\nVinblastine\nPaclitaxel\nTamoxifen", col2: "Imatinib\nSorafenib\nPalbociclib\nBevacizumab\nBortezomib\nMitoxantrone\nTrastuzumab\nCetuximab\nBrentuximab\nElotuzumab" },
+      row2: { col0: "Adverse Effects", col1: "Thrombocytopenia\nNeutropenia\nGI issues\nNeurotoxicity\nMyelosuppression\nSecondary leukemia\nPeripheral neuropathy", col2: "Nausea\nVomiting\nSkin toxicities\nDry skin\nCongestive heart failure\nHypertension\nProteinuria" }
+    }
+  },
+  
+  alkylatingAgentsTable: {
+    headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+    rows: {
+      row0: { col0: "Nitrogen mustards", col1: "Cyclophosphamide\nIfosfamide", col2: "Nausea, vomiting, bone marrow depression, cystitis, pulmonary fibrosis, infertility, premature menopause, myelodysplasia, secondary neoplasia" },
+      row1: { col0: "Platinum agents", col1: "Cisplatin\nCarboplatin\nOxaliplatin", col2: "Bone marrow depression, nausea, vomiting, allergy, nephrotoxicity, hypomagnesemia, hypocalcemia, hypokalemia, hypophosphatemia, hyperuricemia, Raynaud's disease, sterility, teratogenicity, ototoxicity, peripheral neuropathy, cold dysesthesia, laryngopharyngeal dysesthesia" }
+    }
+  },
+  
+  antimetabolitesTable: {
+    headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+    rows: {
+      row0: { col0: "Folic acid analogues", col1: "Methotrexate\nPemetrexed\nPralatrexate", col2: "Acute renal failure, neurotoxicity, hepatotoxicity" },
+      row1: { col0: "Pyrimidine analogues", col1: "5-fluorouracil\nCapecitabine\nFloxuridine\nGemcitabine", col2: "GI issues, leukopenia, thrombocytopenia, hemorrhage" }
+    }
+  },
+  
+  antimitoticAgentsTable: {
+    headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+    rows: {
+      row0: { col0: "Vinca alkaloids", col1: "Vincristine\nVinblastine\nVinorelbine", col2: "Leukopenia, thrombocytopenia, anemia, peripheral neuropathy, neuronal death" },
+      row1: { col0: "Taxanes", col1: "Docetaxel\nCabazitaxel\nPaclitaxel", col2: "Nausea, vomiting, hypersensitivity, bone marrow depression, fluid retention, peripheral neuropathy, alopecia, arthralgia, myalgias, cardiac toxicity, mild GI disturbances, mucositis" }
+    }
+  },
+  
+  topoisomeraseInhibitorsTable: {
+    headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+    rows: {
+      row0: { col0: "Topoisomerase 1 inhibitors", col1: "Irinotecan\nTopotecan", col2: "Diarrhea, abdominal cramps, hair loss or thinning, increased sweating and saliva, nausea, vomiting, loss of appetite, tiredness, watery eyes, occasionally cause mouth sores and ulcers, muscle cramps, rashes, myelosuppression" },
+      row1: { col0: "Topoisomerase 2 inhibitors", col1: "Etoposide\nTeniposide", col2: "Hair loss, nausea and vomiting, anorexia, stomatitis, bone marrow suppression, leukopenia" }
+    }
+  },
+  
+  antitumorAntibioticsTable: {
+    headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+    rows: {
+      row0: { col0: "Anthracycline", col1: "Doxorubicin\nDaunorubicin\nEpirubicin\nIdarubicin\nValrubicin", col2: "Nausea, vomiting, bone marrow depression, cardiotoxicity, red-colored urine, severe local tissue damage with extravasation, alopecia, stomatitis, anorexia, conjunctivitis, acral pigmentation, dermatitis, hyperuricemia" },
+      row1: { col0: "Other", col1: "Mitoxantrone\nBleomycin", col2: "Bone marrow suppression, irreversible cardiomyopathy, anaphylactic reactions" }
+    }
+  },
+  
+  immunotherapyTable: {
+    headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
+    rows: {
+      row0: { col0: "Monoclonal antibodies", col1: "Rituximab\nOfatumumab\nObinutuzumab\nAlemtuzumab\nDaratumumab", col2: "Infusion-related reactions (including fever, chills, shortness of breath, low blood pressure, and anaphylaxis), myelosuppression, increased risk of opportunistic infections, liver toxicity" },
+      row1: { col0: "Small molecules", col1: "Thalidomide\nLenalidomide\nPomalidomide", col2: "Various toxicities depending on specific agent" }
+    }
+  }
 };
+
+// Helper function to convert table format to array format
+function tableToArray(table: { headers: Record<string, string>, rows: Record<string, Record<string, string>> }): { headers: string[], rows: string[][] } {
+  const headers = Object.keys(table.headers)
+    .sort() // col0, col1, col2
+    .map(colKey => table.headers[colKey]);
+  
+  const rows = Object.keys(table.rows)
+    .sort() // row0, row1, row2
+    .map(rowKey => {
+      const row = table.rows[rowKey];
+      return Object.keys(row)
+        .sort() // col0, col1, col2
+        .map(colKey => row[colKey]);
+    });
+  
+  return { headers, rows };
+}
 
 export const ChemotherapySection: React.FC = () => {
   const { data, source } = useHybridContent({
@@ -28,6 +104,15 @@ export const ChemotherapySection: React.FC = () => {
     sectionId: 'chemotherapy',
     fallbackData: CHEMOTHERAPY_FALLBACK
   });
+
+  // Convert all tables from object format to array format
+  const mechanismTable = tableToArray(data.mechanismTable);
+  const alkylatingTable = tableToArray(data.alkylatingAgentsTable);
+  const antimetabolitesTable = tableToArray(data.antimetabolitesTable);
+  const antimitoticTable = tableToArray(data.antimitoticAgentsTable);
+  const topoisomeraseTable = tableToArray(data.topoisomeraseInhibitorsTable);
+  const antitumorTable = tableToArray(data.antitumorAntibioticsTable);
+  const immunotherapyTable = tableToArray(data.immunotherapyTable);
 
   return (
     <>
@@ -92,8 +177,7 @@ export const ChemotherapySection: React.FC = () => {
         </div>
       </ContentCard>
 
-      {/* Classification Table 1: Non-selective vs Target-specific */}
-      {/* All tables remain hardcoded - too complex for editing */}
+      {/* Classification Table 1: Non-selective vs Target-specific - NOW EDITABLE! */}
       <ContentCard 
         title="Classification by Drug Mechanism" 
         icon={<span className="text-2xl">⚖️</span>}
@@ -102,17 +186,6 @@ export const ChemotherapySection: React.FC = () => {
           Table 4: Classification of chemotherapy and adverse effects (non-selective vs target-specific drugs)
         </p>
         
-        <DataTable 
-          headers={["Category", "Non-specific Anticancer Drugs", "Target Specific Anti-cancer Drugs"]}
-          rows={[
-            [
-              "Mechanism",
-              "Act on both malignant and normal cells",
-              "Act selectively only on malignant cells"
-            ]
-          ]}
-        />
-
         {/* Mechanism Images - Always hardcoded */}
         <div className="grid md:grid-cols-2 gap-6 my-6">
           <div className="bg-red-50 rounded-xl p-4 border-2 border-red-200">
@@ -144,25 +217,14 @@ export const ChemotherapySection: React.FC = () => {
           </div>
         </div>
 
-        {/* Example Drugs and Adverse Effects */}
+        {/* NOW USING FIREBASE DATA! */}
         <DataTable 
-          headers={["Category", "Non-specific Anticancer Drugs", "Target Specific Anti-cancer Drugs"]}
-          rows={[
-            [
-              "Example Drugs",
-              "Methotrexate\n5-Fluorouracil\nCychphophamids\nCisplatin\nDoxorubicin\nIrinotecan\nMitoxantrone\nVinblastine\nPaclitaxel\nTamoxifen",
-              "Imatinib\nSorafenib\nPalbociclib\nBevacizumab\nBortezomib\nMitoxantrone\nTrastuzumab\nCetuximab\nBrentuximab\nElotuzumab"
-            ],
-            [
-              "Adverse Effects",
-              "Thrombocytopenia\nNeutropenia\nGI issues\nNeurotoxicity\nMyelosuppression\nSecondary leukemia\nPeripheral neuropathy",
-              "Nausea\nVomiting\nSkin toxicities\nDry skin\nCongestive heart failure\nHypertension\nProteinuria"
-            ]
-          ]}
+          headers={mechanismTable.headers}
+          rows={mechanismTable.rows}
         />
       </ContentCard>
 
-      {/* Classification Table 2: Drug Groups - All hardcoded */}
+      {/* Classification Table 2: Drug Groups - NOW ALL EDITABLE! */}
       <ContentCard 
         title="Classification by Drug Groups" 
         icon={<AlertTriangle className="w-6 h-6 text-orange-600" />}
@@ -177,123 +239,57 @@ export const ChemotherapySection: React.FC = () => {
           Table 5: Classification of chemotherapy (drug-group wise) and adverse effects
         </p>
 
-        {/* Alkylating Agents */}
+        {/* 1. Alkylating Agents - NOW EDITABLE */}
         <div className="mb-6">
           <h5 className="font-bold text-slate-900 mb-3 bg-slate-100 p-2 rounded">1. Alkylating Agents</h5>
           <DataTable 
-            headers={["Sub-class", "Example Drugs", "Common Toxicities"]}
-            rows={[
-              [
-                "Nitrogen mustards",
-                "Cyclophosphamide\nIfosfamide",
-                "Nausea, vomiting, bone marrow depression, cystitis, pulmonary fibrosis, infertility, premature menopause, myelodysplasia, secondary neoplasia"
-              ],
-              [
-                "Platinum agents",
-                "Cisplatin\nCarboplatin\nOxaliplatin",
-                "Bone marrow depression, nausea, vomiting, allergy, nephrotoxicity, hypomagnesemia, hypocalcemia, hypokalemia, hypophosphatemia, hyperuricemia, Raynaud's disease, sterility, teratogenicity, ototoxicity, peripheral neuropathy, cold dysesthesia, laryngopharyngeal dysesthesia"
-              ]
-            ]}
+            headers={alkylatingTable.headers}
+            rows={alkylatingTable.rows}
           />
         </div>
 
-        {/* Anti-metabolites */}
+        {/* 2. Anti-metabolites - NOW EDITABLE */}
         <div className="mb-6">
           <h5 className="font-bold text-slate-900 mb-3 bg-slate-100 p-2 rounded">2. Anti-metabolites</h5>
           <DataTable 
-            headers={["Sub-class", "Example Drugs", "Common Toxicities"]}
-            rows={[
-              [
-                "Folic acid analogues",
-                "Methotrexate\nPemetrexed\nPralatrexate",
-                "Acute renal failure, neurotoxicity, hepatotoxicity"
-              ],
-              [
-                "Pyrimidine analogues",
-                "5-fluorouracil\nCapecitabine\nFloxuridine\nGemcitabine",
-                "GI issues, leukopenia, thrombocytopenia, hemorrhage"
-              ]
-            ]}
+            headers={antimetabolitesTable.headers}
+            rows={antimetabolitesTable.rows}
           />
         </div>
 
-        {/* Anti-mitotic Agents */}
+        {/* 3. Anti-mitotic Agents - NOW EDITABLE */}
         <div className="mb-6">
           <h5 className="font-bold text-slate-900 mb-3 bg-slate-100 p-2 rounded">3. Anti-mitotic Agents</h5>
           <DataTable 
-            headers={["Sub-class", "Example Drugs", "Common Toxicities"]}
-            rows={[
-              [
-                "Vinca alkaloids",
-                "Vincristine\nVinblastine\nVinorelbine",
-                "Leukopenia, thrombocytopenia, anemia, peripheral neuropathy, neuronal death"
-              ],
-              [
-                "Taxanes",
-                "Docetaxel\nCabazitaxel\nPaclitaxel",
-                "Nausea, vomiting, hypersensitivity, bone marrow depression, fluid retention, peripheral neuropathy, alopecia, arthralgia, myalgias, cardiac toxicity, mild GI disturbances, mucositis"
-              ]
-            ]}
+            headers={antimitoticTable.headers}
+            rows={antimitoticTable.rows}
           />
         </div>
 
-        {/* Topoisomerase Inhibitors */}
+        {/* 4. Topoisomerase Inhibitors - NOW EDITABLE */}
         <div className="mb-6">
           <h5 className="font-bold text-slate-900 mb-3 bg-slate-100 p-2 rounded">4. Topoisomerase Inhibitors</h5>
           <DataTable 
-            headers={["Sub-class", "Example Drugs", "Common Toxicities"]}
-            rows={[
-              [
-                "Topoisomerase 1 inhibitors",
-                "Irinotecan\nTopotecan",
-                "Diarrhea, abdominal cramps, hair loss or thinning, increased sweating and saliva, nausea, vomiting, loss of appetite, tiredness, watery eyes, occasionally cause mouth sores and ulcers, muscle cramps, rashes, myelosuppression"
-              ],
-              [
-                "Topoisomerase 2 inhibitors",
-                "Etoposide\nTeniposide",
-                "Hair loss, nausea and vomiting, anorexia, stomatitis, bone marrow suppression, leukopenia"
-              ]
-            ]}
+            headers={topoisomeraseTable.headers}
+            rows={topoisomeraseTable.rows}
           />
         </div>
 
-        {/* Anti-tumor Antibiotics */}
+        {/* 5. Anti-tumor Antibiotics - NOW EDITABLE */}
         <div className="mb-6">
           <h5 className="font-bold text-slate-900 mb-3 bg-slate-100 p-2 rounded">5. Anti-tumor Antibiotics</h5>
           <DataTable 
-            headers={["Sub-class", "Example Drugs", "Common Toxicities"]}
-            rows={[
-              [
-                "Anthracycline",
-                "Doxorubicin\nDaunorubicin\nEpirubicin\nIdarubicin\nValrubicin",
-                "Nausea, vomiting, bone marrow depression, cardiotoxicity, red-colored urine, severe local tissue damage with extravasation, alopecia, stomatitis, anorexia, conjunctivitis, acral pigmentation, dermatitis, hyperuricemia"
-              ],
-              [
-                "Other",
-                "Mitoxantrone\nBleomycin",
-                "Bone marrow suppression, irreversible cardiomyopathy, anaphylactic reactions"
-              ]
-            ]}
+            headers={antitumorTable.headers}
+            rows={antitumorTable.rows}
           />
         </div>
 
-        {/* Immunotherapy */}
+        {/* 6. Immunotherapy - NOW EDITABLE */}
         <div className="mb-6">
           <h5 className="font-bold text-slate-900 mb-3 bg-slate-100 p-2 rounded">6. Immunotherapy</h5>
           <DataTable 
-            headers={["Sub-class", "Example Drugs", "Common Toxicities"]}
-            rows={[
-              [
-                "Monoclonal antibodies",
-                "Rituximab\nOfatumumab\nObinutuzumab\nAlemtuzumab\nDaratumumab",
-                "Infusion-related reactions (including fever, chills, shortness of breath, low blood pressure, and anaphylaxis), myelosuppression, increased risk of opportunistic infections, liver toxicity"
-              ],
-              [
-                "Small molecules",
-                "Thalidomide\nLenalidomide\nPomalidomide",
-                "Various toxicities depending on specific agent"
-              ]
-            ]}
+            headers={immunotherapyTable.headers}
+            rows={immunotherapyTable.rows}
           />
         </div>
       </ContentCard>

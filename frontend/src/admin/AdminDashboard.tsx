@@ -5,21 +5,17 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { contentService, type ChapterContent } from '@/services/content.service';
-import { LogOut, LayoutDashboard, Edit, Save, Eye, RefreshCw } from 'lucide-react';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+import { LogOut, LayoutDashboard, RefreshCw, Edit3, Lock } from 'lucide-react';
+import { StructuredContentEditor } from './StructuredContentEditor';
 
 export const AdminDashboard: React.FC = () => {
   const { user, logout } = useAuth();
   const [chapters, setChapters] = useState<ChapterContent[]>([]);
   const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
-  const [content, setContent] = useState('');
-  const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [preview, setPreview] = useState(false);
-  const [message, setMessage] = useState('');
   const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {
     loadChapters();
@@ -30,104 +26,83 @@ export const AdminDashboard: React.FC = () => {
     setError('');
     try {
       const data = await contentService.getAllChapters();
-      console.log('Loaded chapters:', data); // Debug
       setChapters(data);
       
       if (data.length === 0) {
-        setError('No chapters found in database. Please run migration script.');
+        setError('No chapters found. Please run migration script.');
       }
     } catch (error) {
       console.error('Error loading chapters:', error);
-      setError('Failed to load chapters. Check console for details.');
+      setError('Failed to load chapters. Check console.');
     } finally {
       setLoading(false);
     }
   };
 
   const handleChapterSelect = (chapterId: string) => {
-    console.log('Selected chapter:', chapterId); // Debug
     setSelectedChapter(chapterId);
     setSelectedSection(null);
-    setContent('');
-    setMessage('');
+    setError('');
+    setSuccessMessage('');
   };
 
   const handleSectionSelect = (sectionId: string) => {
-    console.log('Selected section:', sectionId); // Debug
     setSelectedSection(sectionId);
-    
-    const chapter = chapters.find(c => c.id === selectedChapter);
-    console.log('Found chapter:', chapter); // Debug
-    
-    if (chapter && chapter.sections && chapter.sections[sectionId]) {
-      const sectionContent = chapter.sections[sectionId].content || '';
-      console.log('Section content:', sectionContent); // Debug
-      setContent(sectionContent);
-      setMessage('');
-    } else {
-      console.error('Section not found:', { chapterId: selectedChapter, sectionId }); // Debug
-      setContent('<h2>Section Content</h2><p>Start editing here...</p>');
-      setError('Section not found in database');
-    }
+    setError('');
+    setSuccessMessage('');
   };
 
-  const handleSave = async () => {
+  const handleSaveSection = async (updatedData: any) => {
     if (!selectedChapter || !selectedSection || !user) {
-      setError('Please select a chapter and section first');
-      return;
+      throw new Error('Please select a chapter and section');
     }
 
-    setSaving(true);
-    setMessage('');
-    setError('');
-    
     try {
-      console.log('Saving:', { chapterId: selectedChapter, sectionId: selectedSection, content }); // Debug
-      
-      await contentService.updateSection(
+      await contentService.updateSectionData(
         selectedChapter,
         selectedSection,
-        { content },
+        updatedData,
         user.email
       );
       
-      setMessage('✅ Saved successfully!');
-      setTimeout(() => setMessage(''), 3000);
+      setSuccessMessage('✅ Saved successfully! Changes are now live.');
+      setTimeout(() => setSuccessMessage(''), 5000);
       
       // Reload chapters to get updated data
       await loadChapters();
     } catch (error) {
-      console.error('Save error:', error); // Debug
-      setError('❌ Error saving content. Check console.');
-    } finally {
-      setSaving(false);
+      console.error('Save error:', error);
+      throw error;
     }
   };
 
   const selectedChapterData = chapters.find(c => c.id === selectedChapter);
+  const selectedSectionData = selectedChapterData?.sections?.[selectedSection || ''];
 
-  // Quill modules configuration
-  const quillModules = {
-    toolbar: [
-      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-      ['bold', 'italic', 'underline', 'strike'],
-      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-      [{ 'color': [] }, { 'background': [] }],
-      ['link', 'image'],
-      ['clean']
-    ]
+  // Check if section has editable structured data
+  const hasEditableData = selectedSectionData?.data && 
+    typeof selectedSectionData.data === 'object' &&
+    Object.keys(selectedSectionData.data).length > 0;
+
+  // FIXED: Get sections sorted by order property
+  const getSortedSections = (sections: Record<string, any>) => {
+    return Object.entries(sections).sort(([, a], [, b]) => {
+      const orderA = a.order ?? 999;
+      const orderB = b.order ?? 999;
+      return orderA - orderB;
+    });
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-slate-200">
+      <header className="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <LayoutDashboard className="w-8 h-8 text-teal-600" />
             <div>
               <h1 className="text-2xl font-bold text-slate-900">Admin Dashboard</h1>
-              <p className="text-sm text-slate-600">Welcome, {user?.email}</p>
+              <p className="text-sm text-slate-600">Content Management System</p>
             </div>
           </div>
           <div className="flex gap-3">
@@ -152,6 +127,17 @@ export const AdminDashboard: React.FC = () => {
       </header>
 
       <div className="max-w-7xl mx-auto p-6">
+        {/* Success Message */}
+        {successMessage && (
+          <div className="mb-4 bg-green-50 border-2 border-green-200 rounded-lg p-4 flex items-start gap-3">
+            <span className="text-green-600 text-xl">✅</span>
+            <div>
+              <p className="text-green-700 font-semibold">Success!</p>
+              <p className="text-sm text-green-600">{successMessage}</p>
+            </div>
+          </div>
+        )}
+
         {/* Error Display */}
         {error && (
           <div className="mb-4 bg-red-50 border-2 border-red-200 rounded-lg p-4 flex items-start gap-3">
@@ -175,9 +161,9 @@ export const AdminDashboard: React.FC = () => {
         {!loading && (
           <div className="grid md:grid-cols-4 gap-6">
             {/* Sidebar - Chapter Selection */}
-            <div className="md:col-span-1 bg-white rounded-xl shadow-lg p-4 h-fit">
-              <h3 className="font-bold text-slate-900 mb-4">
-                Chapters ({chapters.length})
+            <div className="md:col-span-1 bg-white rounded-xl shadow-lg p-4 h-fit sticky top-24">
+              <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <span>📚</span> Chapters ({chapters.length})
               </h3>
               <div className="space-y-2">
                 {chapters.length === 0 ? (
@@ -190,13 +176,13 @@ export const AdminDashboard: React.FC = () => {
                     <button
                       key={chapter.id}
                       onClick={() => handleChapterSelect(chapter.id)}
-                      className={`w-full text-left px-4 py-2 rounded-lg transition text-sm ${
+                      className={`w-full text-left px-4 py-3 rounded-lg transition text-sm ${
                         selectedChapter === chapter.id
-                          ? 'bg-teal-100 text-teal-900 font-semibold'
-                          : 'hover:bg-slate-100 text-slate-700'
+                          ? 'bg-teal-100 text-teal-900 font-semibold border-2 border-teal-300'
+                          : 'hover:bg-slate-100 text-slate-700 border-2 border-transparent'
                       }`}
                     >
-                      <div className="font-semibold">{chapter.icon} {chapter.id}</div>
+                      <div className="font-semibold">{chapter.icon} {chapter.title}</div>
                       <div className="text-xs text-slate-500 mt-1">
                         {Object.keys(chapter.sections || {}).length} sections
                       </div>
@@ -208,98 +194,116 @@ export const AdminDashboard: React.FC = () => {
 
             {/* Main Content Area */}
             <div className="md:col-span-3 space-y-6">
-              {/* Section Selection */}
+              {/* Section Selection - NOW SORTED! */}
               {selectedChapter && selectedChapterData && (
-                <div className="bg-white rounded-xl shadow-lg p-4">
-                  <h3 className="font-bold text-slate-900 mb-4">
-                    Sections in {selectedChapterData.title}
+                <div className="bg-white rounded-xl shadow-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-4 text-lg">
+                    📝 Sections in {selectedChapterData.title}
                   </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {Object.keys(selectedChapterData.sections || {}).length === 0 ? (
                       <p className="col-span-full text-sm text-slate-500 text-center py-4">
                         No sections found
                       </p>
                     ) : (
-                      Object.entries(selectedChapterData.sections).map(([sectionId, section]) => (
-                        <button
-                          key={sectionId}
-                          onClick={() => handleSectionSelect(sectionId)}
-                          className={`px-4 py-2 rounded-lg text-sm transition ${
-                            selectedSection === sectionId
-                              ? 'bg-blue-100 text-blue-900 font-semibold'
-                              : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-                          }`}
-                        >
-                          {section.title}
-                        </button>
-                      ))
+                      // FIXED: Use sorted sections instead of random Object.entries
+                      getSortedSections(selectedChapterData.sections).map(([sectionId, section]) => {
+                        const hasData = section.data && Object.keys(section.data).length > 0;
+                        
+                        return (
+                          <button
+                            key={sectionId}
+                            onClick={() => handleSectionSelect(sectionId)}
+                            className={`px-4 py-3 rounded-lg text-sm transition relative ${
+                              selectedSection === sectionId
+                                ? 'bg-blue-100 text-blue-900 font-semibold border-2 border-blue-300'
+                                : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-2 border-transparent'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between gap-2">
+                              <div className="flex items-center gap-2">
+                                <span className="text-xs font-mono text-slate-500">#{section.order}</span>
+                                <span>{section.title}</span>
+                              </div>
+                              {hasData ? (
+                                <span title="Editable">
+                                  <Edit3 className="w-4 h-4 text-green-600" />
+                                </span>
+                              ) : (
+                                <span title="View only">
+                                  <Lock className="w-4 h-4 text-slate-400" />
+                                </span>
+                              )}
+                            </div>
+                          </button>
+                        );
+                      })
                     )}
+                  </div>
+
+                  {/* Legend */}
+                  <div className="mt-4 pt-4 border-t border-slate-200">
+                    <p className="text-xs text-slate-600 mb-2 font-semibold">Legend:</p>
+                    <div className="flex gap-4 text-xs">
+                      <div className="flex items-center gap-2">
+                        <Edit3 className="w-4 h-4 text-green-600" />
+                        <span className="text-slate-600">Editable content</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Lock className="w-4 h-4 text-slate-400" />
+                        <span className="text-slate-600">View only (hardcoded)</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
 
-              {/* Editor */}
-              {selectedSection && selectedChapterData && (
-                <div className="bg-white rounded-xl shadow-lg p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-bold text-slate-900 text-lg">
-                      Edit: {selectedChapterData.sections[selectedSection]?.title}
-                    </h3>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => setPreview(!preview)}
-                        className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition"
-                      >
-                        <Eye className="w-4 h-4" />
-                        {preview ? 'Edit' : 'Preview'}
-                      </button>
-                      <button
-                        onClick={handleSave}
-                        disabled={saving}
-                        className="flex items-center gap-2 px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg transition disabled:opacity-50"
-                      >
-                        <Save className="w-4 h-4" />
-                        {saving ? 'Saving...' : 'Save'}
-                      </button>
-                    </div>
-                  </div>
-
-                  {message && (
-                    <div className="mb-4 bg-green-50 border-2 border-green-200 rounded-lg p-3 text-green-700">
-                      {message}
-                    </div>
-                  )}
-
-                  {preview ? (
-                    <div
-                      className="prose max-w-none p-4 border-2 border-slate-200 rounded-lg min-h-96"
-                      dangerouslySetInnerHTML={{ __html: content }}
+              {/* Content Editor */}
+              {selectedSection && selectedSectionData && (
+                <>
+                  {hasEditableData ? (
+                    <StructuredContentEditor
+                      sectionTitle={selectedSectionData.title}
+                      sectionData={selectedSectionData.data}
+                      onSave={handleSaveSection}
                     />
                   ) : (
-                    <div className="border-2 border-slate-200 rounded-lg">
-                      <ReactQuill
-                        theme="snow"
-                        value={content}
-                        onChange={setContent}
-                        modules={quillModules}
-                        className="h-96"
-                      />
+                    <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+                      <Lock className="w-16 h-16 text-slate-300 mx-auto mb-4" />
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">
+                        View Only Section
+                      </h3>
+                      <p className="text-slate-600 mb-4">
+                        This section contains hardcoded content (tables, images, complex layouts)
+                        <br/>that cannot be edited through the admin panel.
+                      </p>
+                      <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 text-left">
+                        <p className="text-sm text-blue-900">
+                          <strong>Section:</strong> {selectedSectionData.title}<br/>
+                          <strong>Order:</strong> #{selectedSectionData.order}<br/>
+                          <strong>Type:</strong> Complex component with styles and images<br/>
+                          <strong>Editable:</strong> No - requires code changes
+                        </p>
+                      </div>
                     </div>
                   )}
-
-                  {/* Debug Info (remove in production) */}
-                  <div className="mt-4 p-3 bg-slate-50 rounded text-xs text-slate-600">
-                    <strong>Debug:</strong> Chapter: {selectedChapter} | Section: {selectedSection} | Content Length: {content.length}
-                  </div>
-                </div>
+                </>
               )}
 
               {/* Empty State */}
               {!selectedChapter && (
                 <div className="bg-white rounded-xl shadow-lg p-12 text-center">
-                  <Edit className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">No Chapter Selected</h3>
-                  <p className="text-slate-600">Select a chapter from the sidebar to start editing</p>
+                  <LayoutDashboard className="w-16 h-16 text-slate-300 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">Welcome to Admin Dashboard</h3>
+                  <p className="text-slate-600 mb-4">
+                    Select a chapter from the sidebar to view and edit its content
+                  </p>
+                  <div className="bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg p-4 border-2 border-teal-200">
+                    <p className="text-sm text-slate-700">
+                      💡 <strong>Tip:</strong> Sections with <Edit3 className="w-4 h-4 inline text-green-600" /> icon are editable.
+                      Changes are saved to Firebase and appear instantly for all users.
+                    </p>
+                  </div>
                 </div>
               )}
             </div>
