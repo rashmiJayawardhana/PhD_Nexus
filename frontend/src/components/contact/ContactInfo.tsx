@@ -26,7 +26,7 @@ export const ContactInfo = () => {
   return (
     <div className="space-y-6">
       {/* Intro Card */}
-      <div className="bg-gradient-to-br from-teal-600 to-blue-600 rounded-2xl p-8 text-white">
+      <div className="bg-linear-to-br from-teal-600 to-blue-600 rounded-2xl p-8 text-white">
         <h3 className="text-2xl font-bold mb-4">Get in Touch</h3>
         <p className="leading-relaxed">
           Have questions about our educational materials or need support? We're here to help healthcare professionals like you.

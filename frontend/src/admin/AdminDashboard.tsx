@@ -94,7 +94,7 @@ export const AdminDashboard: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -298,7 +298,7 @@ export const AdminDashboard: React.FC = () => {
                   <p className="text-slate-600 mb-4">
                     Select a chapter from the sidebar to view and edit its content
                   </p>
-                  <div className="bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg p-4 border-2 border-teal-200">
+                  <div className="bg-linear-to-r from-teal-50 to-blue-50 rounded-lg p-4 border-2 border-teal-200">
                     <p className="text-sm text-slate-700">
                       💡 <strong>Tip:</strong> Sections with <Edit3 className="w-4 h-4 inline text-green-600" /> icon are editable.
                       Changes are saved to Firebase and appear instantly for all users.

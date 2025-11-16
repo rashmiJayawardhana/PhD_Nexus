@@ -305,7 +305,7 @@ export const ChemotherapySection: React.FC = () => {
         </p>
 
         {/* Image - Always hardcoded */}
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200">
+        <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200">
           <h5 className="font-bold text-purple-900 mb-4 text-center">
             Adverse Effects of Chemotherapy (Acute vs Chronic)
           </h5>

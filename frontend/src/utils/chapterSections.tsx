@@ -160,25 +160,25 @@ export const getChapterSections = (chapterId: string): ContentSection[] => {
               This section provides comprehensive supplementary materials to enhance your understanding of safe chemotherapy handling practices.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-lg p-5 border-2 border-teal-200">
+              <div className="bg-linear-to-br from-teal-50 to-blue-50 rounded-lg p-5 border-2 border-teal-200">
                 <h4 className="font-bold text-teal-900 mb-2">📚 References</h4>
                 <p className="text-sm text-slate-700">
                   Complete bibliography of all academic and professional sources cited throughout the content.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-2 border-purple-200">
+              <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-2 border-purple-200">
                 <h4 className="font-bold text-purple-900 mb-2">📖 Glossary</h4>
                 <p className="text-sm text-slate-700">
                   Comprehensive definitions of technical terms, abbreviations, and key concepts.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-pink-50 to-red-50 rounded-lg p-5 border-2 border-pink-200">
+              <div className="bg-linear-to-br from-pink-50 to-red-50 rounded-lg p-5 border-2 border-pink-200">
                 <h4 className="font-bold text-pink-900 mb-2">❤️ Acknowledgements</h4>
                 <p className="text-sm text-slate-700">
                   Recognition of institutions and experts who contributed to this educational resource.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-lg p-5 border-2 border-indigo-200">
+              <div className="bg-linear-to-br from-indigo-50 to-blue-50 rounded-lg p-5 border-2 border-indigo-200">
                 <h4 className="font-bold text-indigo-900 mb-2">🔤 Abbreviations</h4>
                 <p className="text-sm text-slate-700">
                   Complete list of abbreviations and acronyms used in the content.

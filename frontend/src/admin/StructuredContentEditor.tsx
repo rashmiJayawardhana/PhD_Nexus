@@ -3,7 +3,7 @@
 // ==============================================================
 
 import React, { useState, useEffect } from 'react';
-import { Save, Eye, Edit3, Lock, AlertCircle, CheckCircle2, Plus, Trash2 } from 'lucide-react';
+import { Save, Eye, Edit3, Lock, AlertCircle, CheckCircle2 } from 'lucide-react';
 
 interface StructuredContentEditorProps {
   sectionTitle: string;
@@ -119,7 +119,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     const sortedHeaderKeys = sortKeys(Object.keys(headers));
 
     return (
-      <div key={fullPath.join('.')} className="mb-6 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border-2 border-blue-300">
+      <div key={fullPath.join('.')} className="mb-6 p-6 bg-linear-to-br from-blue-50 to-indigo-50 rounded-lg border-2 border-blue-300">
         <div className="flex items-center justify-between mb-4">
           <h4 className="font-bold text-blue-900 capitalize flex items-center gap-2">
             <Edit3 className="w-5 h-5 text-blue-600" />
@@ -204,7 +204,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     const fullPath = [...path, key];
 
     return (
-      <div key={fullPath.join('.')} className="mb-6 p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border-2 border-purple-300">
+      <div key={fullPath.join('.')} className="mb-6 p-6 bg-linear-to-br from-purple-50 to-pink-50 rounded-lg border-2 border-purple-300">
         <div className="flex items-center justify-between mb-4">
           <h4 className="font-bold text-purple-900 capitalize flex items-center gap-2">
             <Edit3 className="w-5 h-5 text-purple-600" />
@@ -283,7 +283,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     const fullPath = [...path, key];
 
     return (
-      <div key={fullPath.join('.')} className="mb-6 p-6 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg border-2 border-teal-300">
+      <div key={fullPath.join('.')} className="mb-6 p-6 bg-linear-to-br from-teal-50 to-cyan-50 rounded-lg border-2 border-teal-300">
         <div className="flex items-center justify-between mb-4">
           <h4 className="font-bold text-teal-900 capitalize flex items-center gap-2">
             <Edit3 className="w-5 h-5 text-teal-600" />
@@ -402,7 +402,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
         return (
           <div key={fullPath.join('.')} className="mb-4 p-4 bg-slate-50 rounded-lg border-2 border-slate-200">
             <div className="flex items-start gap-2 mb-2">
-              <Lock className="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+              <Lock className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
               <div>
                 <label className="block text-sm font-semibold text-slate-700 capitalize">
                   {key.replace(/([A-Z])/g, ' $1').trim()}
@@ -434,7 +434,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
       
       return (
         <div key={fullPath.join('.')} className="mb-4">
-          <label className="block text-sm font-semibold text-slate-700 mb-2 capitalize flex items-center gap-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 capitalize items-center gap-2">
             <Edit3 className="w-4 h-4 text-green-600" />
             {key.replace(/([A-Z])/g, ' $1').trim()}
             <span className="text-xs font-normal text-slate-500">• Editable</span>
@@ -501,7 +501,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-teal-500 to-blue-500 p-6 text-white">
+      <div className="bg-linear-to-r from-teal-500 to-blue-500 p-6 text-white">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="font-bold text-2xl mb-2">✏️ Edit: {sectionTitle}</h3>
@@ -565,7 +565,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
         {/* Messages */}
         {message === 'success' && (
           <div className="mb-6 bg-green-50 border-2 border-green-200 rounded-lg p-4 flex items-start gap-3">
-            <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
             <div>
               <p className="text-green-700 font-semibold">✅ Saved successfully!</p>
               <p className="text-sm text-green-600">Changes are live for all users.</p>
@@ -575,7 +575,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
 
         {message === 'error' && (
           <div className="mb-6 bg-red-50 border-2 border-red-200 rounded-lg p-4 flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+            <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
             <div>
               <p className="text-red-700 font-semibold">❌ Error saving</p>
               <p className="text-sm text-red-600">Check console for details.</p>
@@ -586,7 +586,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
         {/* Info Box */}
         <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 mb-6">
           <div className="flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+            <AlertCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
             <div className="text-sm text-blue-900">
               <strong>Editable:</strong> Text, tables, stats, lists (types/properties)
               <br/>

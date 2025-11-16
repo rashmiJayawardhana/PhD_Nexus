@@ -34,7 +34,7 @@ export const DataTable: React.FC<TableData> = ({ headers, rows }) => {
     <div className="overflow-x-auto mb-6">
       <table className="w-full border-collapse bg-white rounded-lg overflow-hidden shadow-md">
         <thead>
-          <tr className="bg-gradient-to-r from-teal-600 to-teal-500">
+          <tr className="bg-linear-to-r from-teal-600 to-teal-500">
             {headers.map((header, idx) => (
               <th key={idx} className="px-6 py-4 text-left text-white font-semibold text-sm uppercase tracking-wide">
                 {header}

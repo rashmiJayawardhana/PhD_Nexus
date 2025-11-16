@@ -56,7 +56,7 @@ export const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
                 : 'text-slate-700'
             }`}
           >
-            <ChevronRight className="w-4 h-4 flex-shrink-0" />
+            <ChevronRight className="w-4 h-4 shrink-0" />
             <span className="text-sm">{subTopic.title}</span>
           </button>
         ))}

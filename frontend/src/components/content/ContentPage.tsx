@@ -27,7 +27,7 @@ export const ContentPage: React.FC<ContentPageProps> = ({ onBack }) => {
   } = useContentNavigation('chapter-01', 'introduction');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen bg-linear-to-br from-teal-50 via-blue-50 to-purple-50">
       <ContentHeader 
         onBack={onBack}
         isSidebarOpen={isSidebarOpen}

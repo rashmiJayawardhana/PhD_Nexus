@@ -14,7 +14,7 @@ export const ChemotherapyExposureSection: React.FC = () => (
       variant="warning"
     >
       <div className="space-y-4">
-        <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-5 border-2 border-red-200">
+        <div className="bg-linear-to-r from-red-50 to-orange-50 rounded-xl p-5 border-2 border-red-200">
           <h5 className="font-bold text-red-900 mb-3">🎯 Main Exposure Routes</h5>
           <p className="text-slate-700 leading-relaxed">
             Chemotherapy exposure routes typically include <strong>inhalation, dermal, ingestion, and needle 

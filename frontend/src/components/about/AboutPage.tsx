@@ -7,7 +7,7 @@ interface AboutPageProps {
 }
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onBack, onContentClick }) => (
-  <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-900 to-purple-900">
+  <div className="min-h-screen bg-linear-to-br from-teal-900 via-slate-900 to-purple-900">
     <button
       onClick={onBack}
       className="fixed top-6 left-6 z-50 px-6 py-3 bg-white/95 backdrop-blur-md rounded-full text-gray-900 hover:bg-white/20 transition flex items-center gap-2"
@@ -19,7 +19,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack, onContentClick }) 
     <section className="min-h-screen flex items-center justify-center px-6 py-5">
       <div className="max-w-5xl mx-auto text-center space-y-4">
         <div className="space-y-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-blue-400 to-purple-400">
+          <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-linear-to-r from-teal-400 via-blue-400 to-purple-400">
             Chemosafe
           </h1>
           <p className="text-2xl md:text-3xl text-amber-400 font-light">
@@ -33,11 +33,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack, onContentClick }) 
       </div>
     </section>
 
-    <section className="py-20 px-6 bg-gradient-to-b from-transparent to-slate-900/50">
+    <section className="py-20 px-6 bg-linear-to-b from-transparent to-slate-900/50">
       <div className="max-w-5xl mx-auto space-y-16">
         
         {/* Mission Statement */}
-        <div className="bg-gradient-to-r from-teal-600/20 to-blue-600/20 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-teal-500/30">
+        <div className="bg-linear-to-r from-teal-600/20 to-blue-600/20 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-teal-500/30">
           <div className="flex items-start gap-4 mb-6">
             <div className="bg-teal-500 p-3 rounded-xl">
               <Target className="w-6 h-6 text-white" />
@@ -50,7 +50,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack, onContentClick }) 
         </div>
 
         {/* Global Impact */}
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-blue-500/30">
+        <div className="bg-linear-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-blue-500/30">
           <div className="flex items-start gap-4 mb-6">
             <div className="bg-blue-500 p-3 rounded-xl">
               <Users className="w-6 h-6 text-white" />
@@ -66,7 +66,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack, onContentClick }) 
         </div>
 
         {/* Research Background */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-purple-500/30">
+        <div className="bg-linear-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-purple-500/30">
           <div className="flex items-start gap-4 mb-6">
             <div className="bg-purple-500 p-3 rounded-xl">
               <BookOpen className="w-6 h-6 text-white" />
@@ -89,7 +89,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack, onContentClick }) 
         </div>
 
         {/* Who Can Benefit */}
-        <div className="bg-gradient-to-r from-amber-600/20 to-orange-600/20 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-amber-500/30">
+        <div className="bg-linear-to-r from-amber-600/20 to-orange-600/20 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-amber-500/30">
           <div className="flex items-start gap-4 mb-6">
             <div className="bg-amber-500 p-3 rounded-xl">
               <Shield className="w-6 h-6 text-white" />
@@ -102,7 +102,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack, onContentClick }) 
         </div>
 
         {/* Key Takeaway */}
-        <div className="relative bg-gradient-to-r from-teal-500 to-blue-500 rounded-3xl p-8 md:p-12 overflow-hidden">
+        <div className="relative bg-linear-to-r from-teal-500 to-blue-500 rounded-3xl p-8 md:p-12 overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
           
@@ -151,7 +151,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onBack, onContentClick }) 
           <div className="text-center py-12">
             <button 
               onClick={onContentClick}
-              className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-10 py-4 rounded-full font-semibold transition shadow-2xl hover:shadow-teal-500/50 text-lg flex items-center gap-3 mx-auto"
+              className="bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-10 py-4 rounded-full font-semibold transition shadow-2xl hover:shadow-teal-500/50 text-lg flex items-center gap-3 mx-auto"
             >
               Explore Learning Materials
               <ArrowRight className="w-5 h-5" />
