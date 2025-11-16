@@ -277,11 +277,11 @@ export const EvidenceExposureSection: React.FC = () => (
               </li>
               <li className="flex items-center gap-2 bg-white p-2 rounded">
                 <span className="text-orange-600">🩹</span>
-                <span>Skin irritation[11]</span>
+                <span>Skin irritation</span>
               </li>
               <li className="flex items-center gap-2 bg-white p-2 rounded">
                 <span className="text-orange-600">👁️</span>
-                <span>Ocular irritation[11]</span>
+                <span>Ocular irritation</span>
               </li>
               <li className="flex items-center gap-2 bg-white p-2 rounded">
                 <span className="text-orange-600">😵</span>
@@ -329,9 +329,9 @@ export const EvidenceExposureSection: React.FC = () => (
 
         <div className="bg-white rounded-xl p-5 border-2 border-slate-200 shadow-lg">
           <p className="text-slate-700 leading-relaxed text-center mb-4">
-            The common AEs include headaches, nausea, vomiting, hair loss, skin/ocular irritation, 
+            The common AEs include headaches, nausea, vomiting, hair loss, skin/ocular irritation[11], 
             teratogenic and reproductive AEs (miscarriage [especially when handling chemotherapy during 
-            the first trimester], infertility, preterm births, and learning disabilities in offspring).
+            the first trimester] [11], infertility, preterm births, and learning disabilities in offspring) [1025].
           </p>
           <div className="flex justify-center">
             <img

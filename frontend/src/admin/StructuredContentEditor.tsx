@@ -1,6 +1,6 @@
 // FILE: src/admin/StructuredContentEditor.tsx
-// User-friendly editor showing what can be edited vs hardcoded
-// ==============================================================
+// Editor with table ordering support via _order property
+// ======================================================================
 
 import React, { useState, useEffect } from 'react';
 import { Save, Eye, Edit3, Lock, AlertCircle, CheckCircle2 } from 'lucide-react';
@@ -21,7 +21,6 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
   const [preview, setPreview] = useState(false);
   const [message, setMessage] = useState('');
 
-  // Reset data when sectionData changes
   useEffect(() => {
     setData(sectionData);
     setMessage('');
@@ -55,7 +54,6 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     }
   };
 
-  // Check if value is a table structure
   const isTableStructure = (value: any): boolean => {
     return (
       typeof value === 'object' &&
@@ -67,13 +65,10 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     );
   };
 
-  // Check if value is stats structure (nested objects with number/label/color)
   const isStatsStructure = (value: any): boolean => {
     if (typeof value !== 'object' || value === null) return false;
-    
     const values = Object.values(value);
     if (values.length === 0) return false;
-    
     return values.every(stat => 
       typeof stat === 'object' && 
       stat !== null &&
@@ -82,7 +77,6 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     );
   };
 
-  // Check if value is array of objects with name/description
   const isTypesArray = (value: any): boolean => {
     return (
       Array.isArray(value) &&
@@ -99,7 +93,6 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     return typeof value === 'string' || typeof value === 'number';
   };
 
-  // SORT HELPER: Natural sort for row0, row1, row2... and col0, col1, col2...
   const sortKeys = (keys: string[]): string[] => {
     return keys.sort((a, b) => {
       const aNum = parseInt(a.match(/\d+/)?.[0] || '0');
@@ -108,24 +101,69 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     });
   };
 
-  // Render table editor with SORTED rows
-  const renderTableEditor = (key: string, tableData: any, path: string[] = []) => {
+  // NEW: Get table order from _order property
+  const getTableOrder = (tableData: any): number => {
+    return tableData._order ?? 999; // Default to 999 if no order specified
+  };
+
+  // NEW: Sort data keys by table order
+  const getSortedDataKeys = (obj: any): string[] => {
+    return Object.keys(obj)
+      .filter(key => key !== '_order') // Skip _order property
+      .sort((a, b) => {
+        const aValue = obj[a];
+        const bValue = obj[b];
+        
+        // If both are tables with _order, sort by _order
+        if (isTableStructure(aValue) && isTableStructure(bValue)) {
+          const aOrder = getTableOrder(aValue);
+          const bOrder = getTableOrder(bValue);
+          return aOrder - bOrder;
+        }
+        
+        // Otherwise maintain original order (alphabetical)
+        return a.localeCompare(b);
+      });
+  };
+
+  const getTableDisplayName = (key: string, tableNumber: number, totalTables: number): string => {
+    const formatted = key
+      .replace(/([A-Z])/g, ' $1')
+      .replace(/Table$/i, '')
+      .trim();
+    
+    if (totalTables > 1) {
+      return `Table ${tableNumber}: ${formatted}`;
+    }
+    
+    return formatted;
+  };
+
+  const renderTableEditor = (key: string, tableData: any, path: string[] = [], tableNumber: number = 1, totalTables: number = 1) => {
     const fullPath = [...path, key];
     const headers = tableData.headers || {};
     const rows = tableData.rows || {};
 
-    // SORT row keys: row0, row1, row2, row3...
     const sortedRowKeys = sortKeys(Object.keys(rows));
     const sortedHeaderKeys = sortKeys(Object.keys(headers));
+    
+    const displayName = getTableDisplayName(key, tableNumber, totalTables);
 
     return (
       <div key={fullPath.join('.')} className="mb-6 p-6 bg-linear-to-br from-blue-50 to-indigo-50 rounded-lg border-2 border-blue-300">
         <div className="flex items-center justify-between mb-4">
-          <h4 className="font-bold text-blue-900 capitalize flex items-center gap-2">
+          <h4 className="font-bold text-blue-900 flex items-center gap-2">
             <Edit3 className="w-5 h-5 text-blue-600" />
-            {key.replace(/([A-Z])/g, ' $1').trim()} (Table)
+            {displayName}
           </h4>
-          <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded">Editable Table</span>
+          <div className="flex items-center gap-2">
+            {totalTables > 1 && (
+              <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded font-mono">
+                {tableNumber} of {totalTables}
+              </span>
+            )}
+            <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded">Editable Table</span>
+          </div>
         </div>
 
         {/* Headers Editor */}
@@ -151,7 +189,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
           </div>
         </div>
 
-        {/* Rows Editor - SORTED */}
+        {/* Rows Editor */}
         <div>
           <label className="block text-sm font-semibold text-blue-900 mb-2">Table Rows (Ordered)</label>
           <div className="space-y-3">
@@ -199,7 +237,6 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     );
   };
 
-  // Render stats editor (lung, breast, colorectal)
   const renderStatsEditor = (key: string, statsData: any, path: string[] = []) => {
     const fullPath = [...path, key];
 
@@ -278,7 +315,6 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     );
   };
 
-  // Render types array editor
   const renderTypesArrayEditor = (key: string, typesData: any[], path: string[] = []) => {
     const fullPath = [...path, key];
 
@@ -341,26 +377,44 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
     );
   };
 
-  // Main render field function
+  // UPDATED: Main render field function with table ordering
   const renderField = (key: string, value: any, path: string[] = [], level: number = 0) => {
     const fullPath = [...path, key];
 
-    // Check for table structure
-    if (isTableStructure(value)) {
-      return renderTableEditor(key, value, path);
+    // SKIP _order property (it's metadata, not content)
+    if (key === '_order') {
+      return null;
     }
 
-    // Check for stats structure
+    if (isTableStructure(value)) {
+      // NEW: Get sorted table keys with _order property
+      const currentData = path.length > 0 ? data[path[0]] : data;
+      const tableEntries = Object.entries(currentData).filter(([k, v]) => 
+        k !== '_order' && isTableStructure(v)
+      );
+      
+      // Sort by _order property
+      const sortedTableEntries = tableEntries.sort((a, b) => {
+        const aOrder = getTableOrder(a[1]);
+        const bOrder = getTableOrder(b[1]);
+        return aOrder - bOrder;
+      });
+      
+      const tableIndex = sortedTableEntries.findIndex(([k]) => k === key) + 1;
+      const totalTables = sortedTableEntries.length;
+      
+      return renderTableEditor(key, value, path, tableIndex, totalTables);
+    }
+
     if (isStatsStructure(value)) {
       return renderStatsEditor(key, value, path);
     }
 
-    // Check for types array
     if (isTypesArray(value)) {
       return renderTypesArrayEditor(key, value, path);
     }
 
-    // String arrays (e.g., properties, keyPoints, description)
+    // String arrays
     if (Array.isArray(value) && value.every(v => typeof v === 'string')) {
       return (
         <div key={fullPath.join('.')} className="mb-6 p-4 bg-orange-50 rounded-lg border-2 border-orange-200">
@@ -391,7 +445,6 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
       );
     }
 
-    // Editable primitives
     const isEditable = isEditableType(value);
 
     // Complex nested structures
@@ -434,7 +487,7 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
       
       return (
         <div key={fullPath.join('.')} className="mb-4">
-          <label className="block text-sm font-semibold text-slate-700 mb-2 capitalize items-center gap-2">
+          <label className="text-sm font-semibold text-slate-700 mb-2 capitalize flex items-center gap-2">
             <Edit3 className="w-4 h-4 text-green-600" />
             {key.replace(/([A-Z])/g, ' $1').trim()}
             <span className="text-xs font-normal text-slate-500">• Editable</span>
@@ -591,11 +644,13 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
               <strong>Editable:</strong> Text, tables, stats, lists (types/properties)
               <br/>
               <strong>Locked:</strong> Images, complex styles, hardcoded data
+              <br/>
+              <strong>Note:</strong> Tables appear in order based on _order property
             </div>
           </div>
         </div>
 
-        {/* Editor */}
+        {/* Editor - NOW SORTED! */}
         {preview ? (
           <div className="prose max-w-none p-6 bg-slate-50 border-2 border-slate-200 rounded-lg">
             <h4 className="text-lg font-bold mb-4">Preview</h4>
@@ -610,7 +665,8 @@ export const StructuredContentEditor: React.FC<StructuredContentEditorProps> = (
           </div>
         ) : (
           <div className="space-y-4">
-            {data && Object.keys(data).map(key => renderField(key, data[key]))}
+            {/* UPDATED: Use sorted keys! */}
+            {data && getSortedDataKeys(data).map(key => renderField(key, data[key]))}
           </div>
         )}
 

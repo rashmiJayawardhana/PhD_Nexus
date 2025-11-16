@@ -1,5 +1,5 @@
 // FILE: scripts/migrate-chapter-01.ts
-// Complete Chapter 01 migration with real content from components
+// Complete Chapter 01 migration with table ordering
 // ================================================================
 
 import { initializeApp } from 'firebase/app';
@@ -20,7 +20,7 @@ const db = getFirestore(app);
 const ADMIN_UID = 'Oy4i5QwrT0RiJmt0Utae2MNXzCF2';
 const ADMIN_EMAIL = 'samanthisenarath38@gmail.com';
 
-// COMPLETE CHAPTER 01 DATA
+// COMPLETE CHAPTER 01 DATA WITH TABLE ORDERING
 const chapter01Data = {
   id: 'chapter-01',
   title: 'Chapter 01: Introduction',
@@ -36,6 +36,7 @@ const chapter01Data = {
         description: 'The first chapter of this e-module provides an overview towards cancer by providing cancer definition, epidemiology, treatment methods, adverse drug effects, and related terminologies. It is useful in better understanding occupational exposure and best practices and recommendations for handling chemotherapy which are discussed in upcoming chapters of this e-module.',
         note: 'Oncology nurses are expected to reach learning outcomes and practical competencies at the end of the study of the learning content of Chapter 01.',
         tableTitle: 'Learning Outcomes & Practice Competencies & Learning Content',
+        // Single table - no order needed
         tableRows: {
           headers: {
             col0: "Learning Outcomes",
@@ -74,7 +75,6 @@ const chapter01Data = {
       order: 1,
       data: {
         definition: 'Cancer is the generic name for neoplasms/tumors. Tumors are of two types, benign and cancerous. Benign tumors grow slowly and usually do not invade other tissues or convert to cancer. Cancerous tumors are referred to as malignant tumors and demonstrate uncontrolled cell division and the potential to invade surrounding tissues by destroying normal cells. Cancers may be developed in solid or liquid tissues.',
-        // FIXED: Array of objects is OK (not nested arrays)
         types: [
           { name: "Solid Cancers", description: "Abnormal cells create a mass or lump (e.g., breast and prostate cancers). Many types of cancers belong to solid cancers." },
           { name: "Liquid Cancers", description: "Abnormal cell buildup in blood, bone marrow, and lymphatic system (e.g., leukemia, myeloma)" },
@@ -110,8 +110,9 @@ const chapter01Data = {
       order: 3,
       data: {
         intro: 'The well-known treatment modalities of cancer include surgery, radiotherapy, and drug therapies (chemotherapy, hormone therapy, targeted therapy, immunotherapy). The type of treatment depends on the cancer diagnosis (type and stage of cancer, organ type, condition of the cells). The principal goal of the treatment is improving the quality of life and/or overall survival.',
-        // Convert table rows to object format
+        // TWO TABLES - ADD ORDER!
         treatmentTypesTable: {
+          _order: 1, // First table
           headers: { col0: "Treatment Type", col1: "Description" },
           rows: {
             row0: { col0: "Surgery", col1: "A surgical operation to remove cancer/body parts affected by cancer" },
@@ -121,6 +122,7 @@ const chapter01Data = {
           }
         },
         therapiesTable: {
+          _order: 2, // Second table
           title: 'Purpose-Based Cancer Therapies',
           headers: { col0: "Cancer Therapy", col1: "Description" },
           rows: {
@@ -139,7 +141,6 @@ const chapter01Data = {
       order: 4,
       data: {
         intro: 'Anti-cancer chemotherapy and a few other drug groups (antiviral drugs, hormones, some bioengineered drugs, and other miscellaneous drugs) are considered hazardous drugs (HDs) due to the below-mentioned characteristics.',
-        // Array of strings is OK
         properties: [
           'Carcinogenicity',
           'Teratogenicity or developmental toxicity',
@@ -156,7 +157,7 @@ const chapter01Data = {
       title: 'Chemotherapy & Adverse Effects',
       order: 5,
       data: {
-        // Editable text content
+        // Text content
         intro: 'Chemotherapy is a general term to indicate the use of chemicals as a therapy. However, the term is commonly used for cytotoxic chemotherapy in cancer management and is considered as hazardous drugs. Systemic Anti-Cancer Therapy (SACT) refers to drug-based cancer treatments introduced as systemic therapy and it includes chemotherapy, hormone drugs, immunotherapy, targeted therapy, and antibody-drug conjugates.',
         sactNote: 'Can be used either alone or in combination with other types of treatments such as surgery or radiation therapy. Combination treatments are effective and common in the eradication or mitigation of cancer.',
         administration: 'Chemotherapy is administered through oral, intravenous (IV), subcutaneous (SC), intramuscular (IM), or intrathecal routes (IT). IV route administration is common due to increased bioavailability, versatility, and flexibility in treatment dosages when compared to other routes of administration.',
@@ -168,8 +169,9 @@ const chapter01Data = {
         chronicEffects: 'Long-term or late-onset effects that may persist after treatment completion. Often non-reversible and require ongoing monitoring.',
         clinicalNote: 'Understanding the temporal pattern of adverse effects is crucial for oncology nurses to provide appropriate patient education, implement timely interventions, and plan for long-term follow-up care.',
         
-        // Editable drug mechanism table
+        // SEVEN TABLES - ADD ORDER TO EACH!
         mechanismTable: {
+          _order: 1, // Table 1
           headers: { col0: "Category", col1: "Non-specific Anticancer Drugs", col2: "Target Specific Anti-cancer Drugs" },
           rows: {
             row0: {
@@ -190,8 +192,8 @@ const chapter01Data = {
           }
         },
         
-        // NEW: Editable drug classification tables
         alkylatingAgentsTable: {
+          _order: 2, // Table 2
           headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
           rows: {
             row0: {
@@ -208,6 +210,7 @@ const chapter01Data = {
         },
         
         antimetabolitesTable: {
+          _order: 3, // Table 3
           headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
           rows: {
             row0: {
@@ -224,6 +227,7 @@ const chapter01Data = {
         },
         
         antimitoticAgentsTable: {
+          _order: 4, // Table 4
           headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
           rows: {
             row0: {
@@ -240,6 +244,7 @@ const chapter01Data = {
         },
         
         topoisomeraseInhibitorsTable: {
+          _order: 5, // Table 5
           headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
           rows: {
             row0: {
@@ -256,6 +261,7 @@ const chapter01Data = {
         },
         
         antitumorAntibioticsTable: {
+          _order: 6, // Table 6
           headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
           rows: {
             row0: {
@@ -272,6 +278,7 @@ const chapter01Data = {
         },
         
         immunotherapyTable: {
+          _order: 7, // Table 7
           headers: { col0: "Sub-class", col1: "Example Drugs", col2: "Common Toxicities" },
           rows: {
             row0: {
@@ -295,7 +302,6 @@ const chapter01Data = {
       order: 6,
       data: {
         title: 'Chapter 01 Summary',
-        // Array of strings is OK
         description: [
           'Cancer refers to abnormal cell growth, categorized as benign (non-cancerous) or malignant (cancerous). Malignant tumors invade surrounding tissues and show metastasis properties by spreading to new sites through blood or lymph. Cancer is a leading cause of global deaths, and it is expected to rise by 77% by 2050. Lung, breast, colorectal, prostate, and stomach cancers are globally common.',
           'Anti-cancer treatment modalities include surgery, radiotherapy, and SACT (chemotherapy, hormone therapy, targeted therapy, and immunotherapy). The non-selective mechanism and narrow therapeutic index of anti-cancer chemotherapy cause a wide variety of adverse effects. Due to the inherent toxic properties of chemotherapy, it is categorized as a hazardous drug.',
@@ -320,7 +326,7 @@ const chapter01Data = {
 };
 
 async function migrateChapter01() {
-  console.log('🚀 Migrating Chapter 01 (INCLUDING chemotherapy drug tables)...\n');
+  console.log('🚀 Migrating Chapter 01 (WITH TABLE ORDERING)...\n');
 
   const processedSections: Record<string, any> = {};
   
@@ -341,7 +347,7 @@ async function migrateChapter01() {
   });
   
   console.log('✅ Chapter 01 migrated successfully!\n');
-  console.log('📊 Chemotherapy section now includes 6 editable drug tables!\n');
+  console.log('📊 Tables now have _order property for correct sequencing!\n');
 }
 
 async function createAdmin() {
@@ -358,8 +364,8 @@ async function createAdmin() {
 async function run() {
   try {
     console.log('========================================');
-    console.log('   CHAPTER 01 MIGRATION (COMPLETE)');
-    console.log('   With Chemotherapy Drug Tables');
+    console.log('   CHAPTER 01 MIGRATION (WITH ORDER)');
+    console.log('   Tables Display in Correct Sequence');
     console.log('========================================\n');
     
     await createAdmin();
@@ -367,17 +373,17 @@ async function run() {
     
     console.log('\n✅ Migration complete!');
     console.log('\nWhat was migrated:');
-    console.log('1. Introduction table (3x4 table)');
-    console.log('2. Treatment tables (2 tables)');
-    console.log('3. Chemotherapy drug mechanism table');
-    console.log('4. Chemotherapy drug classification (6 tables):');
-    console.log('   - Alkylating Agents');
-    console.log('   - Anti-metabolites');
-    console.log('   - Anti-mitotic Agents');
-    console.log('   - Topoisomerase Inhibitors');
-    console.log('   - Anti-tumor Antibiotics');
-    console.log('   - Immunotherapy');
-    console.log('\nNext: Update ChemotherapySection.tsx');
+    console.log('1. Introduction table (1 table - no order needed)');
+    console.log('2. Treatment tables (2 tables with _order: 1, 2)');
+    console.log('3. Chemotherapy tables (7 tables with _order: 1-7):');
+    console.log('   - Mechanism Table (_order: 1)');
+    console.log('   - Alkylating Agents (_order: 2)');
+    console.log('   - Anti-metabolites (_order: 3)');
+    console.log('   - Anti-mitotic Agents (_order: 4)');
+    console.log('   - Topoisomerase Inhibitors (_order: 5)');
+    console.log('   - Anti-tumor Antibiotics (_order: 6)');
+    console.log('   - Immunotherapy (_order: 7)');
+    console.log('\nNext: Update StructuredContentEditor to use _order');
     process.exit(0);
   } catch (error) {
     console.error('\n❌ Migration failed:', error);

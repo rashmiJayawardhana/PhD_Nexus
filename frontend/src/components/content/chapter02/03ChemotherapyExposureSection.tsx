@@ -18,8 +18,8 @@ export const ChemotherapyExposureSection: React.FC = () => (
           <h5 className="font-bold text-red-900 mb-3">🎯 Main Exposure Routes</h5>
           <p className="text-slate-700 leading-relaxed">
             Chemotherapy exposure routes typically include <strong>inhalation, dermal, ingestion, and needle 
-            prick injuries</strong>  (Figure 03). Inhalation via droplets, particulates, vapors, and dermal contamination 
-            are more common.
+            prick injuries</strong>[9,11,12,27]  (Figure 03). Inhalation via droplets, particulates, vapors, and dermal contamination 
+            are more common[12,30].
           </p>
         </div>
 
@@ -46,18 +46,18 @@ export const ChemotherapyExposureSection: React.FC = () => (
           <h5 className="font-bold text-red-900 mb-3">⚠️ Surface Contamination & Exposure Risks</h5>
           <div className="space-y-3 text-sm text-slate-700">
             <p>
-              <strong>Most work surfaces are contaminated with HDs.</strong> Biological Safety Cabinets (BSCs), 
-              countertops, equipment, floors, and other surfaces were identified as highly contaminated areas. 
+              <strong>Most work surfaces are contaminated with HDs[11].</strong> Biological Safety Cabinets (BSCs), 
+              countertops, equipment, floors, and other surfaces were identified as highly contaminated areas[22]. 
               Inappropriate handling predominantly causes surface and dermal contamination.
             </p>
             <p>
               Contamination of the outside of the vials/drug containers, also reported during the filling 
-              process, can cause damage or leaking during the transportation of drugs.
+              process, can cause damage or leaking during the transportation of drugs[11].
             </p>
             <p>
               <strong>Manipulation, administration, and spill management</strong> are the primary risk activities 
-              in the generation of aerosols or inhalable particles. Drug particles on contaminated surfaces may 
-              also become airborne particles after drying. Thus, surface contamination is a risk of inhalation.
+              in the generation of aerosols or inhalable particles[11,12,24]. Drug particles on contaminated surfaces may 
+              also become airborne particles after drying. Thus, surface contamination is a risk of inhalation[11].
             </p>
             <p>
               Inadvertent ingestion is possible with contamination of food and beverages with cytotoxic drugs. 
@@ -208,7 +208,7 @@ export const ChemotherapyExposureSection: React.FC = () => (
       icon={<AlertCircle className="w-6 h-6 text-red-600" />}
     >
       <p className="text-slate-700 mb-4">
-        Possible opportunities for exposure based on activity are outlined below (Table 8):
+        Possible opportunities for exposure based on activity are outlined below (Table 8) [9,11,12,24]:
       </p>
       
       <p className="text-slate-700 mb-4 text-sm italic">
