@@ -430,7 +430,7 @@ export const EducationImpactSection: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-4">
-            {Object.entries(data.lmicRecommendations).map(([key, text]: [string, any], idx: number) => {
+            {Object.entries(data.lmicRecommendations).map(([, text]: [string, any], idx: number) => {
               const icons = ['💻', '📚', '🔀', '♻️'];
               const titles = ['E-learning Modules', 'Address Education Gap', 'Blended Learning Approach', 'Continuous Development'];
               return (
