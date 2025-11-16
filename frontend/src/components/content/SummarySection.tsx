@@ -164,7 +164,7 @@ export const SummarySection: React.FC<SummarySectionProps> = ({ data }) => {
       </div>
 
       {/* Decorative Footer Wave */}
-      <div className="h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
+      <div className="h-2 bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500" />
     </div>
   );
 };
