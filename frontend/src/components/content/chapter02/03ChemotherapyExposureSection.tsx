@@ -73,7 +73,7 @@ export const ChemotherapyExposureSection: React.FC = () => (
 
         {/* Four Routes Grid */}
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-5 border-2 border-blue-200 hover:shadow-xl transition-all duration-300">
+          <div className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-lg p-5 border-2 border-blue-200 hover:shadow-xl transition-all duration-300">
             <h5 className="font-bold text-blue-900 mb-3 flex items-center gap-2">
               💨 Route 1: Inhalation
             </h5>
@@ -104,7 +104,7 @@ export const ChemotherapyExposureSection: React.FC = () => (
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-2 border-purple-200 hover:shadow-xl transition-all duration-300">
+          <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-2 border-purple-200 hover:shadow-xl transition-all duration-300">
             <h5 className="font-bold text-purple-900 mb-3 flex items-center gap-2">
               ✋ Route 2: Dermal Contact
             </h5>
@@ -135,7 +135,7 @@ export const ChemotherapyExposureSection: React.FC = () => (
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-lg p-5 border-2 border-amber-200 hover:shadow-xl transition-all duration-300">
+          <div className="bg-linear-to-br from-amber-50 to-yellow-50 rounded-lg p-5 border-2 border-amber-200 hover:shadow-xl transition-all duration-300">
             <h5 className="font-bold text-amber-900 mb-3 flex items-center gap-2">
               🍽️ Route 3: Ingestion
             </h5>
@@ -167,7 +167,7 @@ export const ChemotherapyExposureSection: React.FC = () => (
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-lg p-5 border-2 border-red-200 hover:shadow-xl transition-all duration-300">
+          <div className="bg-linear-to-br from-red-50 to-pink-50 rounded-lg p-5 border-2 border-red-200 hover:shadow-xl transition-all duration-300">
             <h5 className="font-bold text-red-900 mb-3 flex items-center gap-2">
               💉 Route 4: Needle Stick Injuries
             </h5>

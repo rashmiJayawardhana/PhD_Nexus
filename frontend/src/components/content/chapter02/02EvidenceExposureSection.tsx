@@ -15,14 +15,14 @@ export const EvidenceExposureSection: React.FC = () => (
       variant="warning"
     >
       <div className="space-y-4">
-        <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-5 border-2 border-red-200">
+        <div className="bg-linear-to-r from-red-50 to-orange-50 rounded-xl p-5 border-2 border-red-200">
           <h5 className="font-bold text-red-900 mb-3 flex items-center gap-2">
             📅 Historical Context (1970s)
           </h5>
           <p className="text-slate-700 leading-relaxed mb-3">
-            First concerns about the occupational exposure to anti-cancer agents were raised in the 1970s. 
+            First concerns about the occupational exposure to anti-cancer agents were raised in the 1970s[12]. 
             First detected increased urinary mutagenic substances among nurses who prepared and administered 
-            antineoplastic drugs compared to unexposed HCWs.
+            antineoplastic drugs compared to unexposed HCWs[11].
           </p>
           <p className="text-slate-700 leading-relaxed">
             Therefore, safety precautions and guidelines are established to minimize occupational exposure 
@@ -34,7 +34,7 @@ export const EvidenceExposureSection: React.FC = () => (
           <p className="text-slate-700 text-sm">
             <strong>🎯 Key Finding:</strong> Each person and every step of handling chemotherapy (manufacturing, 
             transportation, preparation, distribution, administration of drugs to patients, and waste disposal) 
-            is at risk of exposure. <strong>Nurses and pharmacists are at greater risk in their roles in handling.</strong>
+            is at risk of exposure[11]. <strong>Nurses and pharmacists are at greater risk in their roles in handling[12].</strong>
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export const EvidenceExposureSection: React.FC = () => (
           <strong> biological samples</strong> is widely used to identify occupational exposure and related risks.
         </p>
 
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-5 border-2 border-purple-200">
+        <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-xl p-5 border-2 border-purple-200">
           <h5 className="font-bold text-purple-900 mb-3">🔬 Why Detection Matters</h5>
           <p className="text-slate-700 text-sm mb-3">
             However, sampling data on exposure or analytical methodologies could not precisely determine 
@@ -76,11 +76,11 @@ export const EvidenceExposureSection: React.FC = () => (
           <ul className="space-y-2 text-sm text-slate-700 ml-4">
             <li className="flex items-start gap-2">
               <span className="text-purple-600 font-bold">✓</span>
-              <span>Workplace exposure (primarily among nurses)</span>
+              <span>Workplace exposure (primarily among nurses)[11]</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-purple-600 font-bold">✓</span>
-              <span>The presence of drugs or metabolites in biological samples</span>
+              <span>The presence of drugs or metabolites in biological samples[22,23]</span>
             </li>
           </ul>
           <p className="text-slate-700 text-sm mt-3">
@@ -141,10 +141,10 @@ export const EvidenceExposureSection: React.FC = () => (
 
         <InfoBox type="note">
           <strong>Universal Finding:</strong> All studies conducted to detect workplace contamination reported 
-          detectable concentrations of at least one or more HDs in various healthcare settings. Contamination 
-          of the outer surfaces of cytotoxic drug vials is also reported. Indicating occupational exposure, 
+          detectable concentrations of at least one or more HDs in various healthcare settings[22]. Contamination 
+          of the outer surfaces of cytotoxic drug vials is also reported[11,12,24]. Indicating occupational exposure, 
           recent literature reports urine mutagenicity, chromosomal aberrations (CAs), sister chromatid 
-          exchanges (SCEs), and other endpoints in pharmacists and nurses who handle chemotherapy.
+          exchanges (SCEs), and other endpoints in pharmacists and nurses who handle chemotherapy[11,25].
         </InfoBox>
       </div>
     </ContentCard>
@@ -162,7 +162,7 @@ export const EvidenceExposureSection: React.FC = () => (
           analytical methods:
         </p>
 
-        <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border-2 border-teal-200 mb-6">
+        <div className="bg-linear-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border-2 border-teal-200 mb-6">
           <h5 className="font-bold text-teal-900 mb-4 text-center">
             🔬 Commonly Detected Chemotherapy Drugs
           </h5>
@@ -237,7 +237,7 @@ export const EvidenceExposureSection: React.FC = () => (
               <div>
                 <strong>LC-MS-MS</strong>
                 <br />
-                <span className="text-xs text-slate-600">High-Performance Liquid Chromatography-Tandem Mass Spectroscopy</span>
+                <span className="text-xs text-slate-600">High-Performance Liquid Chromatography-Tandem Mass Spectroscopy[22]</span>
               </div>
             </li>
           </ul>
@@ -253,7 +253,7 @@ export const EvidenceExposureSection: React.FC = () => (
     >
       <div className="space-y-4">
         <p className="text-slate-700 leading-relaxed bg-amber-50 p-4 rounded-lg border-2 border-amber-200">
-          <strong>Adverse effects and black box warnings</strong> of anti-cancer drugs are well-documented. 
+          <strong>Adverse effects and black box warnings</strong> of anti-cancer drugs are well-documented[2,8,21]. 
           Occupational exposure to chemotherapy also brings similar adverse effects among HCWs.
         </p>
 
@@ -277,11 +277,11 @@ export const EvidenceExposureSection: React.FC = () => (
               </li>
               <li className="flex items-center gap-2 bg-white p-2 rounded">
                 <span className="text-orange-600">🩹</span>
-                <span>Skin irritation</span>
+                <span>Skin irritation[11]</span>
               </li>
               <li className="flex items-center gap-2 bg-white p-2 rounded">
                 <span className="text-orange-600">👁️</span>
-                <span>Ocular irritation</span>
+                <span>Ocular irritation[11]</span>
               </li>
               <li className="flex items-center gap-2 bg-white p-2 rounded">
                 <span className="text-orange-600">😵</span>
