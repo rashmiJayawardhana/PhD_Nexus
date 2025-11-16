@@ -1,4 +1,4 @@
-// FILE: src/components/content/chapter04/CompoundingHdsSection.tsx
+// FILE: src/components/content/chapter04/03CompoundingHdsSection.tsx
 import { Beaker, FlaskConical, Shield, Wind } from "lucide-react";
 import { ContentCard } from "../ContentCard";
 import { InfoBox } from "../InfoBox";

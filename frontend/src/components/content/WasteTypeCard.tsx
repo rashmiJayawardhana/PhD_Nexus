@@ -9,7 +9,7 @@ interface WasteTypeCardProps {
 }
 
 export const WasteTypeCard: React.FC<WasteTypeCardProps> = ({ category, items }) => (
-  <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-lg p-5 border-2 border-red-200 mb-4">
+  <div className="bg-linear-to-br from-red-50 to-orange-50 rounded-lg p-5 border-2 border-red-200 mb-4">
     <h5 className="font-bold text-red-900 mb-3 flex items-center gap-2">
       <Trash2 className="w-5 h-5" />
       {category}

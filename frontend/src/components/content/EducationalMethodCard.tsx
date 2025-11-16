@@ -61,7 +61,7 @@ export const EducationalMethodCard: React.FC<EducationalMethodCardProps> = ({
         <ul className="space-y-1 mt-3 ml-2">
           {benefits.map((benefit, idx) => (
             <li key={idx} className="flex items-start gap-2 text-xs text-slate-700">
-              <CheckCircle2 className={`w-4 h-4 ${style.icon} flex-shrink-0 mt-0.5`} />
+              <CheckCircle2 className={`w-4 h-4 ${style.icon} shrink-0 mt-0.5`} />
               <span>{benefit}</span>
             </li>
           ))}

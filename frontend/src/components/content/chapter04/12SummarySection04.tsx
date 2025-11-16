@@ -1,12 +1,13 @@
-// FILE: src/components/content/chapter04/SummarySection04.tsx
+// FILE: src/components/content/chapter04/12SummarySection04.tsx
 // Chapter 4 specific summary implementation
 // ============================================
+import { DataSourceIndicator, useHybridContent } from '@/hooks/useHybridContent';
 import { SummarySection } from '../SummarySection';
 import type { SummaryData } from '@/types/content';
 import summaryImage from '../../../assets/summary04.webp';
 
-export const SummarySection04: React.FC = () => {
-  const summaryData: SummaryData = {
+// Fallback data matching Firebase structure
+const SUMMARY_FALLBACK = {
     title: 'Chapter 04 Summary',
     description: [
       'Recommendations for handling chemotherapy are established in the guidelines considering the role or activity of handling. Education, training, appropriate facilities and PPE and skills are vital to perform activities related to handling chemotherapy. Chapter 04 discusses the recommendations that are most important to local setting nurses since the present e-module is used as educational material.  Therefore, chapter 04 included the work practices related to receiving, distribution, and storage of HDs, compounding HDs, transport of compounded HDs, administration of chemotherapy, disposal of waste, cleaning and decontamination of HD equipment and work surfaces, deactivation, decontamination, handling spills, contaminated bed linen, recommendations are made to avoid exposure, emergency procedures for personnel contamination with HDs,  training personnel in handling HDs and Medical Surveillance.'
@@ -25,17 +26,39 @@ export const SummarySection04: React.FC = () => {
       '📚 Training Requirements: Initial training when first assigned, annual refresher training. Content includes adverse effects, exposure routes, PPE selection, engineering controls, work practices, spill management, and medical surveillance role.',
       '🏥 Medical Surveillance: Maintain worker registry, conduct baseline assessments (health status, medical/reproductive history, physical exam, lab tests), perform periodic evaluations, develop follow-up plans, and document all exposures carefully.'
     ],
-    images: [
+  variant: 'gradient',
+  hasImage: true,
+  imagePath: 'summary04.png'
+};
+
+export const SummarySection04: React.FC = () => {
+  const { data, source } = useHybridContent({
+    chapterId: 'chapter-04',
+    sectionId: 'summary',
+    fallbackData: SUMMARY_FALLBACK
+  });
+
+  // Build SummaryData structure
+  const summaryData: SummaryData = {
+    title: data.title,
+    description: data.description,
+    keyPoints: data.keyPoints,
+    images: data.hasImage ? [
       {
         src: summaryImage,
-        alt: 'Chapter 4 Summary: Safe Handling Recommendations',
-        caption: 'Comprehensive guide to safe handling practices for hazardous drugs',
-        size: 'full', // Use preset: small, medium, large, full, auto
-        objectFit: 'contain' // How image should fit: contain, cover, fill, none, scale-down
+        alt: 'Chapter 4 Summary - Handling Recommendations',
+        caption: 'Comprehensive safety recommendations for handling hazardous drugs',
+        size: 'full',
+        objectFit: 'contain'
       }
-    ],
-    variant: 'gradient'
+    ] : undefined,
+    variant: data.variant as 'default' | 'gradient' | 'bordered'
   };
 
-  return <SummarySection data={summaryData} />;
+  return (
+    <>
+      <DataSourceIndicator source={source} />
+      <SummarySection data={summaryData} />
+    </>
+  );
 };

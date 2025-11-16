@@ -24,7 +24,7 @@ export const ProcedureList: React.FC<ProcedureListProps> = ({
       <ol className="space-y-3">
         {items.map((item, idx) => (
           <li key={idx} className="flex items-start gap-3">
-            <span className="flex-shrink-0 w-6 h-6 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+            <span className="shrink-0 w-6 h-6 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
               {idx + 1}
             </span>
             <span className="text-slate-700 text-sm pt-0.5">{item}</span>

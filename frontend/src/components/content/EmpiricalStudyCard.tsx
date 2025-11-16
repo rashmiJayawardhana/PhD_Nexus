@@ -46,7 +46,7 @@ export const EmpiricalStudyCard: React.FC<EmpiricalStudyCardProps> = ({
     >
       <div className="flex items-start gap-3 mb-3">
         <span
-          className={`${style.badge} text-white text-xs px-3 py-1 rounded-full font-semibold flex-shrink-0`}
+          className={`${style.badge} text-white text-xs px-3 py-1 rounded-full font-semibold shrink-0`}
         >
           {study}
         </span>
