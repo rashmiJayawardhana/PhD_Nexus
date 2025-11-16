@@ -75,7 +75,7 @@ export const CleaningDecontaminationSection = () => (
         <h4 className="text-xl font-bold text-slate-900 mt-6 mb-4">Cleaning Steps, Purpose and Cleaning Agents</h4>
         <div className="space-y-6 mt-6">
           {/* Step 1: Deactivation */}
-          <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 border-2 border-orange-300 shadow-lg">
+          <div className="bg-linear-to-br from-orange-50 to-amber-50 rounded-xl p-6 border-2 border-orange-300 shadow-lg">
             <h5 className="font-bold text-orange-900 mb-4 flex items-center gap-2 text-lg">
               <Flame className="w-6 h-6" />
               Step 1: Deactivation
@@ -105,7 +105,7 @@ export const CleaningDecontaminationSection = () => (
           </div>
 
           {/* Step 2: Decontamination */}
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 shadow-lg">
+          <div className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 shadow-lg">
             <h5 className="font-bold text-blue-900 mb-4 flex items-center gap-2 text-lg">
               <Droplets className="w-6 h-6" />
               Step 2: Decontamination
@@ -133,7 +133,7 @@ export const CleaningDecontaminationSection = () => (
           </div>
 
           {/* Step 3: Cleaning */}
-          <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border-2 border-green-300 shadow-lg">
+          <div className="bg-linear-to-br from-green-50 to-teal-50 rounded-xl p-6 border-2 border-green-300 shadow-lg">
             <h5 className="font-bold text-green-900 mb-4 flex items-center gap-2 text-lg">
               <Sparkles className="w-6 h-6" />
               Step 3: Cleaning
@@ -157,7 +157,7 @@ export const CleaningDecontaminationSection = () => (
           </div>
 
           {/* Step 4: Disinfection */}
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300 shadow-lg">
+          <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300 shadow-lg">
             <h5 className="font-bold text-purple-900 mb-4 flex items-center gap-2 text-lg">
               <Wind className="w-6 h-6" />
               Step 4: Disinfection
@@ -185,22 +185,22 @@ export const CleaningDecontaminationSection = () => (
 
         {/* Process Summary */}
         <div className="grid md:grid-cols-4 gap-3 mt-6">
-          <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-lg p-4 border-2 border-orange-300 text-center">
+          <div className="bg-linear-to-br from-orange-100 to-orange-50 rounded-lg p-4 border-2 border-orange-300 text-center">
             <div className="text-3xl mb-2">🔥</div>
             <h6 className="font-bold text-orange-900 text-xs mb-1">1. Deactivate</h6>
             <p className="text-[10px] text-slate-600">Render HD inert</p>
           </div>
-          <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg p-4 border-2 border-blue-300 text-center">
+          <div className="bg-linear-to-br from-blue-100 to-blue-50 rounded-lg p-4 border-2 border-blue-300 text-center">
             <div className="text-3xl mb-2">💧</div>
             <h6 className="font-bold text-blue-900 text-xs mb-1">2. Decontaminate</h6>
             <p className="text-[10px] text-slate-600">Remove residue</p>
           </div>
-          <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-lg p-4 border-2 border-green-300 text-center">
+          <div className="bg-linear-to-br from-green-100 to-green-50 rounded-lg p-4 border-2 border-green-300 text-center">
             <div className="text-3xl mb-2">🧽</div>
             <h6 className="font-bold text-green-900 text-xs mb-1">3. Clean</h6>
             <p className="text-[10px] text-slate-600">Remove materials</p>
           </div>
-          <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg p-4 border-2 border-purple-300 text-center">
+          <div className="bg-linear-to-br from-purple-100 to-purple-50 rounded-lg p-4 border-2 border-purple-300 text-center">
             <div className="text-3xl mb-2">🦠</div>
             <h6 className="font-bold text-purple-900 text-xs mb-1">4. Disinfect</h6>
             <p className="text-[10px] text-slate-600">Kill microorganisms</p>

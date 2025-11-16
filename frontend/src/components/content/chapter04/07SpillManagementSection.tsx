@@ -14,7 +14,7 @@ export const SpillManagementSection = () => (
         variant="warning"
       >
         <div className="space-y-6">
-          <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-6 border-2 border-red-300 shadow-lg">
+          <div className="bg-linear-to-br from-red-50 to-orange-50 rounded-xl p-6 border-2 border-red-300 shadow-lg">
             <p className="text-slate-700 leading-relaxed mb-4">
               It is essential to have a clearly labelled and complete spill kit immediately available in all areas 
               where HDs are handled (areas where HDs are received, stored, transported, compounded, administered, and 
@@ -56,7 +56,7 @@ export const SpillManagementSection = () => (
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-6 border-2 border-amber-300 shadow-lg">
+          <div className="bg-linear-to-br from-amber-50 to-yellow-50 rounded-xl p-6 border-2 border-amber-300 shadow-lg">
             <h5 className="font-bold text-amber-900 mb-4 flex items-center gap-2 text-lg">
               <AlertTriangle className="w-5 h-5" />
               Types of Possible Cytotoxic/HD Spills
@@ -97,7 +97,7 @@ export const SpillManagementSection = () => (
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 shadow-lg">
+          <div className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 shadow-lg">
             <h5 className="font-bold text-blue-900 mb-4 flex items-center gap-2 text-lg">
               <FileText className="w-5 h-5" />
               Spill Response Protocol
@@ -136,7 +136,7 @@ export const SpillManagementSection = () => (
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300 shadow-lg">
+          <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300 shadow-lg">
             <h5 className="font-bold text-purple-900 mb-4 flex items-center gap-2 text-lg">
               <Package className="w-5 h-5" />
               Contents of HD Spill Kit
@@ -278,7 +278,7 @@ export const SpillManagementSection = () => (
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 mt-6">
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-5 border-2 border-blue-300 shadow-sm">
+            <div className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-xl p-5 border-2 border-blue-300 shadow-sm">
               <h6 className="font-semibold text-blue-900 mb-3">🏥 Emergency Facility Requirements:</h6>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li className="flex items-start gap-2">
@@ -308,7 +308,7 @@ export const SpillManagementSection = () => (
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 border-2 border-green-300 shadow-sm">
+            <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-xl p-5 border-2 border-green-300 shadow-sm">
               <h6 className="font-semibold text-green-900 mb-3">🧺 Handling Protocol:</h6>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li className="flex items-start gap-2">

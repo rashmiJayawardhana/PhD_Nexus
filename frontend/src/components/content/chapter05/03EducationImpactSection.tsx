@@ -14,9 +14,9 @@ export const EducationImpactSection = () => (
     >
       <div className="space-y-6">
         {/* Key Message Box */}
-        <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl p-6 border-2 border-green-300 shadow-lg">
+        <div className="bg-linear-to-r from-green-100 to-emerald-100 rounded-xl p-6 border-2 border-green-300 shadow-lg">
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center">
                 <Lightbulb className="w-8 h-8 text-white" />
               </div>
@@ -63,7 +63,7 @@ export const EducationImpactSection = () => (
         </div>
 
         {/* Impact Areas */}
-        <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border-2 border-teal-200">
+        <div className="bg-linear-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border-2 border-teal-200">
           <h4 className="text-lg font-bold text-teal-900 mb-4 flex items-center gap-2">
             <Target className="w-6 h-6" />
             Key Impact Areas of Educational Interventions
@@ -121,7 +121,7 @@ export const EducationImpactSection = () => (
         </div>
 
         {/* E-learning Highlight */}
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300">
+        <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300">
           <div className="flex items-start gap-4">
             <span className="text-4xl">🌐</span>
             <div>
@@ -235,7 +235,7 @@ export const EducationImpactSection = () => (
       icon={<TrendingUp className="w-6 h-6 text-purple-600" />}
       variant="info"
     >
-      <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border-2 border-purple-300 shadow-lg">
+      <div className="bg-linear-to-br from-purple-50 to-indigo-50 rounded-xl p-8 border-2 border-purple-300 shadow-lg">
         <div className="text-center mb-6">
           <span className="text-6xl mb-4 inline-block">🌍</span>
           <h4 className="text-2xl font-bold text-purple-900 mb-2">
@@ -269,7 +269,7 @@ export const EducationImpactSection = () => (
           ].map((item, idx) => (
             <div key={idx} className="bg-white rounded-lg p-5 border-2 border-purple-200 hover:border-purple-400 transition-colors">
               <div className="flex items-start gap-3">
-                <span className="text-3xl flex-shrink-0">{item.icon}</span>
+                <span className="text-3xl shrink-0">{item.icon}</span>
                 <div>
                   <h6 className="font-bold text-purple-900 mb-2">{item.title}</h6>
                   <p className="text-sm text-slate-700 leading-relaxed">{item.text}</p>
@@ -286,7 +286,7 @@ export const EducationImpactSection = () => (
       title="Empirical Evidence: Education Program Impact" 
       icon={<span className="text-2xl">📊</span>}
     >
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-5 mb-6 border-l-4 border-blue-600">
+      <div className="bg-linear-to-r from-blue-50 to-indigo-50 rounded-lg p-5 mb-6 border-l-4 border-blue-600">
         <p className="text-slate-800 font-semibold flex items-center gap-2">
           <span className="text-2xl">📋</span>
           Table 16: Empirical studies on education programs for safe handling of chemotherapy
@@ -352,7 +352,7 @@ export const EducationImpactSection = () => (
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white rounded-lg p-3 border border-green-200">
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0" />
                       {item.stat && (
                         <span className="font-bold text-green-700 text-lg">{item.stat}</span>
                       )}
@@ -515,7 +515,7 @@ export const EducationImpactSection = () => (
           methodology="Comparative"
           variant="blue"
           findings={
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-5 border-2 border-blue-300">
+            <div className="bg-linear-to-r from-blue-50 to-cyan-50 rounded-lg p-5 border-2 border-blue-300">
               <p className="text-slate-700 text-center">
                 Nurses' <strong className="text-blue-700 text-lg">knowledge and performance</strong> in 
                 handling chemotherapy are <strong className="text-blue-700 text-lg">statistically 
@@ -534,7 +534,7 @@ export const EducationImpactSection = () => (
       variant="success"
     >
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-6 border-2 border-emerald-300 shadow-md">
+        <div className="bg-linear-to-br from-emerald-50 to-green-50 rounded-xl p-6 border-2 border-emerald-300 shadow-md">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center">
               <span className="text-2xl">✅</span>
@@ -551,14 +551,14 @@ export const EducationImpactSection = () => (
               'Sustained behavior change'
             ].map((benefit, idx) => (
               <div key={idx} className="flex items-center gap-3 bg-white rounded-lg p-3 border border-emerald-200">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
                 <span className="text-sm text-slate-700">{benefit}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-300 shadow-md">
+        <div className="bg-linear-to-br from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-300 shadow-md">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center">
               <span className="text-2xl">⚠️</span>
@@ -574,7 +574,7 @@ export const EducationImpactSection = () => (
               'Preference for traditional methods by some learners'
             ].map((challenge, idx) => (
               <div key={idx} className="flex items-center gap-3 bg-white rounded-lg p-3 border border-amber-200">
-                <span className="text-amber-600 font-bold flex-shrink-0">⚡</span>
+                <span className="text-amber-600 font-bold shrink-0">⚡</span>
                 <span className="text-sm text-slate-700">{challenge}</span>
               </div>
             ))}
@@ -589,7 +589,7 @@ export const EducationImpactSection = () => (
       icon={<span className="text-2xl">⭐</span>}
       variant="highlight"
     >
-      <div className="bg-gradient-to-br from-teal-50 via-blue-50 to-cyan-50 rounded-xl p-8 border-2 border-teal-300 shadow-lg">
+      <div className="bg-linear-to-br from-teal-50 via-blue-50 to-cyan-50 rounded-xl p-8 border-2 border-teal-300 shadow-lg">
         <div className="text-center mb-6">
           <span className="text-5xl mb-3 inline-block">🎯</span>
           <h4 className="text-xl font-bold text-teal-900">Six Pillars of Effective Education</h4>
@@ -654,7 +654,7 @@ export const EducationImpactSection = () => (
                 key={idx} 
                 className={`flex items-start gap-4 bg-white rounded-xl p-5 border-2 ${colorSchemes[practice.color].split(' ')[1]} shadow-md hover:shadow-xl transition-all hover:-translate-y-1`}
               >
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className={`w-14 h-14 ${colorSchemes[practice.color].split(' ')[0]} text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg`}>
                     {practice.num}
                   </div>
@@ -674,9 +674,9 @@ export const EducationImpactSection = () => (
     </ContentCard>
 
     {/* Final Takeaway */}
-    <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-300 shadow-xl">
+    <div className="bg-linear-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-300 shadow-xl">
       <div className="flex items-start gap-4">
-        <div className="flex-shrink-0">
+        <div className="shrink-0">
           <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center shadow-lg">
             <CheckCircle2 className="w-8 h-8 text-white" />
           </div>

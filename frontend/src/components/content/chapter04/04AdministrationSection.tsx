@@ -43,7 +43,7 @@ export const AdministrationSection = () => (
           <strong>Exposure Risk:</strong> Connection and disconnection of HD containing IV bags or syringes pose a risk of generating aerosols, particulates, possible spills or splashes, inhalation, dermal contact, and needle prick injuries.
         </InfoBox>
 
-        <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border-2 border-purple-300 shadow-lg mt-6">
+        <div className="bg-linear-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border-2 border-purple-300 shadow-lg mt-6">
           <h5 className="font-bold text-purple-900 mb-4 text-lg flex items-center gap-2">
             <Heart className="w-6 h-6" />
             Parenteral Administration Safety Precautions
@@ -101,17 +101,17 @@ export const AdministrationSection = () => (
 
         {/* Key Safety Points */}
         <div className="grid md:grid-cols-3 gap-4 mt-6">
-          <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg p-4 border-2 border-blue-300 text-center shadow-md">
+          <div className="bg-linear-to-br from-blue-100 to-blue-50 rounded-lg p-4 border-2 border-blue-300 text-center shadow-md">
             <div className="text-3xl mb-2">🔒</div>
             <h6 className="font-bold text-blue-900 text-sm mb-1">Use CSTDs</h6>
             <p className="text-xs text-slate-600">Luer-Lok connections & needleless systems</p>
           </div>
-          <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-lg p-4 border-2 border-green-300 text-center shadow-md">
+          <div className="bg-linear-to-br from-green-100 to-green-50 rounded-lg p-4 border-2 border-green-300 text-center shadow-md">
             <div className="text-3xl mb-2">🚿</div>
             <h6 className="font-bold text-green-900 text-sm mb-1">Prime in BSC</h6>
             <p className="text-xs text-slate-600">Never at bedside or in sinks</p>
           </div>
-          <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg p-4 border-2 border-purple-300 text-center shadow-md">
+          <div className="bg-linear-to-br from-purple-100 to-purple-50 rounded-lg p-4 border-2 border-purple-300 text-center shadow-md">
             <div className="text-3xl mb-2">🧤</div>
             <h6 className="font-bold text-purple-900 text-sm mb-1">Full PPE</h6>
             <p className="text-xs text-slate-600">Double gloves, gown, eye & face protection</p>
@@ -133,7 +133,7 @@ export const AdministrationSection = () => (
           </p>
         </div>
 
-        <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border-2 border-indigo-300 shadow-md">
+        <div className="bg-linear-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border-2 border-indigo-300 shadow-md">
           <h5 className="font-bold text-indigo-900 mb-4 text-lg">Oral Administration Work Practices</h5>
           <RequirementsList
             title=""
@@ -164,7 +164,7 @@ export const AdministrationSection = () => (
         </div>
 
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-2 border-green-300">
+          <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-2 border-green-300">
             <h6 className="font-bold text-green-900 mb-3">✅ Best Practices</h6>
             <ul className="space-y-2 text-sm text-slate-700">
               <li className="flex items-start gap-2">
@@ -186,7 +186,7 @@ export const AdministrationSection = () => (
             </ul>
           </div>
           
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-5 border-2 border-amber-300">
+          <div className="bg-linear-to-br from-amber-50 to-orange-50 rounded-lg p-5 border-2 border-amber-300">
             <h6 className="font-bold text-amber-900 mb-3">⚠️ Tablet Manipulation</h6>
             <ul className="space-y-2 text-sm text-slate-700">
               <li className="flex items-start gap-2">
@@ -238,7 +238,7 @@ export const AdministrationSection = () => (
           </p>
         </div>
 
-        <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border-2 border-teal-300 shadow-md">
+        <div className="bg-linear-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border-2 border-teal-300 shadow-md">
           <h5 className="font-bold text-teal-900 mb-4 text-lg flex items-center gap-2">
             <Droplet className="w-6 h-6" />
             Topical Application Requirements

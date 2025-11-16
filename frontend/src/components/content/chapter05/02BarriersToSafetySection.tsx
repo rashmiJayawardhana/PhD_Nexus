@@ -174,7 +174,7 @@ export const BarriersToSafetySection = () => (
         />
       </div>
 
-      <div className="mt-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-5 border-2 border-amber-200">
+      <div className="mt-6 bg-linear-to-br from-amber-50 to-orange-50 rounded-lg p-5 border-2 border-amber-200">
         <h5 className="font-bold text-amber-900 mb-3 flex items-center gap-2">
           <Award className="w-5 h-5" />
           Most Significant Barrier

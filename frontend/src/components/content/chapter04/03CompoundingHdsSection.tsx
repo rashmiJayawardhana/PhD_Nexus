@@ -26,7 +26,7 @@ export const CompoundingHdsSection = () => (
           <strong>Essential Requirement:</strong> Only trained individuals need to compound the HDs. (All staff who use BSC/isolators should train to use related equipment and maintain proper techniques).
         </InfoBox>
 
-        <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border-2 border-teal-300 shadow-lg">
+        <div className="bg-linear-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border-2 border-teal-300 shadow-lg">
           <h5 className="font-bold text-teal-900 mb-4 text-lg flex items-center gap-2">
             <FlaskConical className="w-6 h-6" />
             Compounding Work Practices
@@ -104,7 +104,7 @@ export const CompoundingHdsSection = () => (
           />
 
           <div className="grid md:grid-cols-2 gap-6 mt-6">
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-5 border-2 border-blue-300 shadow-sm">
+            <div className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-lg p-5 border-2 border-blue-300 shadow-sm">
               <h6 className="font-semibold text-slate-800 mb-3 flex items-center gap-2">
                 <span className="text-xl">🌡️</span>
                 Environmental Controls
@@ -120,7 +120,7 @@ export const CompoundingHdsSection = () => (
                 color="blue"
               />
             </div>
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-2 border-green-300 shadow-sm">
+            <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-2 border-green-300 shadow-sm">
               <h6 className="font-semibold text-slate-800 mb-3 flex items-center gap-2">
                 <Shield className="w-5 h-5 text-green-600" />
                 Access & Safety
@@ -154,7 +154,7 @@ export const CompoundingHdsSection = () => (
           </p>
         </div>
 
-        <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border-2 border-cyan-300 shadow-md">
+        <div className="bg-linear-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border-2 border-cyan-300 shadow-md">
           <h5 className="font-bold text-cyan-900 mb-4 text-lg">Transportation Safety Requirements</h5>
           <RequirementsList
             title=""
@@ -199,7 +199,7 @@ export const CompoundingHdsSection = () => (
         </div>
 
         <div className="grid md:grid-cols-2 gap-4 mt-6">
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-2 border-green-300">
+          <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-2 border-green-300">
             <h6 className="font-bold text-green-900 mb-3">✅ Recommended: Manual Transport</h6>
             <ul className="space-y-2 text-sm text-slate-700">
               <li className="flex items-start gap-2">
@@ -221,7 +221,7 @@ export const CompoundingHdsSection = () => (
             </ul>
           </div>
           
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-5 border-2 border-amber-300">
+          <div className="bg-linear-to-br from-amber-50 to-orange-50 rounded-lg p-5 border-2 border-amber-300">
             <h6 className="font-bold text-amber-900 mb-3">⚠️ Caution: Pneumatic Tubes</h6>
             <ul className="space-y-2 text-sm text-slate-700">
               <li className="flex items-start gap-2">

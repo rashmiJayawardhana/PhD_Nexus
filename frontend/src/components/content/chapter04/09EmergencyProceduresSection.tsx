@@ -13,7 +13,7 @@ export const EmergencyProceduresSection = () => (
         variant="warning"
       >
         <div className="space-y-6">
-          <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border-2 border-red-300 shadow-lg">
+          <div className="bg-linear-to-br from-red-50 to-pink-50 rounded-xl p-6 border-2 border-red-300 shadow-lg">
             <p className="text-slate-700 leading-relaxed mb-4 text-base">
               Dermal contamination and inhalation of HDs are considered the primary sources of occupational exposure 
               to them. Many HDs are absorbed through the skin, mucous membrane and respiratory system. Therefore, 
@@ -72,17 +72,17 @@ export const EmergencyProceduresSection = () => (
 
           {/* Quick Response Guide */}
           <div className="grid md:grid-cols-3 gap-4 mt-6">
-            <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg p-4 border-2 border-blue-300 text-center shadow-md">
+            <div className="bg-linear-to-br from-blue-100 to-blue-50 rounded-lg p-4 border-2 border-blue-300 text-center shadow-md">
               <div className="text-3xl mb-2">🚿</div>
               <h6 className="font-bold text-blue-900 text-sm mb-1">Skin Contact</h6>
               <p className="text-xs text-slate-600">Remove PPE & wash with soap/water immediately</p>
             </div>
-            <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg p-4 border-2 border-purple-300 text-center shadow-md">
+            <div className="bg-linear-to-br from-purple-100 to-purple-50 rounded-lg p-4 border-2 border-purple-300 text-center shadow-md">
               <div className="text-3xl mb-2">👁️</div>
               <h6 className="font-bold text-purple-900 text-sm mb-1">Eye Exposure</h6>
               <p className="text-xs text-slate-600">Flush for 15+ minutes at eyewash station</p>
             </div>
-            <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-lg p-4 border-2 border-green-300 text-center shadow-md">
+            <div className="bg-linear-to-br from-green-100 to-green-50 rounded-lg p-4 border-2 border-green-300 text-center shadow-md">
               <div className="text-3xl mb-2">📋</div>
               <h6 className="font-bold text-green-900 text-sm mb-1">Documentation</h6>
               <p className="text-xs text-slate-600">Report & document in medical record</p>

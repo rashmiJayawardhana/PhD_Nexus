@@ -29,24 +29,24 @@ export const ReceivingStorageSection = () => (
 
         {/* Visual Process Flow */}
         <div className="grid md:grid-cols-3 gap-4 my-6">
-          <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg p-4 border-2 border-blue-300 text-center shadow-md">
+          <div className="bg-linear-to-br from-blue-100 to-blue-50 rounded-lg p-4 border-2 border-blue-300 text-center shadow-md">
             <div className="text-3xl mb-2">📦</div>
             <h6 className="font-bold text-blue-900 text-sm mb-1">Receiving</h6>
             <p className="text-xs text-slate-600">Check for damage & contamination</p>
           </div>
-          <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg p-4 border-2 border-purple-300 text-center shadow-md">
+          <div className="bg-linear-to-br from-purple-100 to-purple-50 rounded-lg p-4 border-2 border-purple-300 text-center shadow-md">
             <div className="text-3xl mb-2">🚚</div>
             <h6 className="font-bold text-purple-900 text-sm mb-1">Distribution</h6>
             <p className="text-xs text-slate-600">Safe transport in closed containers</p>
           </div>
-          <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-lg p-4 border-2 border-green-300 text-center shadow-md">
+          <div className="bg-linear-to-br from-green-100 to-green-50 rounded-lg p-4 border-2 border-green-300 text-center shadow-md">
             <div className="text-3xl mb-2">🏢</div>
             <h6 className="font-bold text-green-900 text-sm mb-1">Storage</h6>
             <p className="text-xs text-slate-600">Separate, ventilated area</p>
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border-2 border-indigo-300 shadow-md">
+        <div className="bg-linear-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border-2 border-indigo-300 shadow-md">
           <h5 className="font-bold text-indigo-900 mb-4 text-lg flex items-center gap-2">
             <Package className="w-6 h-6" />
             Safety Precautions for HD Handling
@@ -86,9 +86,9 @@ export const ReceivingStorageSection = () => (
 
         {/* Key Requirements Summary */}
         <div className="grid md:grid-cols-2 gap-4 mt-6">
-          <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-lg p-5 border-2 border-amber-300 shadow-sm">
+          <div className="bg-linear-to-br from-amber-50 to-yellow-50 rounded-lg p-5 border-2 border-amber-300 shadow-sm">
             <div className="flex items-start gap-3">
-              <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+              <AlertTriangle className="w-6 h-6 text-amber-600 shrink-0 mt-1" />
               <div>
                 <h6 className="font-bold text-amber-900 mb-2">Damage Assessment</h6>
                 <p className="text-sm text-slate-700">
@@ -99,9 +99,9 @@ export const ReceivingStorageSection = () => (
             </div>
           </div>
           
-          <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-5 border-2 border-teal-300 shadow-sm">
+          <div className="bg-linear-to-br from-teal-50 to-cyan-50 rounded-lg p-5 border-2 border-teal-300 shadow-sm">
             <div className="flex items-start gap-3">
-              <Thermometer className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
+              <Thermometer className="w-6 h-6 text-teal-600 shrink-0 mt-1" />
               <div>
                 <h6 className="font-bold text-teal-900 mb-2">Storage Conditions</h6>
                 <p className="text-sm text-slate-700">

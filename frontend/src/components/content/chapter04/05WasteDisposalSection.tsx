@@ -42,7 +42,7 @@ export const WasteDisposalSection = () => (
           </p>
         </div>
 
-        <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-6 border-2 border-red-300 shadow-lg">
+        <div className="bg-linear-to-br from-red-50 to-orange-50 rounded-xl p-6 border-2 border-red-300 shadow-lg">
           <h5 className="font-bold text-red-900 mb-4 text-lg flex items-center gap-2">
             <AlertCircle className="w-6 h-6" />
             The Types of HD Waste
@@ -157,7 +157,7 @@ export const WasteDisposalSection = () => (
           PPE. May dispose in normal sewage system, but place solid waste in cytotoxic waste bags.
         </InfoBox>
 
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 shadow-md">
+        <div className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 shadow-md">
           <h5 className="font-bold text-blue-900 mb-4 flex items-center gap-2">
             <Package className="w-6 h-6" />
             HD Waste Container Requirements
@@ -215,7 +215,7 @@ export const WasteDisposalSection = () => (
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-6 border-2 border-amber-300 mt-6">
+        <div className="bg-linear-to-br from-amber-50 to-yellow-50 rounded-xl p-6 border-2 border-amber-300 mt-6">
           <h5 className="font-bold text-amber-900 mb-4">Storage Area Requirements</h5>
           <p className="text-slate-700 mb-4">Disposal of HD-contaminated soft materials, such as laundry, gloves, or gowns, should be made in thick, leak-proof plastic bags and placed in clearly labelled waste containers.</p>
           <p className="text-slate-700 mb-4">Until terminal disposal, the work area that stores HD waste must be designed as mentioned below.</p>
@@ -239,7 +239,7 @@ export const WasteDisposalSection = () => (
           </ul>
         </div>
 
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300 mt-6">
+        <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300 mt-6">
           <h5 className="font-bold text-purple-900 mb-4">Patient Excreta Handling</h5>
           <p className="text-slate-700 mb-4">Most cytotoxic drugs are eliminated from the body within seven days of administration, although some may be excreted over a more extended period. Active forms of drugs or their metabolites may remain within the body's excreta, and safe work procedures that reduce potential exposure to excreta are outlined below.</p>
           <ul className="space-y-2 text-sm text-slate-700">

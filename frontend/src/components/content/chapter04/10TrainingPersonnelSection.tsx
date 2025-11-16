@@ -12,7 +12,7 @@ export const TrainingPersonnelSection = () => (
         variant="success"
       >
         <div className="space-y-6">
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border-2 border-green-300 shadow-lg">
+          <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-xl p-6 border-2 border-green-300 shadow-lg">
             <p className="text-slate-700 leading-relaxed text-base">
               All staff who handle cytotoxic drugs must be provided with sufficient education and training applicable 
               to their role, regarding the risks and safe handling of these drugs. Training should begin when the 
@@ -49,7 +49,7 @@ export const TrainingPersonnelSection = () => (
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-3">
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-l-4 border-green-500 shadow-sm">
+                <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-l-4 border-green-500 shadow-sm">
                   <div className="flex items-start gap-3">
                     <span className="text-green-600 text-2xl">📖</span>
                     <div>
@@ -76,7 +76,7 @@ export const TrainingPersonnelSection = () => (
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-5 border-l-4 border-blue-500 shadow-sm">
+                <div className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-lg p-5 border-l-4 border-blue-500 shadow-sm">
                   <div className="flex items-start gap-3">
                     <span className="text-blue-600 text-2xl">🛠️</span>
                     <div>
@@ -100,7 +100,7 @@ export const TrainingPersonnelSection = () => (
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-l-4 border-purple-500 shadow-sm">
+              <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-l-4 border-purple-500 shadow-sm">
                 <div className="flex items-start gap-3">
                   <span className="text-purple-600 text-2xl">⭐</span>
                   <div>
@@ -137,7 +137,7 @@ export const TrainingPersonnelSection = () => (
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-6 border-2 border-amber-300 shadow-md">
+          <div className="bg-linear-to-br from-amber-50 to-yellow-50 rounded-xl p-6 border-2 border-amber-300 shadow-md">
             <h5 className="font-bold text-amber-900 mb-4 flex items-center gap-2 text-lg">
               <Users className="w-6 h-6" />
               Evaluation and Record Keeping
@@ -185,7 +185,7 @@ export const TrainingPersonnelSection = () => (
 
           {/* Training Schedule */}
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-5 border-2 border-blue-300">
+            <div className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-lg p-5 border-2 border-blue-300">
               <h6 className="font-bold text-blue-900 mb-3">📅 Initial Training</h6>
               <p className="text-sm text-slate-700">
                 Provided when worker is first assigned to HD handling areas. Covers all fundamental knowledge and 
@@ -193,7 +193,7 @@ export const TrainingPersonnelSection = () => (
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-2 border-purple-300">
+            <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-2 border-purple-300">
               <h6 className="font-bold text-purple-900 mb-3">🔄 Annual Refresher</h6>
               <p className="text-sm text-slate-700">
                 Repeated annually to maintain competency, update on new procedures, and reinforce safe practices.

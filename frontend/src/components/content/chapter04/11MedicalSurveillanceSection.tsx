@@ -12,7 +12,7 @@ export const MedicalSurveillanceSection = () => (
         variant="info"
       >
         <div className="space-y-6">
-          <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border-2 border-indigo-300 shadow-lg">
+          <div className="bg-linear-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border-2 border-indigo-300 shadow-lg">
             <p className="text-slate-700 leading-relaxed text-base">
               Medical surveillance is a vital program in detecting health risks. It involves assessing and 
               documenting symptom complaints, physical findings, and laboratory tests (e.g., FBC, LFT) to determine 
@@ -48,9 +48,9 @@ export const MedicalSurveillanceSection = () => (
 
             <div className="space-y-4">
               {/* Element 1 */}
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  <span className="shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                     1
                   </span>
                   <div>
@@ -63,9 +63,9 @@ export const MedicalSurveillanceSection = () => (
               </div>
 
               {/* Element 2 */}
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  <span className="shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                     2
                   </span>
                   <div>
@@ -79,9 +79,9 @@ export const MedicalSurveillanceSection = () => (
               </div>
 
               {/* Element 3 */}
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  <span className="shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                     3
                   </span>
                   <div>
@@ -124,9 +124,9 @@ export const MedicalSurveillanceSection = () => (
               </div>
 
               {/* Element 4 */}
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  <span className="shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                     4
                   </span>
                   <div>
@@ -141,9 +141,9 @@ export const MedicalSurveillanceSection = () => (
               </div>
 
               {/* Element 5 */}
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  <span className="shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                     5
                   </span>
                   <div>
@@ -183,9 +183,9 @@ export const MedicalSurveillanceSection = () => (
               </div>
 
               {/* Element 6 */}
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  <span className="shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                     6
                   </span>
                   <div>
@@ -198,9 +198,9 @@ export const MedicalSurveillanceSection = () => (
               </div>
 
               {/* Element 7 */}
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  <span className="shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                     7
                   </span>
                   <div>
@@ -215,7 +215,7 @@ export const MedicalSurveillanceSection = () => (
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border-2 border-green-300 shadow-lg">
+          <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-xl p-6 border-2 border-green-300 shadow-lg">
             <h5 className="font-bold text-green-900 mb-4 flex items-center gap-2">
               <TrendingUp className="w-6 h-6" />
               Key Benefits of Medical Surveillance

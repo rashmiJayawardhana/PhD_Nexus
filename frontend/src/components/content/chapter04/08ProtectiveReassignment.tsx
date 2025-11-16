@@ -11,7 +11,7 @@ export const ProtectiveReassignmentSection = () => (
         variant="warning"
       >
         <div className="space-y-6">
-          <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-6 border-2 border-red-300 shadow-lg">
+          <div className="bg-linear-to-br from-red-50 to-orange-50 rounded-xl p-6 border-2 border-red-300 shadow-lg">
             <h5 className="font-bold text-red-900 mb-4 flex items-center gap-2">
               <Heart className="w-6 h-6" />
               Why Protective Reassignment?
@@ -37,9 +37,9 @@ export const ProtectiveReassignmentSection = () => (
             </p>
 
             <div className="space-y-4">
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+                  <span className="shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
                     1
                   </span>
                   <p className="text-sm text-slate-700 pt-1">
@@ -49,9 +49,9 @@ export const ProtectiveReassignmentSection = () => (
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+                  <span className="shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
                     2
                   </span>
                   <p className="text-sm text-slate-700 pt-1">
@@ -61,9 +61,9 @@ export const ProtectiveReassignmentSection = () => (
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+                  <span className="shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
                     3
                   </span>
                   <p className="text-sm text-slate-700 pt-1">
@@ -73,9 +73,9 @@ export const ProtectiveReassignmentSection = () => (
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+                  <span className="shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
                     4
                   </span>
                   <p className="text-sm text-slate-700 pt-1">
@@ -85,9 +85,9 @@ export const ProtectiveReassignmentSection = () => (
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+                  <span className="shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
                     5
                   </span>
                   <p className="text-sm text-slate-700 pt-1">
@@ -98,9 +98,9 @@ export const ProtectiveReassignmentSection = () => (
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
+              <div className="bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg p-5 border-l-4 border-indigo-500 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+                  <span className="shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
                     6
                   </span>
                   <div className="pt-1">
@@ -143,7 +143,7 @@ export const ProtectiveReassignmentSection = () => (
 
           {/* Risk Categories */}
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-gradient-to-br from-pink-50 to-red-50 rounded-lg p-5 border-2 border-pink-300">
+            <div className="bg-linear-to-br from-pink-50 to-red-50 rounded-lg p-5 border-2 border-pink-300">
               <h6 className="font-bold text-pink-900 mb-3">👶 At-Risk Categories</h6>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li className="flex items-start gap-2">
@@ -165,7 +165,7 @@ export const ProtectiveReassignmentSection = () => (
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-2 border-green-300">
+            <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-lg p-5 border-2 border-green-300">
               <h6 className="font-bold text-green-900 mb-3">✅ Alternative Options</h6>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li className="flex items-start gap-2">
