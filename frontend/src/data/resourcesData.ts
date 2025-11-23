@@ -146,7 +146,7 @@ export const selfStudyQuestions: QuestionSet[] = [
     questions: [
       {
         id: 1,
-        text: "Select true/false regarding anti-cancer drugs/anti-cancer chemotherapy:",
+        text: "Select all TRUE statements regarding anti-cancer drugs/anti-cancer chemotherapy:",
         type: "multiple-choice",
         options: [
           "Mainly used to treat cancer",
@@ -154,7 +154,15 @@ export const selfStudyQuestions: QuestionSet[] = [
           "Many anti-cancer drugs belong to the cytotoxic drug group",
           "Chemotherapy destroys cancer cells",
           "Chemotherapy acts on both cancer cells and healthy cells in the body"
-        ]
+        ],
+        correctAnswers: {
+          "Mainly used to treat cancer": true,
+          "Anti-cancer drugs are considered hazardous drugs": true,
+          "Many anti-cancer drugs belong to the cytotoxic drug group": true,
+          "Chemotherapy destroys cancer cells": true,
+          "Chemotherapy acts on both cancer cells and healthy cells in the body": true
+        },
+        explanation: "All statements are TRUE. Anti-cancer drugs are hazardous medications primarily used to treat cancer by destroying cancer cells, though they also affect healthy cells."
       }
     ]
   },
@@ -165,7 +173,7 @@ export const selfStudyQuestions: QuestionSet[] = [
     questions: [
       {
         id: 2,
-        text: "Possible routes of occupational exposure included:",
+        text: "Select all TRUE routes of occupational exposure:",
         type: "multiple-choice",
         options: [
           "Dermal contact",
@@ -173,7 +181,15 @@ export const selfStudyQuestions: QuestionSet[] = [
           "Ingestion",
           "Needle prick injuries",
           "Contact with excreta of patients who have undergone chemotherapy"
-        ]
+        ],
+        correctAnswers: {
+          "Dermal contact": true,
+          "Inhalation of vapours/drug particles": true,
+          "Ingestion": true,
+          "Needle prick injuries": true,
+          "Contact with excreta of patients who have undergone chemotherapy": true
+        },
+        explanation: "All listed routes are valid pathways for occupational exposure to hazardous drugs. Healthcare workers must be aware of all these exposure risks."
       }
     ]
   },
@@ -184,7 +200,7 @@ export const selfStudyQuestions: QuestionSet[] = [
     questions: [
       {
         id: 3,
-        text: "Inhalable drug particles/droplets/particles are created by:",
+        text: "Select all activities that create inhalable drug particles/droplets:",
         type: "multiple-choice",
         options: [
           "Preparation of parenteral drugs",
@@ -192,17 +208,106 @@ export const selfStudyQuestions: QuestionSet[] = [
           "Administering drugs into the IV line/administer IV drugs",
           "Leakage of drugs",
           "Cleaning and decontamination of drug spills"
-        ]
+        ],
+        correctAnswers: {
+          "Preparation of parenteral drugs": true,
+          "Priming IV syringes/tubes": true,
+          "Administering drugs into the IV line/administer IV drugs": true,
+          "Leakage of drugs": true,
+          "Cleaning and decontamination of drug spills": true
+        },
+        explanation: "All these activities can generate inhalable particles. Proper containment and PPE are essential during all these procedures."
       }
     ]
   },
   {
     id: 4,
+    title: "Accidental Spills & Contamination",
+    description: "Learn proper procedures for handling drug spills and contamination",
+    questions: [
+      {
+        id: 4,
+        text: "Select all TRUE statements regarding accidental drug spills/contaminations:",
+        type: "multiple-choice",
+        options: [
+          "Dermal contamination needs to be done with soap and water immediately",
+          "Wipe out small spills on the skin with tissue paper immediately",
+          "Eye contact/splash needs to be immediately washed with normal saline",
+          "Spillage of chemotherapy drugs should be cleaned with a spill kit",
+          "The first step of spillage management is to wear PPE"
+        ],
+        correctAnswers: {
+          "Dermal contamination needs to be done with soap and water immediately": true,
+          "Wipe out small spills on the skin with tissue paper immediately": false,
+          "Eye contact/splash needs to be immediately washed with normal saline": true,
+          "Spillage of chemotherapy drugs should be cleaned with a spill kit": true,
+          "The first step of spillage management is to wear PPE": true
+        },
+        explanation: "NEVER wipe spills with tissue paper as this spreads contamination. Always use soap and water for skin contamination, irrigate eyes immediately with normal saline, use proper spill kits, and always don PPE before cleaning."
+      }
+    ]
+  },
+  {
+    id: 5,
+    title: "PPE & Safety Equipment",
+    description: "Evaluate your knowledge of protective equipment and safety measures",
+    questions: [
+      {
+        id: 5,
+        text: "Select all TRUE statements:",
+        type: "multiple-choice",
+        options: [
+          "Personal Protective Equipment (PPE) reduces possible exposure",
+          "Luer-lock connectors/CTDS provide better protection against exposure to chemotherapy",
+          "IV lines need to be flushed with normal saline before adding chemotherapy",
+          "Chemotherapy-specific PPE (gloves/gown/respiratory mask) will provide the best protection against exposure to chemotherapy",
+          "Policies/guidelines need to be followed in handling chemotherapy"
+        ],
+        correctAnswers: {
+          "Personal Protective Equipment (PPE) reduces possible exposure": true,
+          "Luer-lock connectors/CTDS provide better protection against exposure to chemotherapy": true,
+          "IV lines need to be flushed with normal saline before adding chemotherapy": false,
+          "Chemotherapy-specific PPE (gloves/gown/respiratory mask) will provide the best protection against exposure to chemotherapy": true,
+          "Policies/guidelines need to be followed in handling chemotherapy": true
+        },
+        explanation: "IV lines should NOT be flushed with normal saline before adding chemotherapy - this is incorrect practice. All other statements are TRUE. Proper PPE, Luer-lock connectors, chemotherapy-specific equipment, and following guidelines are essential for safety."
+      }
+    ]
+  },
+  {
+    id: 6,
+    title: "Glove Change Duration",
+    description: "Understand proper timing for changing protective gloves",
+    questions: [
+      {
+        id: 6,
+        text: "Select all CORRECT statements about the duration of changing gloves:",
+        type: "multiple-choice",
+        options: [
+          "15 minutes",
+          "20 minutes",
+          "30 minutes",
+          "Immediately after torn/damaged",
+          "No specific time duration can be used until finishing the activities"
+        ],
+        correctAnswers: {
+          "15 minutes": false,
+          "20 minutes": false,
+          "30 minutes": true,
+          "Immediately after torn/damaged": true,
+          "No specific time duration can be used until finishing the activities": false
+        },
+        explanation: "Gloves should be changed every 30 minutes OR immediately if torn/damaged. There IS a specific time duration - gloves must not be used for extended periods as they can permeate over time. The 30-minute rule is critical for safety."
+      }
+    ]
+  },
+  {
+    id: 7,
     title: "Adverse Effects of Exposure",
     description: "Recognize potential health impacts of chemotherapy exposure",
     questions: [
       {
-        id: 4,
+        id: 7,
         text: "Occupational exposure to chemotherapy may lead to acute/long-term adverse effects:",
         type: "table",
         tableData: {
@@ -219,18 +324,31 @@ export const selfStudyQuestions: QuestionSet[] = [
             "Hair loss/speedy grey hair",
             "Anaemia/reduction of blood cell count"
           ]
-        }
+        },
+        correctAnswers: {
+          "Headache/Dizziness/Drowsy": "true",
+          "Nausea/vomiting": "true",
+          "Breathing difficulties": "true",
+          "Allergy/skin/eye irritation": "true",
+          "Miscarriages/fetal loss": "true",
+          "Congenital disabilities/intrauterine growth retardation/low birth weight": "true",
+          "Sub-fertility/infertility": "true",
+          "Cancer/leukaemia/Genetic/chromosomal changes": "true",
+          "Hair loss/speedy grey hair": "true",
+          "Anaemia/reduction of blood cell count": "true"
+        },
+        explanation: "ALL listed effects are TRUE adverse effects that can result from occupational exposure to chemotherapy. This emphasizes the critical importance of proper safety protocols."
       }
     ]
   },
   {
-    id: 5,
+    id: 8,
     title: "Safety Practices & Procedures",
     description: "Evaluate your knowledge of safe handling practices",
     questions: [
       {
-        id: 5,
-        text: "Safety practices and procedures:",
+        id: 8,
+        text: "Identify whether each safety practice/procedure is TRUE or FALSE:",
         type: "table",
         tableData: {
           headers: ["Statement", "True", "False", "Do not know"],
@@ -246,8 +364,21 @@ export const selfStudyQuestions: QuestionSet[] = [
             "Seal contact material in plastic bag for transport to chemotherapeutic waste container",
             "Alcohol 70% is effective in removing all types of chemotherapy residue"
           ]
-        }
+        },
+        correctAnswers: {
+          "All steps related to preparing chemotherapy need to be done within proper functioning BSC or isolator": "true",
+          "Priming CD-containing syringes/IV tubes into open areas/dustbins/bedside is not an issue": "false",
+          "Chemotherapy drugs need to be handled/stored separately from other drugs": "true",
+          "The excreta of patients who take chemotherapy need to be treated as hazardous waste": "true",
+          "Sharps and syringes should be disposed of in rigid-walled sharps container and segregated from other wastes": "true",
+          "Needles should be recapped before being disposed of to prevent needle stick injury": "false",
+          "Persons collecting hazardous wastes must take precautions while collecting/transferring": "true",
+          "Excreta-contaminated linen/cloths should be washed in machine, not by hand": "true",
+          "Seal contact material in plastic bag for transport to chemotherapeutic waste container": "true",
+          "Alcohol 70% is effective in removing all types of chemotherapy residue": "false"
+        },
+        explanation: "Key points: Never prime syringes in open areas, never recap needles (injury risk), and alcohol 70% is NOT effective for all chemotherapy residues - special decontamination agents are needed."
       }
     ]
-  }
+  },
 ];

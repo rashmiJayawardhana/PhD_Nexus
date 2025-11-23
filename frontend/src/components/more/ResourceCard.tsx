@@ -26,7 +26,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({ resource, variant = 
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-slate-200">
       {/* Header with gradient */}
-      <div className={`bg-gradient-to-r ${gradientClass} p-6 text-white`}>
+      <div className={`bg-linear-to-r ${gradientClass} p-6 text-white`}>
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             <span className="text-4xl">{doc?.icon || material?.icon}</span>
@@ -56,7 +56,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({ resource, variant = 
           <>
             <button
               onClick={() => handleOpen()}
-              className="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-4 py-3 rounded-lg font-medium transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+              className="w-full bg-linear-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-4 py-3 rounded-lg font-medium transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
             >
               {isVideo ? (
                 <>
@@ -103,8 +103,8 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({ resource, variant = 
                     onClick={() => handleOpen(format.url)}
                     className={`${
                       isPDF 
-                        ? 'bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700' 
-                        : 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700'
+                        ? 'bg-linear-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700' 
+                        : 'bg-linear-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700'
                     } text-white px-4 py-3 rounded-lg font-medium transition shadow-md hover:shadow-lg flex flex-col items-center gap-1`}
                   >
                     {isPDF ? (

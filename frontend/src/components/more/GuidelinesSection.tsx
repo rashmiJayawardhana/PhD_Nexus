@@ -1,5 +1,5 @@
 // src/components/more/GuidelinesSection.tsx
-import { BookOpen, Shield, Download, Eye } from 'lucide-react';
+import { BookOpen, Shield } from 'lucide-react';
 import { ResourceCard } from './ResourceCard';
 import { regulatoryGuidelines } from '@/data/resourcesData';
 
@@ -23,7 +23,7 @@ export const GuidelinesSection: React.FC = () => {
         </div>
 
         {/* Student-Friendly Instructions */}
-        <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-8 mb-10 border-2 border-blue-200">
+        <div className="bg-linear-to-r from-blue-50 to-teal-50 rounded-2xl p-8 mb-10 border-2 border-blue-200">
           <div className="flex items-start gap-4 mb-6">
             <BookOpen className="w-6 h-6 text-blue-600 shrink-0 mt-1" />
             <div>

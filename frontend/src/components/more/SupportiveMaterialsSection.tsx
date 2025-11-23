@@ -1,5 +1,5 @@
 // src/components/more/SupportiveMaterialsSection.tsx
-import { Video, FileText, Download, Play, Eye } from 'lucide-react';
+import { Video, FileText, Play, Eye } from 'lucide-react';
 import { ResourceCard } from './ResourceCard';
 import { supportiveMaterials } from '@/data/resourcesData';
 
@@ -8,7 +8,7 @@ export const SupportiveMaterialsSection: React.FC = () => {
   const documents = supportiveMaterials.filter(m => !m.isVideo);
 
   return (
-    <section className="py-12 px-6 bg-gradient-to-br from-purple-50 to-pink-50" id="materials">
+    <section className="py-12 px-6 bg-linear-to-br from-purple-50 to-pink-50" id="materials">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -107,7 +107,7 @@ export const SupportiveMaterialsSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-xl p-6 border-2 border-teal-200">
+            <div className="bg-linear-to-br from-teal-50 to-blue-50 rounded-xl p-6 border-2 border-teal-200">
               <h5 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
                 📱 Study Tips
               </h5>

@@ -36,6 +36,8 @@ export interface Question {
     headers: string[];
     rows: string[];
   };
+  correctAnswers?: Record<string, boolean | string>; // Store correct answers
+  explanation?: string; // Optional explanation for learning
 }
 
 export interface QuestionSet {
@@ -43,4 +45,16 @@ export interface QuestionSet {
   title: string;
   description?: string;
   questions: Question[];
+}
+
+export interface QuizResult {
+  questionSetId: number;
+  totalQuestions: number;
+  correctAnswers: number;
+  incorrectAnswers: number;
+  score: number; // percentage
+  answeredQuestions: Record<number, {
+    userAnswers: Record<string, boolean | string>;
+    isCorrect: boolean;
+  }>;
 }
